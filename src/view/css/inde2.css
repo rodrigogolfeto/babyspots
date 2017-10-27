@@ -116,7 +116,7 @@ header .entrar-cadastrar-conta .entrar {
 }
 
 .busca {
-    background-image: url("../img/bg-busca.png");
+    background-image: url("../images/bg-busca.png");
     width: 100%;
     padding-top: 75px;
 }
@@ -155,7 +155,7 @@ header .entrar-cadastrar-conta .entrar {
     font-size: 14px;
     border: none;
     color: white;
-    background: #166bf8 url("../img/icone-busca.png") no-repeat local 20px;
+    background: #166bf8 url("../images/icone-busca.png") no-repeat local 20px;
     padding: 1% 3% 1% 4.5%;
     border-radius: 5px;
 }
@@ -362,7 +362,7 @@ footer main .newsletter ul li a {
 }
 
 .icone-social {
-    background-image: url("../img/sprites-links-sociais.png");
+    background-image: url("../images/sprites-links-sociais.png");
 }
 
 footer main .newsletter ul li a[href*="facebook"]{

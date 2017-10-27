@@ -20,7 +20,7 @@
                     </li>
                 </ul>
             </div><!-- final locacalizacão-->
-                <img class="logo-heme" src="img/logo-home.png" alt="Logo do site, está escrito: BabySpot's">
+                <img class="logo-heme" src="images/logo-home.png" alt="Logo do site, está escrito: BabySpot's">
             <div class="entrar-cadastrar-conta">
                 <a class="botao entrar" href="#">entrar</a>
                 <a class="botao cadastrar" href="#">cadastrar</a>
@@ -48,7 +48,7 @@
             <h2>Top Estabelecimentos</h2>
             <div class="coluna-esquerda">
                 <div class="item card">
-                    <img class="foto-estabelecimento" src="img/foto-estabelecimento-1.png" alt="foto de um estabelecimento qualquer">
+                    <img class="foto-estabelecimento" src="images/foto-estabelecimento-1.png" alt="foto de um estabelecimento qualquer">
                     <div class="informacoes">
                         <p class="cidade-estabelecimento">Campo Grande-MS</p>
                         <p class="nome-estabelecimento">Chalé lanches</p>
@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <div class="item card">
-                    <img class="foto-estabelecimento" src="img/foto-estabelecimento-1.png" alt="foto de um estabelecimento qualquer">
+                    <img class="foto-estabelecimento" src="images/foto-estabelecimento-1.png" alt="foto de um estabelecimento qualquer">
                     <div class="informacoes">
                         <p class="cidade-estabelecimento">Campo Grande-MS</p>
                         <p class="nome-estabelecimento">Chalé lanches</p>
@@ -82,7 +82,7 @@
             </div>
             <div class="coluna-direita">
                 <div class="item card">
-                    <img class="foto-estabelecimento" src="img/foto-estabelecimento-1.png" alt="foto de um estabelecimento qualquer">
+                    <img class="foto-estabelecimento" src="images/foto-estabelecimento-1.png" alt="foto de um estabelecimento qualquer">
                     <div class="informacoes">
                         <p class="cidade-estabelecimento">Campo Grande-MS</p>
                         <p class="nome-estabelecimento">Chalé lanches</p>
@@ -98,7 +98,7 @@
                     </div>
                 </div>
                 <div class="item card">
-                    <img class="foto-estabelecimento" src="img/foto-estabelecimento-1.png" alt="foto de um estabelecimento qualquer">
+                    <img class="foto-estabelecimento" src="images/foto-estabelecimento-1.png" alt="foto de um estabelecimento qualquer">
                     <div class="informacoes">
                         <p class="cidade-estabelecimento">Campo Grande-MS</p>
                         <p class="nome-estabelecimento">Chalé lanches</p>
@@ -118,22 +118,22 @@
         <section class="top-cidades centralizado"> <!--inicio top cidade -->
             <h2>Top Cidades</h2>
             <div class="cidade">
-                <img src="img/foto-cidade.png" alt="nome da cidade">
+                <img src="images/foto-cidade.png" alt="nome da cidade">
                 <p class="estado-cidade">Mato Grosso do Sul</p>
                 <p class="nome-cidade">Campo Grande</p>
             </div>
             <div class="cidade">
-                <img src="img/foto-cidade.png" alt="nome da cidade">
+                <img src="images/foto-cidade.png" alt="nome da cidade">
                 <p class="estado-cidade">Mato Grosso do Sul</p>
                 <p class="nome-cidade">Campo Grande</p>
             </div>
             <div class="cidade">
-                <img src="img/foto-cidade.png" alt="nome da cidade">
+                <img src="images/foto-cidade.png" alt="nome da cidade">
                 <p class="estado-cidade">Mato Grosso do Sul</p>
                 <p class="nome-cidade">Campo Grande</p>
             </div>
             <div class="cidade">
-                <img src="img/foto-cidade.png" alt="nome da cidade">
+                <img src="images/foto-cidade.png" alt="nome da cidade">
                 <p class="estado-cidade">Mato Grosso do Sul</p>
                 <p class="nome-cidade">Campo Grande</p>
             </div>
@@ -143,7 +143,7 @@
     <footer>
         <main>
             <div class="info">
-                <img src="img/logo-home.png">
+                <img src="images/logo-home.png">
                 <p>
                     Onde você quer ir hoje?<br>Encontre o estabelecimento que forneça uma infraestrutura adequada para a recepção de sua familia.
                 </p>
