@@ -11,12 +11,15 @@ class Usuario {
 	private $email;
 	private $senha;
 	private $endereco;
+	private $foto_url;
+	//Preferências de filtro (RNF008)
 
-	function __construct($nome_completo, $email, $senha, $endereco) {
+	public function __construct($nome_completo, $email, $senha, $endereco, $foto_url) {
 		$this->nome_completo = $nome_completo;
 		$this->email = $email;
 		$this->senha = $senha;
 		$this->endereco = $endereco;
+		$this->foto_url = $foto_url;
 	}
 
 	public function getNomeCompleto() {
@@ -49,5 +52,13 @@ class Usuario {
 
 	public function setEndereco($endereco) {
 		$this->endereco = $endereco;
+	}
+
+	public function getFotoUrl() {
+		return $this->foto_url;
+	}
+
+	public function setFotoUrl($foto_url) {
+		$this->foto_url = $foto_url;
 	}
 }

@@ -7,30 +7,22 @@
  */
 
 class Estabelecimento {
-	/*
-	"---" atributos já implementados
-	"***" atributos NÃO implementados, à discutir
-
-	---Nome do estabelecimento;
-	---Endereço;
-	---Descrição;
-	---Avaliação geral do serviços do estabelecimento;
-
-	***Os serviços oferecidos e suas avaliações;
-	***Fotos;
-	***Nome e foto de perfil do usuário que fez o cadastro do estabelecimento;
-	*/
-
 	private $nome_estabelecimento;
-	private $endereco;
+	private $endereco; //objeto endereço
 	private $descricao;
 	private $avaliacao_geral;
+	private $servicos = array(); //objetos de servicos
+	private $fotos = array(); //strings de URLs
+	private $usuario; //objeto do usuário que cadastrou o estabalecimento
 
-	public function __construct($nome_estabelecimento, $endereco, $descricao, $avaliacao_geral) {
+	public function __construct($nome_estabelecimento, $endereco, $descricao, $avaliacao_geral, array $servicos, array $fotos, $usuario) {
 		$this->nome_estabelecimento = $nome_estabelecimento;
 		$this->endereco = $endereco;
 		$this->descricao = $descricao;
 		$this->avaliacao_geral = $avaliacao_geral;
+		$this->servicos = $servicos;
+		$this->fotos = $fotos;
+		$this->usuario = $usuario;
 	}
 
 	public function getNomeEstabelecimento() {
@@ -63,5 +55,29 @@ class Estabelecimento {
 
 	public function setAvaliacaoGeral($avaliacao_geral) {
 		$this->avaliacao_geral = $avaliacao_geral;
+	}
+
+	public function getServicos() {
+		return $this->servicos;
+	}
+
+	public function setServicos($servicos) {
+		$this->servicos = $servicos;
+	}
+
+	public function getFotos() {
+		return $this->fotos;
+	}
+
+	public function setFotos($fotos) {
+		$this->fotos = $fotos;
+	}
+
+	public function getUsuario() {
+		return $this->usuario;
+	}
+
+	public function setUsuario($usuario) {
+		$this->usuario = $usuario;
 	}
 }
