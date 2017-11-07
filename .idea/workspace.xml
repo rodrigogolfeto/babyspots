@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25ef8e04-d199-4a8d-a951-2e78e6690db1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/Endereco.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/css/flex.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/view/css/inde2.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/view/css/index.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Estabelecimento.php" afterPath="$PROJECT_DIR$/src/model/Estabelecimento.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Usuario.php" afterPath="$PROJECT_DIR$/src/model/Usuario.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/index.php" afterPath="$PROJECT_DIR$/src/view/index.php" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,7 +19,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/view/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -56,6 +68,7 @@
         <option value="$PROJECT_DIR$/src/model/Estabelecimento.php" />
         <option value="$PROJECT_DIR$/src/model/Usuario.php" />
         <option value="$PROJECT_DIR$/src/model/Endereco.php" />
+        <option value="$PROJECT_DIR$/src/view/index.php" />
       </list>
     </option>
   </component>
@@ -179,19 +192,26 @@
         <subPane>
           <expand>
             <path>
-              <item name="babyspots" type="b2602c69:ProjectViewProjectNode" />
-              <item name="babyspots" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="babyspots-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="babyspots-web" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="babyspots" type="b2602c69:ProjectViewProjectNode" />
-              <item name="babyspots" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="babyspots-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="babyspots-web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="babyspots" type="b2602c69:ProjectViewProjectNode" />
-              <item name="babyspots" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="babyspots-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="babyspots-web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="babyspots-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="babyspots-web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -211,15 +231,16 @@
     <property name="settings.editor.splitter.proportion" value="0.251714" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\matheus\Dropbox\projetos\PROGWEB\babyspots-web\src\view\css" />
-      <recent name="C:\Users\matheus\Dropbox\projetos\PROGWEB\babyspots-web\src\view\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\matheus\Dropbox\projetos\PROGWEB\babyspots-web\src\view\css" />
       <recent name="C:\Users\matheus\Dropbox\projetos\PROGWEB\babyspots-web\src\view" />
       <recent name="C:\Users\matheus\Dropbox\projetos\PROGWEB\babyspots-web\src\view\res\img" />
       <recent name="C:\Users\mathe\Google Drive\Projetos\WebStorm\babyspots-web\src\view\res\img" />
       <recent name="C:\Users\mathe\Google Drive\Projetos\WebStorm\babyspots-web\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\matheus\Dropbox\projetos\PROGWEB\babyspots-web\src\view\css" />
+      <recent name="C:\Users\matheus\Dropbox\projetos\PROGWEB\babyspots-web\src\view\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -254,6 +275,7 @@
       <workItem from="1509694784186" duration="591000" />
       <workItem from="1509695738542" duration="5422000" />
       <workItem from="1509766552406" duration="1879000" />
+      <workItem from="1510020927272" duration="143000" />
     </task>
     <task id="LOCAL-00001" summary="Adição das Classes Model Usuario e Estabelecimento, e do arquivo base de conexão com o BD Abstract Factory">
       <created>1509700996506</created>
@@ -266,12 +288,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53153000" />
+    <option name="totallyTimeSpent" value="53296000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23718888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23718888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -313,7 +335,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -419,41 +440,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Usuario" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/idea.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Google Drive/Semestre 4/PROGWEB/public_html/Ex07d/model/Contato.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Google Drive/Semestre 4/PROGWEB/public_html/Ex07d/model/AbstractFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="73" lean-forward="true" selection-start-line="56" selection-start-column="73" selection-end-line="56" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Google Drive/Semestre 4/PROGWEB/public_html/Ex07d/model/ContatoFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-222">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/idea.properties" />
+    <entry file="file://$USER_HOME$/Google Drive/Semestre 4/PROGWEB/public_html/Ex07d/model/Contato.php" />
+    <entry file="file://$USER_HOME$/Google Drive/Semestre 4/PROGWEB/public_html/Ex07d/model/AbstractFactory.php" />
+    <entry file="file://$USER_HOME$/Google Drive/Semestre 4/PROGWEB/public_html/Ex07d/model/ContatoFactory.php" />
     <entry file="file://$PROJECT_DIR$/src/model/Usuario.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1054">
           <caret line="62" column="5" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-          <folding>
-            <element signature="e#6#119#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -461,7 +455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-853">
           <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -469,7 +462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -477,6 +469,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
           <caret line="72" column="5" lean-forward="false" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
