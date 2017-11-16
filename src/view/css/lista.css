@@ -1,0 +1,138 @@
+.buscar {
+    padding-bottom: 50px;
+}
+
+.navegacao {
+    box-sizing: border-box;
+    height: 60px;
+    border-radius: 0;
+}
+
+main.container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1000px;
+    margin-top: 30px;
+}
+
+
+.filtro .container{
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    background-color: white;
+    width: 250px;
+    height: 540px;
+    align-items: flex-start;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #838383;
+    font-size: 14px;
+}
+
+.filtro .container h3 {
+    color: #4094f7;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 22px;
+    box-shadow: 0 2px #dedede;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.filtro .container .avaliacao {
+    box-shadow: 0 2px #dedede;
+    padding-bottom: 15px;
+}
+
+.filtro .container legend{
+    font-size: 12px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.filtro .container .avaliacao label{
+    display: inline-block;
+    width: 150px;
+}
+
+.filtro .container .avaliacao span{
+    display: inline-block;
+
+}
+
+.filtro .container .servicos {
+    box-shadow: 0 2px #dedede;
+    padding-bottom: 15px;
+}
+
+.filtro .container .servicos label{
+    display: inline-block;
+    width: 100%;
+}
+
+.filtro .container input[type='submit'] {
+    border: none;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    background-color: #59a3f6;
+}
+
+.filtro .container input[type='submit']:hover {
+    background-color: #2370f6;
+}
+
+.lista {
+    margin-bottom: 200px;
+}
+
+.lista .container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 730px;;
+}
+
+.item {
+    width: 730px;
+    height: 238px;
+    margin-bottom: 15px;
+}
+
+.item .infos {
+    width: calc(100% - 220px);
+}
+
+.item .avaliacao{
+    width: 85px;
+}
+
+.item .infos ul.utimas-avaliacoes{
+    width: 200px;
+    float: left;
+}
+.item .infos .utimas-avaliacoes li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.item .infos .utimas-avaliacoes li img{
+    border-radius: 100%;
+}
+
+.lista .container > a.botao {
+    border: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    background-color: #59a3f6;
+    margin: 15px auto auto;
+}
+
+.lista .container > a.botao:hover {
+    background-color: #2370f6;
+}

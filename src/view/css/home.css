@@ -1,0 +1,174 @@
+
+main.container {
+	flex-direction: column;
+	width: unset;
+}
+
+
+.buscar {
+	background-image: url("../images/bg-busca.png");
+	width: 100%;
+}
+
+.buscar .container {
+	width: 590px;
+	margin: auto;
+	flex-direction: column;
+	align-items: initial;
+	padding-top: 50px;
+}
+
+main.container .buscar .container h2 {
+	font-size: 32px;
+	margin: 0;
+	color: white;
+	text-align: left;
+}
+
+main.container .buscar .container h2 + p {
+	margin-top: 10px;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+
+.buscar .container .campo-busca input[type="search"] {
+	color: #777777;
+	width: 425px;
+	height: 50px;
+	border: none;
+	font-size: 14px;
+	padding: 20px;
+	border-radius: 5px;
+	margin-right: 20px;
+}
+
+.buscar .container .campo-busca input[type="submit"] {
+	box-sizing: border-box;
+	width: 130px;
+	height: 50px;
+	font-size: 16px;
+	border: none;
+	color: white;
+	background: #166bf8 url("../images/icone-busca.png") no-repeat local 30px;
+	padding-left: 55px;
+	padding-right: 30px;
+	border-radius: 5px;
+}
+
+main.container .buscar .container p {
+	font-size: 1.5ch;
+	color: white;
+	margin-top: 44px;
+}
+
+main.container .buscar .container .carrossel {
+	height: 240px;
+}
+
+main.container .top-estabelecimentos .container {
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.item {
+	width: 495px;
+	margin-bottom: 20px;
+}
+
+.item .foto{
+	float: left;
+	border-radius: 5px 0 0 5px;
+	width: 200px;
+}
+
+.item .infos {
+	float: right;
+	width: 275px;
+	height: 100%;
+}
+
+.item .infos p:nth-child(1) {
+	padding-top: 25px;
+	padding-bottom: 21px;
+	font-size: 14px;
+	color: #777777;
+}
+
+.item .infos p:nth-child(2) {
+	font-size: 18px;
+	color: #2c86e5;
+}
+
+.item .infos p:nth-child(3) {
+	font-size: 12px;
+	color: #777777;
+	padding-top: 12px;
+}
+
+.item .carrossel-servico{
+	height: 60px;
+	margin-bottom: 5px;
+	padding-top: 14px;
+	border-bottom: #777777 1px
+}
+
+.item .avaliacao {
+	height: 45px;
+	width: 145px;
+	float: left;
+}
+
+.item .avaliacao span{
+	font-size: 12px;
+	color: #777777;
+	width: 66px;
+}
+
+/*inicio - sprite com as estrelas */
+	.avali {
+		background: url("../images/star-sprite.png") no-repeat 0 0;
+		width: 66px;
+		height: 10px;
+		margin-top: 8px;
+	}
+
+	.avali.qt-strelas-5 {
+		background-position: 0 0;
+	}
+
+	.avali.qt-strelas-4 {
+		background-position: 0 -20px;
+	}
+
+	.avali.qt-strelas-3 {
+		background-position: 0 -40px;
+	}
+
+	.avali.qt-strelas-2 {
+		background-position: 0 -60px;
+	}
+
+	.avali.qt-strelas-1 {
+		background-position: 0 -80px;
+	}
+/*final - sprite com as estrelas */
+
+.item .detalhes{
+	float: right;
+	font-size: 14px;
+	color: white;
+	background-color: #59a3f6;
+	margin-bottom: 8px;
+	margin-right: 8px;
+}
+
+.item .detalhes:hover{
+	background-color: #2370f6;
+}
+
+
+
+
+
+
