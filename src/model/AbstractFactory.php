@@ -1,4 +1,8 @@
 <?php
+define( 'MYSQL_HOST', 'localhost' );
+define( 'MYSQL_USER', 'root' );
+define( 'MYSQL_PASSWORD', '' );
+define( 'MYSQL_DB_NAME', 'babyspotsdb' );
 /**
  * Created by PhpStorm.
  * User: kelvin-fernandes <sokelvinfernandes>
@@ -11,8 +15,8 @@ abstract class AbstractFactory {
 
 	public function __construct() {
 		try {
-//			$this->db = new PDO("MySQL");
-//			$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$this->db = new PDO( 'mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
+			$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		} catch (PDOException $exception) {
 			echo $exception->getMessage();
 		} catch (Exception $exception) {
@@ -22,9 +26,9 @@ abstract class AbstractFactory {
 
 	abstract public function add($obj);
 
-	abstract public function find($param);
+	abstract public function edit($obj);
 
-	abstract public function getAll();
+	//abstract public function find($param);
 
 	protected function queryRowsToListOfObjects	(PDOStatement $result, $nameObject) {
 		$list = array();

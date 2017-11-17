@@ -7,19 +7,25 @@
  */
 
 class Usuario {
+	private $id_usuario;
 	private $nome_completo;
 	private $email;
 	private $senha;
-	private $endereco;
+	private $cidade;
+	private $estado;
 	private $foto_url;
-	//Preferências de filtro (RNF008)
 
-	public function __construct($nome_completo, $email, $senha, $endereco, $foto_url) {
-		$this->nome_completo = $nome_completo;
+	public function __construct($email, $senha) {
 		$this->email = $email;
 		$this->senha = $senha;
-		$this->endereco = $endereco;
-		$this->foto_url = $foto_url;
+	}
+
+	public function getIdUsuario() {
+		return $this->id_usuario;
+	}
+
+	public function setIdUsuario($id_usuario) {
+		$this->id_usuario = $id_usuario;
 	}
 
 	public function getNomeCompleto() {
@@ -46,12 +52,20 @@ class Usuario {
 		$this->senha = $senha;
 	}
 
-	public function getEndereco() {
-		return $this->endereco;
+	public function getCidade() {
+		return $this->cidade;
 	}
 
-	public function setEndereco($endereco) {
-		$this->endereco = $endereco;
+	public function setCidade($cidade) {
+		$this->cidade = $cidade;
+	}
+
+	public function getEstado() {
+		return $this->estado;
+	}
+
+	public function setEstado($estado) {
+		$this->estado = $estado;
 	}
 
 	public function getFotoUrl() {

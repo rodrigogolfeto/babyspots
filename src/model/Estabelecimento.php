@@ -7,22 +7,46 @@
  */
 
 class Estabelecimento {
+	private $id_estabelecimento;
+	private $id_usuario;
 	private $nome_estabelecimento;
-	private $endereco; //objeto endereço
-	private $descricao;
+	private $data_cadastro;
+	private $cep;
+	private $rua;
+	private $numero;
+	private $complemento;
+	private $bairro;
+	private $cidade;
+	private $estado;
 	private $avaliacao_geral;
-	private $servicos = array(); //objetos de servicos
-	private $fotos = array(); //strings de URLs
-	private $usuario; //objeto do usuário que cadastrou o estabalecimento
 
-	public function __construct($nome_estabelecimento, $endereco, $descricao, $avaliacao_geral, array $servicos, array $fotos, $usuario) {
+	public function __construct($id_estabelecimento, $id_usuario, $nome_estabelecimento, $cep, $rua, $numero, $complemento, $bairro, $cidade, $estado) {
+		$this->id_estabelecimento = $id_estabelecimento;
+		$this->id_usuario = $id_usuario;
 		$this->nome_estabelecimento = $nome_estabelecimento;
-		$this->endereco = $endereco;
-		$this->descricao = $descricao;
-		$this->avaliacao_geral = $avaliacao_geral;
-		$this->servicos = $servicos;
-		$this->fotos = $fotos;
-		$this->usuario = $usuario;
+		$this->cep = $cep;
+		$this->rua = $rua;
+		$this->numero = $numero;
+		$this->complemento = $complemento;
+		$this->bairro = $bairro;
+		$this->cidade = $cidade;
+		$this->estado = $estado;
+	}
+
+	public function getIdEstabelecimento() {
+		return $this->id_estabelecimento;
+	}
+
+	public function setIdEstabelecimento($id_estabelecimento) {
+		$this->id_estabelecimento = $id_estabelecimento;
+	}
+
+	public function getIdUsuario() {
+		return $this->id_usuario;
+	}
+
+	public function setIdUsuario($id_usuario) {
+		$this->id_usuario = $id_usuario;
 	}
 
 	public function getNomeEstabelecimento() {
@@ -33,20 +57,68 @@ class Estabelecimento {
 		$this->nome_estabelecimento = $nome_estabelecimento;
 	}
 
-	public function getEndereco() {
-		return $this->endereco;
+	public function getDataCadastro() {
+		return $this->data_cadastro;
 	}
 
-	public function setEndereco($endereco) {
-		$this->endereco = $endereco;
+	public function setDataCadastro($data_cadastro) {
+		$this->data_cadastro = $data_cadastro;
 	}
 
-	public function getDescricao() {
-		return $this->descricao;
+	public function getCep() {
+		return $this->cep;
 	}
 
-	public function setDescricao($descricao) {
-		$this->descricao = $descricao;
+	public function setCep($cep) {
+		$this->cep = $cep;
+	}
+
+	public function getRua() {
+		return $this->rua;
+	}
+
+	public function setRua($rua) {
+		$this->rua = $rua;
+	}
+
+	public function getNumero() {
+		return $this->numero;
+	}
+
+	public function setNumero($numero) {
+		$this->numero = $numero;
+	}
+
+	public function getComplemento() {
+		return $this->complemento;
+	}
+
+	public function setComplemento($complemento) {
+		$this->complemento = $complemento;
+	}
+
+	public function getBairro() {
+		return $this->bairro;
+	}
+
+	public function setBairro($bairro) {
+		$this->bairro = $bairro;
+	}
+
+	public function getCidade() {
+		return $this->cidade;
+	}
+
+	public function setCidade($cidade) {
+		$this->cidade = $cidade;
+	}
+
+	public function getEstado() {
+		return $this->estado;
+	}
+
+	public function setEstado($estado) {
+		$this->estado = $estado;
 	}
 
 	public function getAvaliacaoGeral() {
@@ -55,29 +127,5 @@ class Estabelecimento {
 
 	public function setAvaliacaoGeral($avaliacao_geral) {
 		$this->avaliacao_geral = $avaliacao_geral;
-	}
-
-	public function getServicos() {
-		return $this->servicos;
-	}
-
-	public function setServicos($servicos) {
-		$this->servicos = $servicos;
-	}
-
-	public function getFotos() {
-		return $this->fotos;
-	}
-
-	public function setFotos($fotos) {
-		$this->fotos = $fotos;
-	}
-
-	public function getUsuario() {
-		return $this->usuario;
-	}
-
-	public function setUsuario($usuario) {
-		$this->usuario = $usuario;
 	}
 }

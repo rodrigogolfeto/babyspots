@@ -7,8 +7,8 @@
         <link type="text/css" rel="stylesheet" href="css/home.css">
         <link rel="application/x-font-ttf" href="fonts/ubuntu/Ubuntu-B.ttf">
         <link rel="application/x-font-ttf" href="fonts/ubuntu/Ubuntu-R.ttf">
-        <title>BabySpot's</title>
-        <!-- Apenas o css para a sessão de top cidades-->
+        <title>BabySpot's | O restaurante ideal para a sua família</title>
+        <!-- APENAS O CSS PARA A SESSÃO DE TOP CIDADES-->
         <style type="text/css">
 
             .top-cidades .cidade img{
@@ -42,24 +42,32 @@
 
         <?php include "header.php"?>
 
-        <main class="container"> <!-- inicio conteudo -->
-            <section class="buscar"> <!-- inicio busca -->
+        <!-- INÍCIO CONTEÚDO -->
+        <main class="container">
+            <!-- INÍCIO BUSCA -->
+            <section class="buscar">
                 <div class="container">
                     <h2>Descubra</h2>
                     <p>O restaurante ideal para a sua família</p>
-                    <div class="busca"> <!-- inicio formulario de busca -->
+                    <!-- INÍCIO FORMULÁRIO DE BUSCA -->
+                    <div class="busca">
                         <form class="campo-busca">
                             <input type="search" name="busca botao" id="busca" placeholder="Buscar Estabelecimento">
                             <input type="submit" name="buscar botao" id="buscar" value="Buscar">
                         </form>
-                    </div> <!-- final formulario de busca -->
+                    </div>
+                    <!-- FINAL FORMULÁRIO DE BUSCA -->
                     <p>ou selecione o serviço que deseja procurar</p>
-                    <div class="carrossel"> <!-- inicio carrossel de serviços -->
+                    <!-- INÍCIO CARROSEL DE SERVIÇOS -->
+                    <div class="carrossel">
                         <!--TODO-->
-                    </div> <!-- final carrossel de serviços -->
+                    </div>
+                    <!-- FINAL CARROSEL DE SERVIÇOS -->
                 </div>
-            </section> <!-- final busca -->
-            <section class="top-estabelecimentos"> <!-- inicio top estabelecimentos -->
+            </section>
+            <!-- FINAL BUSCA -->
+            <!-- INÍCIO TOP ESTABELECIMENTOS -->
+            <section class="top-estabelecimentos">
                 <h2 class="card label">Top Estabelecimentos</h2>
                 <div class="container">
                     <div class="item card">
@@ -73,7 +81,7 @@
                             </div>
                             <div class="avaliacao">
                                 <span>70 avaliações</span>
-                                <p class="avali qt-strelas-5"></p> <!--Colocar a imagem da estrela equivalente-->
+                                <p class="avali qt-strelas-5"></p> <!-- TODO COLOCAR A IMAGEM DA ESTRELA EQUIVALENTE -->
                             </div>
                             <a class="botao detalhes" href="#">detalhes</a>
                         </div>
@@ -89,7 +97,7 @@
                             </div>
                             <div class="avaliacao">
                                 <span>70 avaliações</span>
-                                <p class="avali qt-strelas-5"></p> <!--Colocar a imagem da estrela equivalente-->
+                                <p class="avali qt-strelas-5"></p> <!-- TODO COLOCAR A IMAGEM DA ESTRELA EQUIVALENTE -->
                             </div>
                             <a class="botao detalhes" href="#">detalhes</a>
                         </div>
@@ -105,7 +113,7 @@
                             </div>
                             <div class="avaliacao">
                                 <span>70 avaliações</span>
-                                <p class="avali qt-strelas-5"></p> <!--Colocar a imagem da estrela equivalente-->
+                                <p class="avali qt-strelas-5"></p> <!-- TODO COLOCAR A IMAGEM DA ESTRELA EQUIVALENTE -->
                             </div>
                             <a class="botao detalhes" href="#">detalhes</a>
                         </div>
@@ -121,14 +129,16 @@
                             </div>
                             <div class="avaliacao">
                                 <span>70 avaliações</span>
-                                <p class="avali qt-strelas-5"></p> <!--Colocar a imagem da estrela equivalente-->
+                                <p class="avali qt-strelas-5"></p> <!-- TODO COLOCAR A IMAGEM DA ESTRELA EQUIVALENTE -->
                             </div>
                             <a class="botao detalhes" href="#">detalhes</a>
                         </div>
                     </div>
                 </div>
-            </section> <!-- final top estabelecimentos -->
-            <section class="top-cidades"> <!--inicio top cidade -->
+            </section>
+            <!-- FINAL TOP ESTABELECIMENTOS -->
+            <!-- INÍCIO TOP CIDADES -->
+            <section class="top-cidades">
                 <h2 class="card label">Top Cidades</h2>
                 <div class="container">
                     <div class="cidade card">
@@ -152,8 +162,10 @@
                         <p>Campo Grande</p>
                     </div>
                 </div>
-            </section> <!-- final top cidades -->
-        </main> <!-- final conteudo -->
+            </section>
+            <!-- FINAL TOP CIDADES -->
+        </main>
+        <!-- FINAL CONTEÚDO -->
 
         <?php include "footer.php"?>
 
