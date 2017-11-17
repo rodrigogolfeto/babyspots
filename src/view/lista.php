@@ -56,15 +56,13 @@
             </div>
         </div> <!-- final busca -->
 
-        <nav class="card ">
-            <div class="navegacao">
-                <ul>
-                    <li><a href="home.php">Home</a></li>
-                    <li><a href="home.php">Estabelecimentos</a></li>
-                    <li><a href="home.php">Busca</a></li>
-                </ul>
-            </div>
-        </nav>
+        <div class="navegacao">
+            <ul>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="home.php">Estabelecimentos</a></li>
+                <li><a href="home.php">Busca</a></li>
+            </ul>
+        </div>
 
         <main class="container"> <!-- inicio conteudo -->
 

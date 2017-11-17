@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <link type="text/css" rel="stylesheet" href="css/reset.css">
-        <link type="text/css"rel="stylesheet" href="css/base.css">
+        <link type="text/css" rel="stylesheet" href="css/base.css">
         <link type="text/css" rel="stylesheet" href="css/home.css">
         <link rel="application/x-font-ttf" href="fonts/ubuntu/Ubuntu-B.ttf">
         <link rel="application/x-font-ttf" href="fonts/ubuntu/Ubuntu-R.ttf">
