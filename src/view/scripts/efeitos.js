@@ -8,12 +8,69 @@ $(document).ready(function() {
         loop:true,
         keyPress:true,
         item:5,
-        pager:false
+        pager:false,
+        controls:false
     });
     $('#anterior-servicos').on('click',function(){
-    	sliderServicosBusca.goToPrevSlide();
+        sliderServicosBusca.goToPrevSlide();
     });
-	$('#proximo-servicos').on('click',function(){
-		sliderServicosBusca.goToNextSlide();
-	});
+    $('#proximo-servicos').on('click',function(){
+        sliderServicosBusca.goToNextSlide();
+    });
+
+    var sliderServicosItem1 = $("#servicos-itens-1").lightSlider({
+        loop:true,
+        keyPress:false,
+        item:4,
+        pager:false,
+        controls:false
+    });
+    $('#anterior-servicos-item-1').on('click',function(){
+        sliderServicosItem1.goToPrevSlide();
+    });
+    $('#proximo-servicos-item-1').on('click',function(){
+        sliderServicosItem1.goToNextSlide();
+    });
+
+    var sliderServicosItem2 = $("#servicos-itens-2").lightSlider({
+        loop:true,
+        keyPress:false,
+        item:4,
+        pager:false,
+        controls:false
+    });
+    $('#anterior-servicos-item-2').on('click',function(){
+        sliderServicosItem2.goToPrevSlide();
+    });
+    $('#proximo-servicos-item-2').on('click',function(){
+        sliderServicosItem2.goToNextSlide();
+    });
+
+    var sliderServicosItem3 = $("#servicos-itens-3").lightSlider({
+        loop:true,
+        keyPress:false,
+        item:4,
+        pager:false,
+        controls:false
+    });
+    $('#anterior-servicos-item-3').on('click',function(){
+        sliderServicosItem3.goToPrevSlide();
+    });
+    $('#proximo-servicos-item-3').on('click',function(){
+        sliderServicosItem3.goToNextSlide();
+    });
+
+    var sliderServicosItem4 = $("#servicos-itens-4").lightSlider({
+        loop:true,
+        keyPress:false,
+        item:4,
+        pager:false,
+        controls:false
+    });
+    $('#anterior-servicos-item-4').on('click',function(){
+        sliderServicosItem4.goToPrevSlide();
+    });
+    $('#proximo-servicos-item-4').on('click',function(){
+        sliderServicosItem4.goToNextSlide();
+    });
 });
