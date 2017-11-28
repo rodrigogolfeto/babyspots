@@ -3,47 +3,15 @@
 
     <head>
         <meta charset="UTF-8">
-        <link type="text/css" rel="stylesheet" href="css/reset.css">
-        <link type="text/css" rel="stylesheet" href="css/base.css">
+        <link type="text/css" rel="stylesheet" href="css/css.css">
         <link type="text/css" rel="stylesheet" href="css/home.css">
         <link type="text/css" rel="stylesheet" href="css/lista.css">
         <link rel="application/x-font-ttf" href="fonts/ubuntu/Ubuntu-B.ttf">
         <link rel="application/x-font-ttf" href="fonts/ubuntu/Ubuntu-R.ttf">
         <title>Listagem - BabySpot's</title>
-
-        <style>
-            #msg-erro {
-                display: flex;
-                align-content: center;
-                background: #fff url("images/icone-info.png") no-repeat 115px 75px;
-                width: 100%;
-                height: 240px;
-            }
-
-
-            #msg-erro div{
-                float: left;
-                margin: auto auto auto 280px;
-                line-height: 20px;
-            }
-
-            #msg-erro div span {
-                display: list-item;
-                list-style: none;
-                color: #aaaaaa;
-                font-size: 20px;
-            }
-
-            #msg-erro div span:last-child {
-                font-size: 16px;
-            }
-
-
-        </style>
-
     </head>
     <body>
-        <?php include "header.php"?>
+        <?php include "header.php"; ?>
 
         <div class="buscar"> <!-- inicio busca -->
             <div class="container">

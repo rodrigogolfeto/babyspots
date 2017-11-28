@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link type="text/css" rel="stylesheet" href="css/reset.css">
-        <link type="text/css" rel="stylesheet" href="css/base.css" >
+        <link type="text/css" rel="stylesheet" href="css/css.css" >
         <link type="text/css" rel="stylesheet" href="css/formulario_estabelecimento.css">
     </head>
     <body>
@@ -22,15 +21,14 @@
                 <h3>Cadastrar Estabelecimento</h3>
                 <fieldset id="dados">
                     <label>Nome do Estabelecimento<input type="text" name="nome_estabelecimento"></label>
-                    <label>Serviços
-                        <input type="text" name="servicos"></label>
+                    <label>Serviços<input type="text" name="servicos"></label>
                     <fieldset id="endereco">
                         <label>CEP<input type="text" name="endereco_cep"></label>
                         <label>Rua<input type="text" name="endereco_rua"></label>
                         <label>Número<input type="number" name="endereco_numero"></label>
                         <label>Bairro<input type="text" name="endereco_bairro"></label>
-                        <label>Cidade<input type="text" name="endereco_cidade"></label>
                         <label>Estado<input type="text" name="endereco_estado"></label>
+                        <label>Cidade<input type="text" name="endereco_cidade"></label>
                     </fieldset>
                 </fieldset>
                 <fieldset id="fotos">

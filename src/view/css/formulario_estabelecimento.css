@@ -14,8 +14,8 @@ main.container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    height: 960px;
-    margin-bottom: 420px;
+    height: auto;
+    margin-bottom: 0;
     margin-top: 30px;
     padding-top: 40px;
     padding-left: 30px;
@@ -27,6 +27,7 @@ main form {
     width: 100%;
     font-size: 14px;
     color: #7a7a7a;
+    margin-bottom:30px;
 }
 
 main form h3 {
@@ -46,11 +47,12 @@ input {
     border-radius: 5px;
     border: 1px #d9d9d9 solid;
     height: 40px;
-    font-size: 16px;
-    padding: 5px;
+    font-size: 14px;
+    padding: 5px 10px;
     width: 100%;
     margin-top: 10px;
     margin-bottom: 15px;
+    color:#3e3e3e;
 }
 
 #dados {

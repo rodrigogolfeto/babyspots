@@ -2,45 +2,18 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <link type="text/css" rel="stylesheet" href="css/reset.css">
-        <link type="text/css" rel="stylesheet" href="css/base.css">
+        <link type="text/css" rel="stylesheet" href="css/css.css">
         <link type="text/css" rel="stylesheet" href="css/home.css">
         <link rel="application/x-font-ttf" href="fonts/ubuntu/Ubuntu-B.ttf">
         <link rel="application/x-font-ttf" href="fonts/ubuntu/Ubuntu-R.ttf">
-        <title>BabySpot's | O restaurante ideal para a sua família</title>
-        <!-- APENAS O CSS PARA A SESSÃO DE TOP CIDADES-->
-        <style type="text/css">
-
-            .top-cidades .cidade img{
-                border-radius: 5px;
-            }
-
-            .top-cidades .cidade{
-                display: inline-block;
-                background-color: white;
-                padding: 10px;
-            }
-
-            .top-cidades .cidade p:nth-child(2){
-                font-size: 12px;
-                color: #5f5f5f;
-                margin-top: 18px;
-                box-sizing: border-box;
-            }
-
-            .top-cidades .cidade p:nth-child(3){
-                font-size: 14px;
-                color: #1e82f2;
-                margin-bottom: 17px;
-                box-sizing: border-box;
-            }
-
-        </style>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/efeitos.js"></script> 
+        <title>BabySpot's | O restaurante ideal para a sua família</title>       
     </head>
 
     <body>
 
-        <?php include "header.php"?>
+        <?php include "header.php"; ?>
 
         <!-- INÍCIO CONTEÚDO -->
         <main class="container">
@@ -53,19 +26,62 @@
                     <div class="busca">
                         <form class="campo-busca">
                             <input type="search" name="busca botao" id="busca" placeholder="Buscar Estabelecimento">
-                            <input type="submit" name="buscar botao" id="buscar" value="Buscar">
+                            <input type="submit" name="buscar botao" id="buscar" value="buscar">
                         </form>
                     </div>
                     <!-- FINAL FORMULÁRIO DE BUSCA -->
                     <p>ou selecione o serviço que deseja procurar</p>
                     <!-- INÍCIO CARROSEL DE SERVIÇOS -->
                     <div class="carrossel">
-                        <!--TODO-->
+                        <div class="btn anterior"><a href="javascript:;" id="anterior-servicos">&nbsp;</a></div>
+                        <div class="item">
+                            <ul id="servicos-busca" class="servicos-busca">
+                                <li>
+                                    <a href="javascript:;">
+                                        <div class="ico bercario"></div>
+                                        <h3>berçário</h3>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <div class="ico trocador"></div>
+                                        <h3>trocador</h3>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <div class="ico playground"></div>
+                                        <h3>playground</h3>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <div class="ico estacionamento"></div>
+                                        <h3>estacionamento próprio</h3>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <div class="ico papinha"></div>
+                                        <h3>papinhas<br>04 a 12 meses</h3>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <div class="ico bercario"></div>
+                                        <h3>berçário</h3>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="btn proximo"><a href="javascript:;" id="proximo-servicos">&nbsp;</a></div>
                     </div>
                     <!-- FINAL CARROSEL DE SERVIÇOS -->
                 </div>
             </section>
             <!-- FINAL BUSCA -->
+            
+
             <!-- INÍCIO TOP ESTABELECIMENTOS -->
             <section class="top-estabelecimentos">
                 <h2 class="card label">Top Estabelecimentos</h2>
@@ -136,38 +152,11 @@
                     </div>
                 </div>
             </section>
-            <!-- FINAL TOP ESTABELECIMENTOS -->
-            <!-- INÍCIO TOP CIDADES -->
-            <section class="top-cidades">
-                <h2 class="card label">Top Cidades</h2>
-                <div class="container">
-                    <div class="cidade card">
-                        <img src="images/foto-cidade.png" alt="nome da cidade">
-                        <p>Mato Grosso do Sul</p>
-                        <p>Campo Grande</p>
-                    </div>
-                    <div class="card cidade">
-                        <img src="images/foto-cidade.png" alt="nome da cidade">
-                        <p>Mato Grosso do Sul</p>
-                        <p>Campo Grande</p>
-                    </div>
-                    <div class="card cidade">
-                        <img src="images/foto-cidade.png" alt="nome da cidade">
-                        <p>Mato Grosso do Sul</p>
-                        <p>Campo Grande</p>
-                    </div>
-                    <div class="card cidade">
-                        <img src="images/foto-cidade.png" alt="nome da cidade">
-                        <p>Mato Grosso do Sul</p>
-                        <p>Campo Grande</p>
-                    </div>
-                </div>
-            </section>
-            <!-- FINAL TOP CIDADES -->
+            <!-- FINAL TOP ESTABELECIMENTOS -->            
         </main>
         <!-- FINAL CONTEÚDO -->
 
-        <?php include "footer.php"?>
+        <?php include "footer.php"; ?>
 
     </body>
 </html>
