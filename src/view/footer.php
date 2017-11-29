@@ -26,7 +26,7 @@
             </ul>
         </div>
         <div class="newsletter">
-            <h2>newsletter</h2>
+            <h2>Newsletter</h2>
             <form>
                 <input type="email" name="email" placeholder="Informe o seu E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
                 <input class="botao" type="submit" name="pedidoDeNewletter" value="enviar">
