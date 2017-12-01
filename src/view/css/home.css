@@ -113,12 +113,6 @@ main.container .top-estabelecimentos .container { flex-direction:row;flex-wrap:w
 
 .item .avaliacao { height:45px;width:145px;float:left; }
 .item .avaliacao span { font-size:12px;color:#777777;width:66px; }
-.avali { background:url("../images/star-sprite.png") no-repeat 0 0;width:66px;height:10px;margin-top:8px; }
-.avali.qt-strelas-1 { background-position:0 -80px; }
-.avali.qt-strelas-2 { background-position:0 -60px; }
-.avali.qt-strelas-3 { background-position:0 -40px; }
-.avali.qt-strelas-4 { background-position:0 -20px; }
-.avali.qt-strelas-5 { background-position:0 0; }
 
 .item .detalhes{ width:110px;height:25px;float:right;font-size:14px;color:white;background-color:#59a3f6;margin-bottom:18px;margin-right:18px;padding:10px 0px 0px 0px; }
 .item .detalhes:hover{ background-color:#2370f6; }
