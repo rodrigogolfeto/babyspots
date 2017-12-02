@@ -7,9 +7,9 @@
  */
 
 class Estabelecimento {
-	private $id_estabelecimento;
-	private $id_usuario;
-	private $nome_estabelecimento;
+	private $id_est;
+	private $id_usu;
+	private $nome_est;
 	private $data_cadastro;
 	private $cep;
 	private $rua;
@@ -20,10 +20,10 @@ class Estabelecimento {
 	private $estado;
 	private $avaliacao_geral;
 
-	public function __construct($id_estabelecimento, $id_usuario, $nome_estabelecimento, $cep, $rua, $numero, $complemento, $bairro, $cidade, $estado) {
-		$this->id_estabelecimento = $id_estabelecimento;
-		$this->id_usuario = $id_usuario;
-		$this->nome_estabelecimento = $nome_estabelecimento;
+	public function __construct($id_est, $id_usu, $nome_est, $cep, $rua, $numero, $complemento, $bairro, $cidade, $estado) {
+		$this->id_est = $id_est;
+		$this->id_usu = $id_usu;
+		$this->nome_est = $nome_est;
 		$this->cep = $cep;
 		$this->rua = $rua;
 		$this->numero = $numero;
@@ -33,28 +33,28 @@ class Estabelecimento {
 		$this->estado = $estado;
 	}
 
-	public function getIdEstabelecimento() {
-		return $this->id_estabelecimento;
+	public function getIdEst() {
+		return $this->id_est;
 	}
 
-	public function setIdEstabelecimento($id_estabelecimento) {
-		$this->id_estabelecimento = $id_estabelecimento;
+	public function setIdEst($id_est) {
+		$this->id_est= $id_est;
 	}
 
-	public function getIdUsuario() {
-		return $this->id_usuario;
+	public function getIdUsu() {
+		return $this->id_usu;
 	}
 
-	public function setIdUsuario($id_usuario) {
-		$this->id_usuario = $id_usuario;
+	public function setIdUsu($id_usu) {
+		$this->id_usu = $id_usu;
 	}
 
 	public function getNomeEstabelecimento() {
 		return $this->nome_estabelecimento;
 	}
 
-	public function setNomeEstabelecimento($nome_estabelecimento) {
-		$this->nome_estabelecimento = $nome_estabelecimento;
+	public function setNomeEst($nome_est) {
+		$this->nome_est = $nome_est;
 	}
 
 	public function getDataCadastro() {

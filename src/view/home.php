@@ -24,9 +24,9 @@
                     <p>O restaurante ideal para a sua família</p>
                     <!-- INÍCIO FORMULÁRIO DE BUSCA -->
                     <div class="busca">
-                        <form class="campo-busca">
-                            <input type="search" name="busca botao" id="busca" placeholder="Buscar Estabelecimento">
-                            <input type="submit" name="buscar botao" id="buscar" value="buscar">
+                        <form class="campo-busca" method="get" action="../controller/EstabelecimentoController.php?func=lista">
+                            <input type="search" name="busca" id="busca" placeholder="Buscar Estabelecimento">
+                            <input type="submit" name="btn-buscar" id="btn-buscar" value="buscar">
                         </form>
                     </div>
                     <!-- FINAL FORMULÁRIO DE BUSCA -->
@@ -86,12 +86,13 @@
             <section class="top-estabelecimentos">
                 <h2 class="card label">Top Estabelecimentos</h2>
                 <div class="container">
+                    <? foreach ($result as $item){?>
                     <div class="item card">
                         <img class="foto" src="images/foto-estabelecimento-1.png" alt="foto de um estabelecimento qualquer">
                         <div class="infos">
-                            <p>Campo Grande-MS</p>
-                            <p>Chalé lanches</p>
-                            <p>Av. dos Cafezais, 1142 - Jardim Paulo Coelho Machado</p>
+                            <p><? echo $item->getCidade() . " - " . $item->getEstado()?></p>
+                            <p><? echo $item->getNome_est()?></p>
+                            <p><? echo $item->getRua() . ", " . $item->getNumero() . " - " . $item->getBairro()?></p>
                             <div class="carrossel-servico">
                                 <!-- TODO -->
                             </div>
@@ -102,6 +103,7 @@
                             <a class="botao detalhes" href="#">detalhes</a>
                         </div>
                     </div>
+                    <? } ?>
                     <div class="item card">
                         <img class="foto" src="images/foto-estabelecimento-1.png" alt="foto de um estabelecimento qualquer">
                         <div class="infos">

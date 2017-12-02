@@ -1,6 +1,6 @@
 <?php
-require_once ("model/Estabelecimento.php");
-require_once ("model/EstabelecimentoFactory");
+require_once ("../model/Estabelecimento.php");
+require_once ("../model/EstabelecimentoFactory.php");
 /**
  *
  * Created by PhpStorm.
@@ -42,6 +42,8 @@ class EstabelecimentoController {
 	}
 
 	public function lista(){
+		$result = $this->factory->listar();
+
 		require 'view/lista';
 	}
 

@@ -1,6 +1,6 @@
 <header class="cabecalho-principal"> <!-- inicio do cabeçalho de navegação-->
     <nav class="container"> <!-- inicio toolbar-->
-        <div class="local"> <!-- inicio locacalizacão-->
+        <!--<div class="local">  inicio locacalizacão
             <select class="localizacoes">
                 <option value="">Campo Grande, MS</option>
                 <option value="">São Paulo, SP</option>
