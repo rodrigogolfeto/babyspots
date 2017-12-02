@@ -31,6 +31,27 @@ main.container section:nth-child(1){
     padding-bottom: 20px;
 }
 
+.btn-contribuir {
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    color: #ed8a19;
+    margin-top: 15px;
+    margin-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 13px;
+    padding-left: 43px;
+    font-size: 12px;
+    border-radius: 5px;
+    background: #363636 url("../images/star.png") no-repeat 10px 14px;
+    width: 125px;
+    transition: color .5s;
+}
+
+.btn-contribuir:hover {
+    color: white;
+    cursor: pointer;
+}
 
 .infos p:nth-child(1) { padding-top:20px;padding-bottom:15px;font-size:14px;color:#777777; }
 .infos p:nth-child(2) { font-size:18px;color:#2c86e5; }
@@ -46,7 +67,6 @@ main.container section:nth-child(1){
     border-left: solid #e3e3e3 1px;
     height: 70px;
 }
-
 
 .infos .avaliacao span {
     font-size:12px;
@@ -77,12 +97,13 @@ main.container section:nth-child(1){
     box-sizing: border-box;
     width: 600px;
     padding: 10px 30px;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .comentario {
     margin-top: 15px;
     box-shadow: 0 1px #dedede;
-
 }
 
 .comentarios .label {
@@ -117,16 +138,17 @@ main.container section:nth-child(1){
     color: #7b7b7b;
     width: 150px;
     text-align: right;
+    font-size: 12px;
+
 }
 
 .comentario .nota span{
     display: inline-block;
 }
 .comentario .ver-detalhes {
-font-style: italic;
-color: #59a3f6;
-cursor: pointer;
-font-size: 15px;
+    font-style: italic;
+    color: #59a3f6;
+    cursor: pointer;
 }
 
 .comentario .ver-detalhes:hover {
@@ -139,37 +161,251 @@ text-decoration: underline;
     clear: both;
     font-size: 12px;
     color: #7b7b7b;
+    margin-bottom: 16px;
 }
 
-.comentario .detalhes p {
+.detalhes p {
     text-transform: uppercase;
     color: #59a3f6;
     font-weight: bold;
     font-size: 14px;
-    margin-top: 16px;
     margin-bottom: 13px;
 }
 
-.comentario .detalhes ul {
+.detalhes ul {
     margin-bottom: 15px;
 }
 
-.comentario .detalhes ul li {
+.detalhes ul li {
     font-size: 12px;
     color: #7b7b7b;
+    margin-top: 5px;
 }
 
-.comentario .detalhes ul li span {
+.detalhes ul li span {
     display: inline-block;
     width: 67px;
     height: 10px;
     margin-right: 10px;
-    margin-top: 10px;
-}
-
-.comentario .detalhes ul li:first-child span {
     margin-top: 0;
 }
-#servicos {
-    width: 400px;
+
+.detalhes ul li:first-child span {
+    margin-top: 0;
 }
+
+
+.ver-mais-commentarios {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 12px;
+    font-style: italic;
+    color: #59a3f6;
+}
+
+.ver-mais-commentarios:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #1e82f2;
+}
+
+.btn-avaliar {
+    margin: 30px auto 110px;
+    padding: 22px;
+    width: 210px;
+    display: block;
+    background-color: #59a3f6;
+    font-size: 16px;
+    color: white;
+}
+
+.btn-avaliar:hover {
+    background-color: #1e82f2;
+}
+
+.servicos {
+    width: 380px;
+    height: 190px;
+}
+
+
+/*TODO Carrossel*/
+
+.popoup-critica {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    overflow: auto;
+}
+
+.popoup-critica > .card {
+    position: relative;
+    width: 700px;
+    margin: 40px auto auto;
+}
+
+.popoup-critica .card > span:first-child {
+    height: 5px;
+    width: 100px;
+    margin: auto;
+    background-color: #f87d16;
+    display: block;
+}
+
+.popoup-critica .conteudo {
+    float: left;
+    width: 100%;
+    background-color: white;
+}
+
+/*nome do estabelecimento e a msg de parabens*/
+.popoup-critica .conteudo h2, .msg-status-avaliacao .card.conteudo div p{
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.popoup-critica .conteudo .comment p:first-child {
+    font-size: 14px;
+    color: #7f7e7e;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.popoup-critica .conteudo .comment {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.popoup-critica .comment textarea {
+    box-sizing: border-box;
+    height: 100px;
+    width: 100%;
+    border-radius: 5px;
+    border: #d9d9d9 2px solid;
+}
+
+.popoup-critica .comment p:last-child {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #949494;
+    font-style: italic;
+}
+
+.popoup-critica .comment p:last-child > span:last-child {
+    float: left;
+}
+
+.popoup-critica .comment p:last-child > span:last-child {
+    float: right;
+}
+
+.popoup-critica  .container{
+    margin-top: 20px;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-content: flex-start;
+    width: calc(100% - 40px);
+    align-items: flex-end;
+    margin-right: 20px;
+    margin-left: 20px;
+    box-shadow: 0 1px #dedede;
+}
+
+.popoup-critica .detalhes span:hover {
+    cursor: pointer;
+}
+
+.popoup-critica .botao{
+    font-size:16px;
+    color:white;
+    background-color:#59a3f6;
+    padding: 20px 30px;
+    margin-bottom: 15px;
+    border: none;
+}
+
+.popoup-critica .botao:hover{ background-color:#2370f6; }
+
+
+.popoup-critica .btn-close {
+    float: right;
+    background: url("../images/close-btn-sprite.png") no-repeat 0 0;
+    width:14px;
+    height:14px;
+    margin-top: 17px;
+    margin-right: 16px;
+}
+
+.popoup-critica .btn-close:hover{
+    background-position: 0 -14px;
+    cursor: pointer;
+}
+
+.popoup-critica .conteudo > p {
+    font-size: 12px;
+    color: #bababa;
+    margin: 20px 20px 30px;
+}
+
+.popoup-critica .conteudo > p a {
+    color: black;
+    text-decoration: none;
+}
+
+.msg-status-avaliacao {
+    display: none;
+    width: 500px;
+    height: 200px;
+    margin: 10% auto auto;
+}
+.msg-status-avaliacao .card.conteudo div {
+    margin: auto;
+    border-top: #2ecc09 5px solid;
+    width: 105px;
+}
+
+.msg-status-avaliacao .card.conteudo div p {
+    color: #2ecc09;
+    margin-top: 0;
+    padding-top: 20px;
+    width: auto;
+    text-align: left;
+}
+
+.msg-status-avaliacao .card.conteudo > p {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 66px;
+    margin-bottom: 87px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
