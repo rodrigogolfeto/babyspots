@@ -4,16 +4,22 @@
 
 
 $(document).ready(function() {
-	var sliderServicosBusca = $("#servicos-busca").lightSlider({
-        loop:true,
-        keyPress:true,
-        item:5,
-        pager:false
+
+    var sliderServicosBusca = $("#servicos-busca").lightSlider({ loop:true,keyPress:true,item:5,pager:false,controls:false });
+    $('#anterior-servicos').on('click',function(){ sliderServicosBusca.goToPrevSlide(); });
+    $('#proximo-servicos').on('click',function(){ sliderServicosBusca.goToNextSlide(); });
+
+    // -- CARROCEL ITENS ------------------------------------------------------------------------------------------------------------------
+    $(".card .carrossel-servico").each(function(index,value){ $(this).each(function(){ $(this).attr('id','servico-'+(index+1)); }); });
+    sliderServicosItem = [];
+    $(".carrossel-servico div ul").each(function(index,value){
+        $(this).attr('id','servicos-itens-'+(index+1));
+        $("#servico-"+(index+1)+" .anterior a").each(function(){ $(this).attr('id','anterior-servicos-item-'+(index+1)); $(this).attr('rel',(index+1)); });
+        $("#servico-"+(index+1)+" .proximo a").each(function(){ $(this).attr('id','proximo-servicos-item-'+(index+1)); });
+        sliderServicosItem[(index+1)] = $("#servicos-itens-"+(index+1)).lightSlider({ loop:true,keyPress:false,item:4,pager:false,controls:false });
+        $('#anterior-servicos-item-'+(index+1)).on('click',function(){ sliderServicosItem[index+1].goToPrevSlide(); });
+        $('#proximo-servicos-item-'+(index+1)).on('click',function(){ sliderServicosItem[index+1].goToNextSlide(); });
     });
-    $('#anterior-servicos').on('click',function(){
-    	sliderServicosBusca.goToPrevSlide();
-    });
-	$('#proximo-servicos').on('click',function(){
-		sliderServicosBusca.goToNextSlide();
-	});
+    // -- CARROCEL ITENS ------------------------------------------------------------------------------------------------------------------
+    
 });
