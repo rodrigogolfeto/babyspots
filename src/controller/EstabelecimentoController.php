@@ -83,4 +83,8 @@ class EstabelecimentoController {
 			}
 		}
 	}
+
+	public function avaliar($estabelecimento, $usuario, $descricao, $avaliacao_servico){
+
+	}
 }

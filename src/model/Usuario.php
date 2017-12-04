@@ -7,7 +7,7 @@
  */
 
 class Usuario {
-	private $id_usuario;
+	private $id_usu;
 	private $nome_completo;
 	private $email;
 	private $senha;

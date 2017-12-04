@@ -59,4 +59,12 @@ class UsuarioController {
 			}
 		}
 	}
+
+	public function recuperar_senha($email){
+
+	}
+
+	public function efetivar_login($login, $senha){
+
+	}
 }
