@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="baby_spots.db">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="main">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <collation id="3" parent="1" name="BINARY"/>
+    <collation id="4" parent="1" name="NOCASE"/>
+    <collation id="5" parent="1" name="RTRIM"/>
+    <table id="6" parent="2" name="avaliacao"/>
+    <table id="7" parent="2" name="avaliacao_servico"/>
+    <table id="8" parent="2" name="estabelecimento"/>
+    <table id="9" parent="2" name="estabelecimento_foto"/>
+    <table id="10" parent="2" name="estabelecimento_servico"/>
+    <table id="11" parent="2" name="servico"/>
+    <table id="12" parent="2" name="sqlite_master">
+      <System>1</System>
+    </table>
+    <table id="13" parent="2" name="usuario"/>
+    <column id="14" parent="6" name="id_ava">
+      <DataType>serial|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="15" parent="6" name="id_est">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="16" parent="6" name="id_usu">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="6" name="descricao">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <index id="18" parent="6" name="sqlite_autoindex_avaliacao_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_ava</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="19" parent="6" name="pk_id_ava">
+      <ColNames>id_ava</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_avaliacao_1</UnderlyingIndexName>
+    </key>
+    <foreign-key id="20" parent="6" name="id_est">
+      <ColNames>id_est</ColNames>
+      <RefTableName>estabelecimento</RefTableName>
+      <RefColNames>id_est</RefColNames>
+      <OnDelete>set-null</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="21" parent="6" name="id_usu">
+      <ColNames>id_usu</ColNames>
+      <RefTableName>usuario</RefTableName>
+      <RefColNames>id_usu</RefColNames>
+      <OnDelete>set-null</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="22" parent="7" name="id_ava">
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="7" name="id_ser">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="7" name="pontuacao">
+      <Position>2</Position>
+      <DataType>numeric|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <foreign-key id="25" parent="7" name="fk_id_ava">
+      <ColNames>id_ava</ColNames>
+      <RefTableName>avaliacao</RefTableName>
+      <RefColNames>id_ava</RefColNames>
+      <OnDelete>set-null</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="26" parent="7" name="fk_id_ser">
+      <ColNames>id_ser</ColNames>
+      <RefTableName>aervico</RefTableName>
+      <RefColNames>id_ser</RefColNames>
+      <OnDelete>set-null</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="27" parent="8" name="id_est">
+      <DataType>serial|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="8" name="nome">
+      <Position>1</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="8" name="id_usuario">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="8" name="data_cadastro">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="8" name="cep">
+      <Position>4</Position>
+      <DataType>numeric|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="8" name="rua">
+      <Position>5</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="8" name="numero">
+      <Position>6</Position>
+      <DataType>numeric|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="8" name="complemento">
+      <Position>7</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="35" parent="8" name="bairro">
+      <Position>8</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="8" name="cidade">
+      <Position>9</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="8" name="estado">
+      <Position>10</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="38" parent="8" name="sqlite_autoindex_estabelecimento_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_est</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="39" parent="8" name="pk_id_est">
+      <ColNames>id_est</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_estabelecimento_1</UnderlyingIndexName>
+    </key>
+    <foreign-key id="40" parent="8" name="fk_id_usuario">
+      <ColNames>id_usuario</ColNames>
+      <RefTableName>usuario</RefTableName>
+      <RefColNames>id_usu</RefColNames>
+      <OnDelete>set-null</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="41" parent="9" name="id_esf">
+      <DataType>serial|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="9" name="id_est">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="9" name="url_imagem">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="9" name="data_cadastro">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="45" parent="9" name="sqlite_autoindex_estabelecimento_foto_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_esf</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="46" parent="9" name="pk_id_esf">
+      <ColNames>id_esf</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_estabelecimento_foto_1</UnderlyingIndexName>
+    </key>
+    <foreign-key id="47" parent="9" name="fk_id_est">
+      <ColNames>id_est</ColNames>
+      <RefTableName>estabelecimento</RefTableName>
+      <RefColNames>id_est</RefColNames>
+      <OnDelete>set-null</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="48" parent="10" name="id_est">
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="10" name="id_ser">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <foreign-key id="50" parent="10" name="fk_id_est">
+      <ColNames>id_est</ColNames>
+      <RefTableName>estabelecimento</RefTableName>
+      <RefColNames>id_est</RefColNames>
+      <OnDelete>set-null</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="51" parent="10" name="fk_id_ser">
+      <ColNames>id_est</ColNames>
+      <RefTableName>servico</RefTableName>
+      <RefColNames>id_ser</RefColNames>
+      <OnDelete>set-null</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="52" parent="11" name="id_ser">
+      <DataType>serial|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="11" name="nome">
+      <Position>1</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="54" parent="11" name="sqlite_autoindex_servico_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_ser</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="55" parent="11" name="pk_id_ser">
+      <ColNames>id_ser</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_servico_1</UnderlyingIndexName>
+    </key>
+    <column id="56" parent="12" name="type">
+      <DataType>text|0</DataType>
+    </column>
+    <column id="57" parent="12" name="name">
+      <Position>1</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="58" parent="12" name="tbl_name">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="59" parent="12" name="rootpage">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+    </column>
+    <column id="60" parent="12" name="sql">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="61" parent="13" name="id_usu">
+      <DataType>serial|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="13" name="nome_completo">
+      <Position>1</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="13" name="email">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="13" name="senha">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="13" name="url_imagem">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <index id="66" parent="13" name="sqlite_autoindex_usuario_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_usu</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="67" parent="13" name="pk_id_usu">
+      <ColNames>id_usu</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_usuario_1</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
