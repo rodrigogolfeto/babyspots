@@ -56,20 +56,14 @@
             <section class="top-estabelecimentos">
                 <h2 class="card label">Top Estabelecimentos</h2>
                 <div class="container">
-                    <? foreach ($result as $item){?>
+                        <?// foreach ($result as $item){?>
                     <div class="item card">
                         <img class="foto" src="images/foto-estabelecimento-1.png" alt="foto de um estabelecimento qualquer">
                         <div class="infos">
-<<<<<<< HEAD
-                            <p><? echo $item->getCidade() . " - " . $item->getEstado()?></p>
-                            <p><? echo $item->getNome_est()?></p>
-                            <p><? echo $item->getRua() . ", " . $item->getNumero() . " - " . $item->getBairro()?></p>
-=======
                             <p>Campo Grande-MS</p>
                             <p>Chalé lanches</p>
                             <p>Av. dos Cafezais, 1142 - Jardim Paulo Coelho Machado</p>
                             <?php $idItem = 1; ?>
->>>>>>> 9d9b0b1052913ccd8ff4a706768da9089763efcc
                             <div class="carrossel-servico">
                                 <div class="btn anterior"><a href="javascript:;">&nbsp;</a></div>
                                 <div class="item-carrocel">
@@ -91,7 +85,7 @@
                             <a class="botao detalhes" href="#">detalhes</a>
                         </div>
                     </div>
-                    <? } ?>
+                    <?// } ?>
                     <div class="item card">
                         <img class="foto" src="images/foto-estabelecimento-2.png" alt="foto de um estabelecimento qualquer">
                         <div class="infos">
