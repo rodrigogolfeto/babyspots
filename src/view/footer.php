@@ -1,7 +1,7 @@
 <footer>
     <div class="container">
         <div class="info">
-            <img src="images/logo-home.png">
+            <img src="view/images/logo-home.png">
             <p>
                 Onde você quer ir hoje?<br>Encontre o estabelecimento que forneça uma infraestrutura adequada para a recepção de sua familia.
             </p>

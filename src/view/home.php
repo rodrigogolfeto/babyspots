@@ -13,7 +13,7 @@
 
     <body>
 
-        <?php include "header.php"; ?>
+        <?php include "view/header.php"; ?>
 
         <!-- INÍCIO CONTEÚDO -->
         <main class="container">
@@ -24,7 +24,7 @@
                     <p>O restaurante ideal para a sua família</p>
                     <!-- INÍCIO FORMULÁRIO DE BUSCA -->
                     <div class="busca">
-                        <form class="campo-busca" method="get" action="controller/EstabelecimentoController.php?func=lista">
+                        <form class="campo-busca" method="post" action="?func=lista">
                             <input type="search" name="busca" id="busca" placeholder="Buscar Estabelecimento">
                             <input type="submit" name="btn-buscar" id="btn-buscar" value="buscar">
                         </form>
@@ -59,7 +59,7 @@
                     <div class="item card">
                         <img class="foto" src="view/images/foto-estabelecimento-1.png" alt="Foto de um Estabelecimento">
                         <div class="infos">
-                            <p><?php echo $item->getCidade()." / ".$item->getEstado(); ?></p>
+<!--                            <p>--><?php //echo $item->getCidade()." / ".$item->getEstado();?><!--</p>-->
                             <p><?php ?></p>
                             <p>Av. dos Cafezais, 1142 - Jardim Paulo Coelho Machado</p>
                             <div class="carrossel-servico">
@@ -85,7 +85,7 @@
                     </div>
                     <? } ?>
                     <div class="item card">
-                        <img class="foto" src="images/foto-estabelecimento-2.png" alt="foto de um estabelecimento qualquer">
+                        <img class="foto" src="view/images/foto-estabelecimento-2.png" alt="foto de um estabelecimento qualquer">
                         <div class="infos">
                             <p>Campo Grande-MS</p>
                             <p>Chalé lanches</p>
@@ -113,7 +113,7 @@
                         </div>
                     </div>
                     <div class="item card">
-                        <img class="foto" src="images/foto-estabelecimento-3.png" alt="foto de um estabelecimento qualquer">
+                        <img class="foto" src="view/images/foto-estabelecimento-3.png" alt="foto de um estabelecimento qualquer">
                         <div class="infos">
                             <p>Campo Grande-MS</p>
                             <p>Chalé lanches</p>
@@ -174,7 +174,7 @@
         </main>
         <!-- FINAL CONTEÚDO -->
 
-        <?php include "footer.php"; ?>
+        <?php include "view/footer.php"; ?>
 
     </body>
 </html>

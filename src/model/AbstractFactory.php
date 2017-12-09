@@ -11,7 +11,7 @@ abstract class AbstractFactory {
 
 	public function __construct() {
 		try {
-			$this->db = new PDO("sqlite:C:/xampp/htdocs/babyspots/src/database/baby_spots.db");
+			$this->db = new PDO("sqlite:database/baby_spots.db");
 			$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		} catch (PDOException $exception) {
 			echo $exception->getMessage();

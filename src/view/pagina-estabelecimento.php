@@ -3,13 +3,12 @@
     <head>
         <title><!--TODO puxar o nome do estabelecimento com php--></title>
         <meta charset="UTF-8">
-        <link type="text/css" rel="stylesheet" href="css/css.css">
-        <link type="text/css" rel="stylesheet" href="css/pagina-estabelecimento.css">
-        <link rel="application/x-font-ttf" href="fonts/ubuntu/Ubuntu-B.ttf">
-        <link rel="application/x-font-ttf" href="fonts/ubuntu/Ubuntu-R.ttf">
+        <link type="text/css" rel="stylesheet" href="view/css/css.css">
+        <link type="text/css" rel="stylesheet" href="view/css/pagina-estabelecimento.css">
+        <link rel="application/x-font-ttf" href="view/fonts/ubuntu/Ubuntu-B.ttf">
+        <link rel="application/x-font-ttf" href="view/fonts/ubuntu/Ubuntu-R.ttf">
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="scripts/efeitos.js"></script>
+        <script type="text/javascript" src="view/js/jquery-3.2.1.min.js"></script>
 
     </head>
 
@@ -28,7 +27,7 @@
             <section><!--inicio foto e infos-->
                 <figure class="card">
                     <a class="btn-contribuir">contribuir</a>
-                    <img src="../view/images/foto-estab-pg.png">
+                    <img src="view/images/foto-estab-pg.png">
                     <figcaption>
                         <span><!--TODO puxar o nome do usuario que fez o uploade da foto--></span>
                         <span><!--TODO puxar a data de uploade da foto--></span>
@@ -158,5 +157,6 @@
         <?php include 'footer.php'?>
 
     </body>
-    <script src="scripts/script-pagina-estabelecimento.js"></script>
+    <script type="text/javascript" src="view/scripts/efeitos.js"></script>
+    <script src="view/scripts/script-pagina-estabelecimento.js"></script>
 </html>

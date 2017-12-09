@@ -3,11 +3,11 @@
 
     <head>
         <meta charset="UTF-8">
-        <link type="text/css" rel="stylesheet" href="css/css.css">
-        <link type="text/css" rel="stylesheet" href="css/home.css">
-        <link type="text/css" rel="stylesheet" href="css/lista.css">
-        <link rel="application/x-font-ttf" href="fonts/ubuntu/Ubuntu-B.ttf">
-        <link rel="application/x-font-ttf" href="fonts/ubuntu/Ubuntu-R.ttf">
+        <link type="text/css" rel="stylesheet" href="view/css/css.css">
+        <link type="text/css" rel="stylesheet" href="view/css/home.css">
+        <link type="text/css" rel="stylesheet" href="view/css/lista.css">
+        <link rel="application/x-font-ttf" href="view/fonts/ubuntu/Ubuntu-B.ttf">
+        <link rel="application/x-font-ttf" href="view/fonts/ubuntu/Ubuntu-R.ttf">
         <title>Listagem - BabySpot's</title>
     </head>
     <body>
@@ -26,7 +26,7 @@
 
         <div class="navegacao">
             <ul>
-                <li><a href="home.php">Home</a></li>
+                <li><a href="?">Home</a></li>
                 <li><a href="home.php">Estabelecimentos</a></li>
                 <li><a href="home.php">Busca</a></li>
             </ul>
@@ -70,7 +70,7 @@
             <div class="lista"> <!-- inicio top estabelecimentos -->
                 <div class="container">
                     <div class="item card">
-                        <img class="foto" src="images/foto-estabelecimento-1.png" alt="foto de um estabelecimento qualquer">
+                        <img class="foto" src="view/images/foto-estabelecimento-1.png" alt="foto de um estabelecimento qualquer">
                         <div class="infos">
                             <p>Campo Grande-MS</p>
                             <p>Chalé lanches</p>
@@ -83,11 +83,11 @@
                                 <p class="avali qt-strelas-5"></p> <!--Colocar a imagem da estrela equivalente-->
                             </div>
                             <ul class="utimas-avaliacoes">
-                                <li><img src="images/foto-perfil-usuario-exp.png"></li>
-                                <li><img src="images/foto-perfil-usuario-exp.png"></li>
-                                <li><img src="images/foto-perfil-usuario-exp.png"></li>
-                                <li><img src="images/foto-perfil-usuario-exp.png"></li>
-                                <li><img src="images/foto-perfil-usuario-exp.png"></li>
+                                <li><img src="view/images/foto-perfil-usuario-exp.png"></li>
+                                <li><img src="view/images/foto-perfil-usuario-exp.png"></li>
+                                <li><img src="view/images/foto-perfil-usuario-exp.png"></li>
+                                <li><img src="view/images/foto-perfil-usuario-exp.png"></li>
+                                <li><img src="view/images/foto-perfil-usuario-exp.png"></li>
                             </ul>
                             <a class="botao detalhes" href="#">detalhes</a>
                         </div>

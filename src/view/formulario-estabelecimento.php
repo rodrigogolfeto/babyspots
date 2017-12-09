@@ -6,7 +6,7 @@
     </head>
     <body>
 
-        <?php include 'header.php' ?>
+        <?php include 'view/header.php' ?>
 
 
             <div class="navegacao">
@@ -34,10 +34,10 @@
                 <fieldset id="fotos">
                     <div id="fotos-galeria">
                         <ul>
-                            <li><img src="images/foto-estabelecimento-2.png" alt="uploading"></li>
-                            <li><img src="images/foto-estabelecimento-2.png" alt="uploading"></li>
-                            <li><img src="images/foto-estabelecimento-2.png" alt="uploading"></li>
-                            <li><img src="images/foto-estabelecimento-2.png" alt="uploading"></li>
+                            <li><img src="view/images/foto-estabelecimento-2.png" alt="uploading"></li>
+                            <li><img src="view/images/foto-estabelecimento-2.png" alt="uploading"></li>
+                            <li><img src="view/images/foto-estabelecimento-2.png" alt="uploading"></li>
+                            <li><img src="view/images/foto-estabelecimento-2.png" alt="uploading"></li>
                         </ul>
                         <input class="botao" type="button" value="Adicionar">
                     </div>
@@ -47,6 +47,6 @@
         </main>
 
 
-        <?php include "footer.php" ?>
+        <?php include "view/footer.php" ?>
     </body>
 </html>

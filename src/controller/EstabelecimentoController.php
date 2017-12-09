@@ -25,7 +25,11 @@ class EstabelecimentoController {
 			$func = $_GET['func'];
 		}
 		else{
-			$func = "";
+            if(isset($_POST['func'])){ // para os formularios
+                $func = $_POST['func'];
+            } else {
+                $func = "";
+            }
 		}
 
 		switch ($func){
@@ -52,7 +56,7 @@ class EstabelecimentoController {
 	public function lista(){
 		$result = $this->factory_estabelecimento->listar();
 
-		require 'view/lista';
+		require 'view/lista.php';
 	}
 
 	public function estabelecimento(){
