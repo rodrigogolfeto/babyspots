@@ -1,6 +1,6 @@
 <?php
 require_once ("model/Usuario.php");
-require_once ("model/UsuarioFactory");
+require_once ("model/UsuarioFactory.php");
 
 /**
  *
