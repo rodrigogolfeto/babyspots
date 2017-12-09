@@ -9,7 +9,7 @@
             </select>
         </div><!-- final locacalizacão-->
         <div class="logo-home">
-            <img src="images/logo-home.png" alt="Logo do site, está escrito: BabySpot's">
+            <img src="view/images/logo-home.png" alt="Logo do site, está escrito: BabySpot's">
         </div>
         <div class="conta">
             <a class="botao entrar" href="#">entrar</a>

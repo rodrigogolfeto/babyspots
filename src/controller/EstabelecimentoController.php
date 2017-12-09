@@ -1,6 +1,6 @@
 <?php
-require_once ("../model/Estabelecimento.php");
-require_once ("../model/EstabelecimentoFactory.php");
+require_once ("model/Estabelecimento.php");
+require_once ("model/EstabelecimentoFactory.php");
 /**
  *
  * Created by PhpStorm.
@@ -11,10 +11,10 @@ require_once ("../model/EstabelecimentoFactory.php");
 
 class EstabelecimentoController {
 
-	private $factoryEstabelecimento;
+	private $factory_estabelecimento;
 
 	public function __construct() {
-		$this->factoryEstabelecimento = new EstabelecimentoFactory();
+		$this->factory_estabelecimento = new EstabelecimentoFactory();
 
 		ini_set('error_reporting', E_ALL);
 		ini_set('display_errors', 1);
@@ -38,11 +38,19 @@ class EstabelecimentoController {
 			case 'editar':
 				$this->editar();
 				break;
+			default:
+				$this->home();
 		}
 	}
 
+	public function home(){
+		$result = $this->factory_estabelecimento->listar();
+
+		require 'view/home.php';
+	}
+
 	public function lista(){
-		$result = $this->factory->listar();
+		$result = $this->factory_estabelecimento->listar();
 
 		require 'view/lista';
 	}
@@ -68,7 +76,7 @@ class EstabelecimentoController {
 			try {
 				$estabelecimento = new Estabelecimento($id_estabelecimento, $id_usuario, $nome_estabelecimento, $cep, $rua, $numero, $complemento, $bairro, $cidade, $estado);
 
-				$sucesso = $this->factoryEstabelecimento->edit($estabelecimento);
+				$sucesso = $this->factory_estabelecimento->edit($estabelecimento);
 
 				if ($sucesso)
 					$msg = "Estabelecimento editado com sucesso";

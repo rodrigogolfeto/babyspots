@@ -1,8 +1,4 @@
 <?php
-define( 'MYSQL_HOST', 'localhost' );
-define( 'MYSQL_USER', 'root' );
-define( 'MYSQL_PASSWORD', '' );
-define( 'MYSQL_DB_NAME', 'babyspotsdb' );
 /**
  * Created by PhpStorm.
  * User: kelvin-fernandes <sokelvinfernandes>
@@ -15,7 +11,7 @@ abstract class AbstractFactory {
 
 	public function __construct() {
 		try {
-			$this->db = new PDO( 'mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
+			$this->db = new PDO("sqlite:C:/xampp/htdocs/babyspots/src/database/baby_spots.db");
 			$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		} catch (PDOException $exception) {
 			echo $exception->getMessage();
