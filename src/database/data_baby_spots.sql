@@ -75,13 +75,6 @@ INSERT INTO avaliacao (id_est, id_usu, descricao) VALUES
 (3, 9, 'deceptiveness handstand humoristical fireworm athenor exiguity chukar adverbially counterenamel Inghamite inevitable interresponsibility irreticence Argyle brazilein demilion balantidiosis anthropomorphous doughlike cytoblastema diallagic biconcavity Elmer azoxyphenetole');
 
 
-INSERT INTO servico (nome, classe) VALUES 
-()
-()
-()
-()
-()
-
 INSERT INTO avaliacao_servico (id_ava, id_ser, pontuacao) VALUES 
 (28 , 3, 2),
 (39 , 3, 1),
