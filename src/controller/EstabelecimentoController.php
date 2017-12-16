@@ -45,6 +45,9 @@ class EstabelecimentoController {
 			case 'pagina_estabelecimento':
 				$this->estabelecimento();
 				break;
+            case 'cadastrar':
+                $this->cadastrar();
+                break;
 			default:
 				$this->home();
 		}
@@ -108,4 +111,8 @@ class EstabelecimentoController {
 	public function avaliar($estabelecimento, $usuario, $descricao, $avaliacao_servico){
 
 	}
+
+	public function cadastrar(){
+        require 'view/cadastroUsuario.php';
+    }
 }
