@@ -28,3 +28,30 @@ INSERT INTO estabelecimento_foto (id_est, url_imagem, data_cadastro) VALUES
 (10, 'foto-estabelecimento-3.png', '2017-01-23'),
 (12, 'foto-estabelecimento-1.png', '2015-02-09');
 
+INSERT INTO avaliacao (id_est, id_usu, descricao) VALUES 
+()  
+()  
+()  
+()  
+()
+
+INSERT INTO servico (nome, classe) VALUES 
+()
+()
+()
+()
+()
+
+INSERT INTO avaliacao_servico (id_ava, id_ser) VALUES 
+()
+()
+()
+()
+()
+
+INSERT INTO estabelecimento_servico (id_est, id_ser) VALUES 
+()
+()
+()
+()
+()
