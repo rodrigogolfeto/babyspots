@@ -24,7 +24,7 @@ abstract class AbstractFactory {
 
 	abstract public function edit($obj);
 
-	//abstract public function find($param);
+	abstract public function find($obj);
 
 	protected function queryRowsToListOfObjects	(PDOStatement $result, $nameObject) {
 		$list = array();

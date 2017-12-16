@@ -28,3 +28,64 @@ INSERT INTO estabelecimento_foto (id_est, url_imagem, data_cadastro) VALUES
 (10, 'foto-estabelecimento-3.png', '2017-01-23'),
 (12, 'foto-estabelecimento-1.png', '2015-02-09');
 
+<<<<<<< HEAD
+INSERT INTO servico (nome, classe) VALUES 
+('berçário', 'bercario'),
+('trocador', 'trocador'),
+('playground', 'playground'),
+('estacionamento própio', 'estacio-pro'),
+('papinha', 'papinha'),
+('música ambiente', 'musica'),
+('banheiro p/ deficientes', 'ban-defi'),
+('banheiro familiar', 'ban-fam'),
+('cadeirão', 'cadeirao'),
+('comida vegana', 'com-vega'),
+('comida p/ lactointolerantes', 'com-lacto'),
+('comida p/ celíacas', 'com-celi'),
+('copa', 'copa'),
+('possibilidade de reserva', 'pos-rese'),
+('cuidador', 'cuidador');
+=======
+INSERT INTO avaliacao (id_est, id_usu, descricao) VALUES 
+(3,2,'Ótimo local para um almoço em familia.')  
+(4,3,'É um bom lugar.')  
+(5,3,'Gostei do atendimento, porém a limpeza deixa a desejar')  
+(6,2,'Divertido, confortavel')  
+(7,3,'Não é bom')
+(8,2,'Comida ótima mas atendimento ruim.')  
+(9,3,'Só dou 4 estrelas pela demora para ser atendida.')  
+(10,3,'Péssimo')  
+(12,2,'')  
+(3,2,'Legal.')  
+(4,3,'Lugar agradavel.')  
+(5,3,'Fui muito bem atendida, recomendo')  
+(6,2,'Muito caro.')  
+(7,3,'Satisfeito')
+(8,2,'')  
+(9,3,'Mais ou menos.')  
+(10,3,'Não gostei')  
+(12,2,'')  
+(3,2,'Top.')  
+(4,3,'Show.')  
+(5,3,'Nunca mais eu volto')  
+(6,2,'Nunca fui la mas parece ser bom')  
+(7,3,'Quando eu for la eu mudo a nota')
+(8,2,'')  
+(9,3,'Gostei das musicas')  
+(10,3,'')  
+(12,2,'')  
+
+INSERT INTO avaliacao_servico (id_ava, id_ser) VALUES 
+()
+()
+()
+()
+()
+
+INSERT INTO estabelecimento_servico (id_est, id_ser) VALUES 
+()
+()
+()
+()
+()
+>>>>>>> 3573b4f00fafa89b663172d78a2c5e40d30affed
