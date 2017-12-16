@@ -44,3 +44,31 @@ INSERT INTO servico (nome, classe) VALUES
 ('copa', 'copa'),
 ('possibilidade de reserva', 'pos-rese'),
 ('cuidador', 'cuidador');
+=======
+INSERT INTO avaliacao (id_est, id_usu, descricao) VALUES 
+()  
+()  
+()  
+()  
+()
+
+INSERT INTO servico (nome, classe) VALUES 
+()
+()
+()
+()
+()
+
+INSERT INTO avaliacao_servico (id_ava, id_ser) VALUES 
+()
+()
+()
+()
+()
+
+INSERT INTO estabelecimento_servico (id_est, id_ser) VALUES 
+()
+()
+()
+()
+()
