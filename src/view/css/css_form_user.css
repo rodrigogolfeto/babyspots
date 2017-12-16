@@ -54,15 +54,38 @@ input {
 }
 
 #dados {
-    width: 600px;
-    height: 100%;
     box-sizing: border-box;
+    width: 660px;
     float: left;
 }
-#fotos {
-    float: left;
-    width: 325px;
-    height: 100%;
-    box-sizing: border-box;
-    margin-top: 25px;
+
+#dados label {
+    display: block;
+    margin-right: 10px;
 }
+
+#dados label:nth-child(n+2){
+    width: 320px;
+    float: left;
+}
+
+#foto img, #foto input {
+    display: block;
+    margin: auto;
+}
+#foto input {
+    margin-top: 20px;
+    width: 100px;
+}
+
+form div > input[type=submit] {
+    box-sizing: border-box;
+    display: block;
+    font-size: 16px;
+    color: white;
+    background-color: #59a3f6;
+    width: 190px;
+    margin: 100px auto auto;
+    height: 50px;
+}
+

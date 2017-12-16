@@ -2,7 +2,7 @@
 <html>
     <head>
         <link type="text/css" rel="stylesheet" href="view/css/css.css" >
-        <link type="text/css" rel="stylesheet" href="view/css/cadastroDeUsaurio.css">
+        <link type="text/css" rel="stylesheet" href="view/css/css_form_user.css">
         <script src="view/js/jquery-3.2.1.min.js" type="application/javascript"></script>
     </head>
     <body>

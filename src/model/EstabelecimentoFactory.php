@@ -71,6 +71,12 @@ class EstabelecimentoFactory extends AbstractFactory {
 	}
 
 	public function buscar($conteudo){
+		/*
+		TODO
+		- cria array de estabelecimento que esse array vai lá pra controller e depois view
+		- select no banco e a cada linha vai adicionando o objetivo nessa lista de estabelecimento
+		*/
+
 		$sql = "SELECT e.id_est, e.id_usu, e.nome, e.cep, e.rua, e.numero, e.complemento, e.bairro, e.cidade, e.estado, (SELECT url_imagem FROM estabelecimento_foto ef WHERE e.id_est = ef.id_est), (SELECT nome_completo FROM usuario u WHERE u.id_usu = e.id_usu) FROM "	. $this->tb_estabelecimento . " e WHERE nome LIKE '%" . $conteudo . "%' OR rua LIKE '%" . $conteudo . "%' OR bairro LIKE '%" . $conteudo . "%' OR cidade LIKE '%". $conteudo . "%' OR estado LIKE '%" . $conteudo . "%'";
 
 		try {
@@ -113,13 +119,16 @@ class EstabelecimentoFactory extends AbstractFactory {
 	}
 
 	public function listarTopEstabelecimentos(){
-		$sql = "SELECT ";
-		$sql.= "e.id_est, e.id_usu, e.nome, e.cep, e.rua, e.numero, e.complemento, e.bairro, e.cidade, e.estado, (SELECT url_imagem FROM estabelecimento_foto ef WHERE e.id_est = ef.id_est), (SELECT nome_completo FROM usuario u WHERE u.id_usu = e.id_usu)";
-		$sql.= " FROM " . $this->tb_estabelecimento . " e LIMIT 6";
+		$sql = "SELECT e.id_est, e.id_usu, e.nome, e.cep, e.rua, e.numero, e.complemento, e.bairro, e.cidade, e.estado, (SELECT url_imagem FROM estabelecimento_foto ef WHERE e.id_est = ef.id_est), (SELECT nome_completo FROM usuario u WHERE u.id_usu = e.id_usu), (SELECT AVG(ava.pontuacao)
+  FROM avaliacao_servico ava, estabelecimento_servico ests, estabelecimento est where ava.id_ser = ests.id_ser and ests.id_est = est.id_est order by AVG(ava.pontuacao) desc) FROM " . $this->tb_estabelecimento . " e";
+
+		/* SELECT AVG(ava.pontuacao)
+  FROM avaliacao_servico ava, estabelecimento_servico ests, estabelecimento est where ava.id_ser = ests.id_ser and ests.id_est = est.id_est order by AVG(ava.pontuacao) desc, ava.pontuacao limit 6;*/
 
 		try {
 			$resultQuery = $this->db->query($sql);
 
+			
 			if(!($resultQuery instanceof PDOStatement)){
 				throw new Exception("SQL Error!");
 			}
