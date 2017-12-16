@@ -19,8 +19,11 @@ class Estabelecimento {
 	private $cidade;
 	private $estado;
 	private $avaliacao_geral;
+	private $url_imagem;
+	private $usuario;
+	private $servicos;
 
-	public function __construct($id_est, $id_usu, $nome_est, $cep, $rua, $numero, $complemento, $bairro, $cidade, $estado) {
+	public function __construct($id_est, $id_usu, $nome_est, $cep, $rua, $numero, $complemento, $bairro, $cidade, $estado, $url_imagem, $nome_completo) {
 		$this->id_est = $id_est;
 		$this->id_usu = $id_usu;
 		$this->nome_est = $nome_est;
@@ -31,6 +34,9 @@ class Estabelecimento {
 		$this->bairro = $bairro;
 		$this->cidade = $cidade;
 		$this->estado = $estado;
+		$this->url_imagem = $url_imagem;
+		$this->usuario = new Usuario($nome_completo);
+		//$this->servicos = array();
 	}
 
 	public function getIdEst() {
@@ -50,7 +56,7 @@ class Estabelecimento {
 	}
 
 	public function getNomeEstabelecimento() {
-		return $this->nome_estabelecimento;
+		return $this->nome_est;
 	}
 
 	public function setNomeEst($nome_est) {
@@ -127,5 +133,21 @@ class Estabelecimento {
 
 	public function setAvaliacaoGeral($avaliacao_geral) {
 		$this->avaliacao_geral = $avaliacao_geral;
+	}
+
+	public function getUrlImagem() {
+		return $this->url_imagem;
+	}
+
+	public function setUrlImagem($url_imagem) {
+		$this->url_imagem = $url_imagem;
+	}
+
+	public function getUsuario() {
+		return $this->usuario;
+	}
+
+	public function setUsuario($usuario) {
+		$this->usuario = $usuario;
 	}
 }

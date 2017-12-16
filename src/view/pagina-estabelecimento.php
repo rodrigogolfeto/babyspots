@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title><!--TODO puxar o nome do estabelecimento com php--></title>
+        <title>BabySpot's | <?php echo $item[0]->getNomeEstabelecimento() ?></title>
         <meta charset="UTF-8">
         <link type="text/css" rel="stylesheet" href="view/css/css.css">
         <link type="text/css" rel="stylesheet" href="view/css/pagina-estabelecimento.css">
@@ -17,9 +17,9 @@
 
         <div class="navegacao">
             <ul>
-                <li><a href="home.php">Home</a></li>
-                <li><a href="lista.php">Estabelecimentos</a></li>
-                <li><a href="#"><!--TODO puxar o nome do estabelecimento com php--></a></li>
+                <li><a href="?">Home</a></li>
+                <li><a href="?func=lista&busca=">Estabelecimentos</a></li>
+                <li><a href="#"><?php echo $item[0]->getNomeEstabelecimento(); ?></a></li>
             </ul>
         </div>
 
@@ -29,16 +29,16 @@
                     <a class="btn-contribuir">contribuir</a>
                     <img src="view/images/foto-estab-pg.png">
                     <figcaption>
-                        <span><!--TODO puxar o nome do usuario que fez o uploade da foto--></span>
+<!--                        <span>--><?php //echo $item[0]->getUsuario()->getNomeCompleto(); ?><!--</span>-->
                         <span><!--TODO puxar a data de uploade da foto--></span>
                     </figcaption>
                 </figure>
                 <div class="info-estab">
                     <div class="infos card">
                         <div>
-                            <p>Campo Grande-MS</p>
-                            <p>Chalé lanches</p>
-                            <p>Av. dos Cafezais, 1142 - Jardim Paulo Coelho Machado</p>
+                            <p><?php echo $item[0]->getCidade()." - ".$item[0]->getEstado(); ?></p>
+                            <p><?php echo $item[0]->getNomeEstabelecimento(); ?></p>
+                            <p><?php echo $item[0]->getRua().", ".$item[0]->getNumero()." - ".$item[0]->getBairro(); ?></p>
                         </div>
                         <div class="avaliacao">
                             <span>70 avaliações</span>

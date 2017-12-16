@@ -12,7 +12,6 @@
     </head>
 
     <body>
-
         <?php include "view/header.php"; ?>
 
         <!-- INÍCIO CONTEÚDO -->
@@ -24,8 +23,9 @@
                     <p>O restaurante ideal para a sua família</p>
                     <!-- INÍCIO FORMULÁRIO DE BUSCA -->
                     <div class="busca">
-                        <form class="campo-busca" method="post" action="?func=lista">
-                            <input type="search" name="busca" id="busca" placeholder="Buscar Estabelecimento">
+                        <form class="campo-busca" method="get" action="">
+                            <input type= "hidden" name="func" value="lista" />
+                            <input type="search" name="busca" id="busca" placeholder="Buscar Estabelecimento" required>
                             <input type="submit" name="btn-buscar" id="btn-buscar" value="buscar">
                         </form>
                     </div>
@@ -55,13 +55,13 @@
             <section class="top-estabelecimentos">
                 <h2 class="card label">Top Estabelecimentos</h2>
                 <div class="container">
-                    <? foreach ($result as $item){?>
+                    <?php foreach ($result as $item) { ?>
                     <div class="item card">
-                        <img class="foto" src="view/images/foto-estabelecimento-1.png" alt="Foto de um Estabelecimento">
+                        <img class="foto" src="view/images/<?php echo $item->getUrlImagem(); ?>" alt="Foto do Estabelecimento">
                         <div class="infos">
-<!--                            <p>--><?php //echo $item->getCidade()." / ".$item->getEstado();?><!--</p>-->
-                            <p><?php ?></p>
-                            <p>Av. dos Cafezais, 1142 - Jardim Paulo Coelho Machado</p>
+                            <p><?php echo $item->getCidade()." - ".$item->getEstado(); ?></p>
+                            <p><?php echo $item->getNomeEstabelecimento(); ?></p>
+                            <p><?php echo $item->getRua().", ".$item->getNumero()." - ".$item->getBairro(); ?></p>
                             <div class="carrossel-servico">
                                 <div class="btn anterior"><a>&nbsp;</a></div>
                                 <div class="item-carrocel">
@@ -80,94 +80,10 @@
                                 <span>70 avaliações</span>
                                 <p class="avali qt-strelas-5"></p> <!-- TODO COLOCAR A IMAGEM DA ESTRELA EQUIVALENTE -->
                             </div><!-- avaliacao -->
-                            <a class="botao detalhes" href="#">detalhes</a>
+                            <a class="botao detalhes" href="?func=pagina_estabelecimento&id_est=<?php echo $item->getIdEst(); ?>">detalhes</a>
                         </div>
                     </div>
-                    <? } ?>
-                    <div class="item card">
-                        <img class="foto" src="view/images/foto-estabelecimento-2.png" alt="foto de um estabelecimento qualquer">
-                        <div class="infos">
-                            <p>Campo Grande-MS</p>
-                            <p>Chalé lanches</p>
-                            <p>Av. dos Cafezais, 1142 - Jardim Paulo Coelho Machado</p>
-
-                            <div class="carrossel-servico">
-                                <div class="btn anterior"><a>&nbsp;</a></div>
-                                <div class="item-carrocel">
-                                    <ul class="servicos-itens">
-                                        <li><a><div class="ico bercario"></div><h3>berçário</h3></a></li>
-                                        <li><a><div class="ico trocador"></div><h3>trocador</h3></a></li>
-                                        <li><a><div class="ico playground"></div><h3>playground</h3></a></li>
-                                        <li><a><div class="ico estacionamento"></div><h3>estacion.</h3></a></li>
-                                        <li><a><div class="ico papinha"></div><h3>papinhas</h3></a></li>
-                                    </ul>
-                                </div>
-                                <div class="btn proximo"><a>&nbsp;</a></div>
-                            </div><!-- carrossel-servico -->
-
-                            <div class="avaliacao">
-                                <span>70 avaliações</span>
-                                <p class="avali qt-strelas-5"></p> <!-- TODO COLOCAR A IMAGEM DA ESTRELA EQUIVALENTE -->
-                            </div>
-                            <a class="botao detalhes" href="#">detalhes</a>
-                        </div>
-                    </div>
-                    <div class="item card">
-                        <img class="foto" src="view/images/foto-estabelecimento-3.png" alt="foto de um estabelecimento qualquer">
-                        <div class="infos">
-                            <p>Campo Grande-MS</p>
-                            <p>Chalé lanches</p>
-                            <p>Av. dos Cafezais, 1142 - Jardim Paulo Coelho Machado</p>
-
-                            <div class="carrossel-servico">
-                                <div class="btn anterior"><a>&nbsp;</a></div>
-                                <div class="item-carrocel">
-                                    <ul class="servicos-itens">
-                                        <li><a><div class="ico bercario"></div><h3>berçário</h3></a></li>
-                                        <li><a><div class="ico trocador"></div><h3>trocador</h3></a></li>
-                                        <li><a><div class="ico playground"></div><h3>playground</h3></a></li>
-                                        <li><a><div class="ico estacionamento"></div><h3>estacion.</h3></a></li>
-                                        <li><a><div class="ico papinha"></div><h3>papinhas</h3></a></li>
-                                    </ul>
-                                </div>
-                                <div class="btn proximo"><a>&nbsp;</a></div>
-                            </div><!-- carrossel-servico -->
-
-                            <div class="avaliacao">
-                                <span>70 avaliações</span>
-                                <p class="avali qt-strelas-5"></p> <!-- TODO COLOCAR A IMAGEM DA ESTRELA EQUIVALENTE -->
-                            </div>
-                            <a class="botao detalhes" href="#">detalhes</a>
-                        </div>
-                    </div>
-                    <div class="item card">
-                        <img class="foto" src="images/foto-estabelecimento-4.png" alt="foto de um estabelecimento qualquer">
-                        <div class="infos">
-                            <p>Campo Grande-MS</p>
-                            <p>Chalé lanches</p>
-                            <p>Av. dos Cafezais, 1142 - Jardim Paulo Coelho Machado</p>
-
-                            <div class="carrossel-servico">
-                                <div class="btn anterior"><a>&nbsp;</a></div>
-                                <div class="item-carrocel">
-                                    <ul class="servicos-itens">
-                                        <li><a><div class="ico bercario"></div><h3>berçário</h3></a></li>
-                                        <li><a><div class="ico trocador"></div><h3>trocador</h3></a></li>
-                                        <li><a><div class="ico playground"></div><h3>playground</h3></a></li>
-                                        <li><a><div class="ico estacionamento"></div><h3>estacion.</h3></a></li>
-                                        <li><a><div class="ico papinha"></div><h3>papinhas</h3></a></li>
-                                    </ul>
-                                </div>
-                                <div class="btn proximo"><a>&nbsp;</a></div>
-                            </div><!-- carrossel-servico -->
-
-                            <div class="avaliacao">
-                                <span>70 avaliações</span>
-                                <p class="avali qt-strelas-5"></p> <!-- TODO COLOCAR A IMAGEM DA ESTRELA EQUIVALENTE -->
-                            </div>
-                            <a class="botao detalhes" href="#">detalhes</a>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </section>
             <!-- FINAL TOP ESTABELECIMENTOS -->            

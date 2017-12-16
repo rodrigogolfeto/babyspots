@@ -42,6 +42,9 @@ class EstabelecimentoController {
 			case 'editar':
 				$this->editar();
 				break;
+			case 'pagina_estabelecimento':
+				$this->estabelecimento();
+				break;
 			default:
 				$this->home();
 		}
@@ -54,13 +57,19 @@ class EstabelecimentoController {
 	}
 
 	public function lista(){
-		$result = $this->factory_estabelecimento->listar();
+		$conteudo = $_GET['busca'];
+
+		$result = $this->factory_estabelecimento->buscar($conteudo);
 
 		require 'view/lista.php';
 	}
 
 	public function estabelecimento(){
-		require 'view/estabelecimento.php';
+		$id = $_GET['id_est'];
+
+		$item = $this->factory_estabelecimento->find($id);
+
+		require 'view/pagina-estabelecimento.php';
 	}
 
 	public function editar(){

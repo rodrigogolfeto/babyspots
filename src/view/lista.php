@@ -16,9 +16,10 @@
         <div class="buscar"> <!-- inicio busca -->
             <div class="container">
                 <div class="busca"> <!-- inicio formulario de busca -->
-                    <form class="campo-busca">
-                        <input type="search" name="busca botao" id="busca" placeholder="Buscar Estabelecimento">
-                        <input type="submit" name="buscar botao" id="buscar" value="Buscar">
+                    <form class="campo-busca" method="get" action="">
+                        <input type= "hidden" name="func" value="lista" />
+                        <input type="search" name="busca" id="busca" placeholder="Buscar Estabelecimento" required>
+                        <input type="submit" name="btn-buscar" id="btn-buscar" value="buscar">
                     </form>
                 </div> <!-- final formulario de busca -->
             </div>
@@ -27,8 +28,8 @@
         <div class="navegacao">
             <ul>
                 <li><a href="?">Home</a></li>
-                <li><a href="home.php">Estabelecimentos</a></li>
-                <li><a href="home.php">Busca</a></li>
+                <li><a href="#">Estabelecimentos</a></li>
+                <li><a href="#">Busca</a></li>
             </ul>
         </div>
 
@@ -69,30 +70,37 @@
 
             <div class="lista"> <!-- inicio top estabelecimentos -->
                 <div class="container">
-                    <div class="item card">
-                        <img class="foto" src="view/images/foto-estabelecimento-1.png" alt="foto de um estabelecimento qualquer">
-                        <div class="infos">
-                            <p>Campo Grande-MS</p>
-                            <p>Chalé lanches</p>
-                            <p>Av. dos Cafezais, 1142 - Jardim Paulo Coelho Machado</p>
-                            <div class="carrossel-servico">
-                                <!-- TODO -->
-                            </div>
-                            <div class="avaliacao">
-                                <span>70 avaliações</span>
-                                <p class="avali qt-strelas-5"></p> <!--Colocar a imagem da estrela equivalente-->
-                            </div>
-                            <ul class="utimas-avaliacoes">
-                                <li><img src="view/images/foto-perfil-usuario-exp.png"></li>
-                                <li><img src="view/images/foto-perfil-usuario-exp.png"></li>
-                                <li><img src="view/images/foto-perfil-usuario-exp.png"></li>
-                                <li><img src="view/images/foto-perfil-usuario-exp.png"></li>
-                                <li><img src="view/images/foto-perfil-usuario-exp.png"></li>
-                            </ul>
-                            <a class="botao detalhes" href="#">detalhes</a>
-                        </div>
-                    </div>
-                    <a href="#" class="botao ">Ver mais</a>
+					<?php
+                   if(count($result) > 0) {
+					   foreach ($result as $item) { ?>
+                           <div class="item card">
+                               <img class="foto" src="view/images/<?php echo $item->getUrlImagem(); ?>"
+                                    alt="Foto do Estabelecimento">
+                               <div class="infos">
+                                   <p><?php echo $item->getCidade() . " - " . $item->getEstado(); ?></p>
+                                   <p><?php echo $item->getNomeEstabelecimento(); ?></p>
+                                   <p><?php echo $item->getRua() . ", " . $item->getNumero() . " - " . $item->getBairro(); ?></p>
+                                   <div class="carrossel-servico">
+                                       <!-- TODO -->
+                                   </div>
+                                   <div class="avaliacao">
+                                       <span>70 avaliações</span>
+                                       <p class="avali qt-strelas-5"></p> <!--Colocar a imagem da estrela equivalente-->
+                                   </div>
+                                   <ul class="utimas-avaliacoes">
+                                       <li><img src="view/images/foto-perfil-usuario-exp.png"></li>
+                                       <li><img src="view/images/foto-perfil-usuario-exp.png"></li>
+                                       <li><img src="view/images/foto-perfil-usuario-exp.png"></li>
+                                       <li><img src="view/images/foto-perfil-usuario-exp.png"></li>
+                                       <li><img src="view/images/foto-perfil-usuario-exp.png"></li>
+                                   </ul>
+                                   <a class="botao detalhes" href="?func=pagina_estabelecimento&id_est=<?php echo $item->getIdEst(); ?>">detalhes</a>
+                               </div>
+                           </div>
+					   <?php }
+					   ?><a href="#" class="botao ">Ver mais</a><?php
+				   }
+				   else { ?>
                     <div class="card" id="msg-erro">
                         <div>
                             <span>Ohh :((</span>
@@ -100,6 +108,7 @@
                             <span>Tente novamente!</span>
                         </div>
                     </div>
+                    <?php }; ?>
                 </div>
 
             </div> <!-- final top estabelecimentos -->

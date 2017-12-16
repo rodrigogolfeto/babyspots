@@ -15,9 +15,8 @@ class Usuario {
 	private $estado;
 	private $foto_url;
 
-	public function __construct($email, $senha) {
-		$this->email = $email;
-		$this->senha = $senha;
+	public function __construct($nome_completo) {
+		$this->nome_completo = $nome_completo;
 	}
 
 	public function getIdUsuario() {
