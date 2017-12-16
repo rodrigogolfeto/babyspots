@@ -1,6 +1,7 @@
 <?php
 require_once ("model/Estabelecimento.php");
 require_once ("model/EstabelecimentoFactory.php");
+require_once ("model/ServicoFactory.php");
 /**
  *
  * Created by PhpStorm.
@@ -12,9 +13,11 @@ require_once ("model/EstabelecimentoFactory.php");
 class EstabelecimentoController {
 
 	private $factory_estabelecimento;
+	private $factory_servico;
 
 	public function __construct() {
 		$this->factory_estabelecimento = new EstabelecimentoFactory();
+		$this->factory_servico = new ServicoFactory();
 
 		ini_set('error_reporting', E_ALL);
 		ini_set('display_errors', 1);
@@ -45,19 +48,30 @@ class EstabelecimentoController {
 			case 'pagina_estabelecimento':
 				$this->estabelecimento();
 				break;
+            case 'cadastrar':
+                $this->cadastrar();
+                break;
 			default:
 				$this->home();
 		}
 	}
 
 	public function home(){
+
 		$result = $this->factory_estabelecimento->listar();
+		$servicos = $this->factory_servico->listar();
+
+		$result = $this->factory_estabelecimento->listarTopEstabelecimentos();
 
 		require 'view/home.php';
 	}
 
 	public function lista(){
-		$conteudo = $_GET['busca'];
+		if(isset($_GET['busca'])){
+			$conteudo = $_GET['busca'];
+		}else{
+			$conteudo = '';
+		}
 
 		$result = $this->factory_estabelecimento->buscar($conteudo);
 
@@ -108,4 +122,8 @@ class EstabelecimentoController {
 	public function avaliar($estabelecimento, $usuario, $descricao, $avaliacao_servico){
 
 	}
+
+	public function cadastrar(){
+        require 'view/cadastroUsuario.php';
+    }
 }
