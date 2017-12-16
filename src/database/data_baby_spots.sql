@@ -28,6 +28,7 @@ INSERT INTO estabelecimento_foto (id_est, url_imagem, data_cadastro) VALUES
 (10, 'foto-estabelecimento-3.png', '2017-01-23'),
 (12, 'foto-estabelecimento-1.png', '2015-02-09');
 
+<<<<<<< HEAD
 INSERT INTO servico (nome, classe) VALUES 
 ('berçário', 'bercario'),
 ('trocador', 'trocador'),
@@ -72,3 +73,4 @@ INSERT INTO estabelecimento_servico (id_est, id_ser) VALUES
 ()
 ()
 ()
+>>>>>>> 3573b4f00fafa89b663172d78a2c5e40d30affed
