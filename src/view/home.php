@@ -25,7 +25,6 @@
                     <div class="busca">
                         <form class="campo-busca" method="get" action="">
                             <input type= "hidden" name="func" value="lista" />
-                            <input type="hidden" name="servico" value=""/>
                             <input type="search" name="busca" id="busca" placeholder="Buscar Estabelecimento" required>
                             <input type="submit" name="btn-buscar" id="btn-buscar" value="buscar">
                         </form>
@@ -38,7 +37,7 @@
                         <div class="item">
                             <ul id="servicos-busca" class="servicos-busca">
 								<?php foreach($servicos as $item){ ?>
-                                    <li><a href="?func=<?php echo $item->getClasse(); ?>"><div class="ico <?php echo $item->getClasse(); ?>"></div><h3><?php echo $item->getNome(); ?></h3></a></li>
+                                    <li><a href="?func=lista&servico=<?php echo $item->getClasse(); ?>"><div class="ico <?php echo $item->getClasse(); ?>"></div><h3><?php echo $item->getNome(); ?></h3></a></li>
                                 <?php } ?>
                             </ul>
                         </div>

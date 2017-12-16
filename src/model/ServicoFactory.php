@@ -21,6 +21,10 @@ class ServicoFactory extends AbstractFactory {
 		// TODO: Implement edit() method.
 	}
 
+	public function find($obj){
+		// TODO: Implement find() method.
+	}
+
 	public function listar(){
 		$sql = "SELECT id_ser, nome, classe FROM " . $this->tb_servico;
 

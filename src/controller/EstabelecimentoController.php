@@ -64,7 +64,11 @@ class EstabelecimentoController {
 	}
 
 	public function lista(){
-		$conteudo = $_GET['busca'];
+		if(isset($_GET['busca'])){
+			$conteudo = $_GET['busca'];
+		}else{
+			$conteudo = '';
+		}
 
 		$result = $this->factory_estabelecimento->buscar($conteudo);
 
