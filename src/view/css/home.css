@@ -1,9 +1,7 @@
-
 main.container {
 	flex-direction:column;
 	width:unset;
 }
-
 
 .buscar {
 	background-image:url("../images/bg-busca.png");
@@ -80,6 +78,16 @@ main.container .buscar .container .carrossel .item .servicos-busca .ico.trocador
 main.container .buscar .container .carrossel .item .servicos-busca .ico.playground { background:url("../images/ico-playground.png") no-repeat;background-position:center center;  }
 main.container .buscar .container .carrossel .item .servicos-busca .ico.estacionamento { background:url("../images/ico-estacionamento.png") no-repeat;background-position:center center;  }
 main.container .buscar .container .carrossel .item .servicos-busca .ico.papinha { background:url("../images/ico-papinha.png") no-repeat;background-position:center center;  }
+main.container .buscar .container .carrossel .item .servicos-busca .ico.musica { background:url("../images/ico-papinha.png") no-repeat;background-position:center center;  }
+main.container .buscar .container .carrossel .item .servicos-busca .ico.ban-defi { background:url("../images/ico-papinha.png") no-repeat;background-position:center center;  }
+main.container .buscar .container .carrossel .item .servicos-busca .ico.ban-fami { background:url("../images/ico-papinha.png") no-repeat;background-position:center center;  }
+main.container .buscar .container .carrossel .item .servicos-busca .ico.cadeirao { background:url("../images/ico-papinha.png") no-repeat;background-position:center center;  }
+main.container .buscar .container .carrossel .item .servicos-busca .ico.com-vega { background:url("../images/ico-papinha.png") no-repeat;background-position:center center;  }
+main.container .buscar .container .carrossel .item .servicos-busca .ico.com-lact { background:url("../images/ico-papinha.png") no-repeat;background-position:center center;  }
+main.container .buscar .container .carrossel .item .servicos-busca .ico.com-celi { background:url("../images/ico-papinha.png") no-repeat;background-position:center center;  }
+main.container .buscar .container .carrossel .item .servicos-busca .ico.copa { background:url("../images/ico-papinha.png") no-repeat;background-position:center center;  }
+main.container .buscar .container .carrossel .item .servicos-busca .ico.pos-rese { background:url("../images/ico-papinha.png") no-repeat;background-position:center center;  }
+main.container .buscar .container .carrossel .item .servicos-busca .ico.cuidador { background:url("../images/ico-papinha.png") no-repeat;background-position:center center;  }
 main.container .buscar .container .carrossel .item .servicos-busca h3 { width:110px;height:40px;font-size:14px;color:#FFF;text-decoration:none;vertical-align:middle;display:table-cell;text-align:center;line-height:16px; }
 
 main.container .top-estabelecimentos .container { flex-direction:row;flex-wrap:wrap; }
@@ -90,7 +98,6 @@ main.container .top-estabelecimentos .container { flex-direction:row;flex-wrap:w
 .item .infos p:nth-child(1) { padding-top:20px;padding-bottom:15px;font-size:14px;color:#777777; }
 .item .infos p:nth-child(2) { font-size:18px;color:#2c86e5; }
 .item .infos p:nth-child(3) { width:256px;height:30px;font-size:12px;color:#777777;padding-top:5px;line-height:14px; }
-
 
 .item .carrossel-servico { width:256px;height:70px;margin:5px 0 10px 0;position:relative; }
 .item .carrossel-servico .btn { width:20px;height:70px;display:block; }
@@ -107,9 +114,17 @@ main.container .top-estabelecimentos .container { flex-direction:row;flex-wrap:w
 .item .carrossel-servico .item-carrocel .servicos-itens .ico.playground { background:url("../images/ico-playground-min.png") no-repeat;background-position:center center;  }
 .item .carrossel-servico .item-carrocel .servicos-itens .ico.estacionamento { background:url("../images/ico-estacionamento-min.png") no-repeat;background-position:center center;  }
 .item .carrossel-servico .item-carrocel .servicos-itens .ico.papinha { background:url("../images/ico-papinha-min.png") no-repeat;background-position:center center;  }
+.item .carrossel-servico .item-carrocel .servicos-itens .ico.musica { background:url("../images/ico-papinha-min.png") no-repeat;background-position:center center;  }
+.item .carrossel-servico .item-carrocel .servicos-itens .ico.ban-defi { background:url("../images/ico-papinha-min.png") no-repeat;background-position:center center;  }
+.item .carrossel-servico .item-carrocel .servicos-itens .ico.ban-fami { background:url("../images/ico-papinha-min.png") no-repeat;background-position:center center;  }
+.item .carrossel-servico .item-carrocel .servicos-itens .ico.cadeirao { background:url("../images/ico-papinha-min.png") no-repeat;background-position:center center;  }
+.item .carrossel-servico .item-carrocel .servicos-itens .ico.com-vega { background:url("../images/ico-papinha-min.png") no-repeat;background-position:center center;  }
+.item .carrossel-servico .item-carrocel .servicos-itens .ico.com-lact { background:url("../images/ico-papinha-min.png") no-repeat;background-position:center center;  }
+.item .carrossel-servico .item-carrocel .servicos-itens .ico.com-celi { background:url("../images/ico-papinha-min.png") no-repeat;background-position:center center;  }
+.item .carrossel-servico .item-carrocel .servicos-itens .ico.copa { background:url("../images/ico-papinha-min.png") no-repeat;background-position:center center;  }
+.item .carrossel-servico .item-carrocel .servicos-itens .ico.pos-rese { background:url("../images/ico-papinha-min.png") no-repeat;background-position:center center;  }
+.item .carrossel-servico .item-carrocel .servicos-itens .ico.cuidador { background:url("../images/ico-papinha-min.png") no-repeat;background-position:center center;  }
 .item .carrossel-servico .item-carrocel .servicos-itens h3 { width:50px;height:20px;font-size:10px;color:#4095f5;text-decoration:none;vertical-align:middle;display:table-cell;text-align:center;line-height:12px; }
-
-
 
 .item .avaliacao { height:45px;width:145px;float:left; }
 .item .avaliacao span { font-size:12px;color:#777777;width:66px; }

@@ -25,6 +25,7 @@
                     <div class="busca">
                         <form class="campo-busca" method="get" action="">
                             <input type= "hidden" name="func" value="lista" />
+                            <input type="hidden" name="servico" value=""/>
                             <input type="search" name="busca" id="busca" placeholder="Buscar Estabelecimento" required>
                             <input type="submit" name="btn-buscar" id="btn-buscar" value="buscar">
                         </form>
@@ -36,12 +37,9 @@
                         <div class="btn anterior"><a id="anterior-servicos">&nbsp;</a></div>
                         <div class="item">
                             <ul id="servicos-busca" class="servicos-busca">
-                                <li><a href="lista.php?categoria="><div class="ico bercario"></div><h3>berçário</h3></a></li>
-                                <li><a href="lista.php?categoria="><div class="ico trocador"></div><h3>trocador</h3></a></li>
-                                <li><a href="lista.php?categoria="><div class="ico playground"></div><h3>playground</h3></a></li>
-                                <li><a href="lista.php?categoria="><div class="ico estacionamento"></div><h3>estacionamento próprio</h3></a></li>
-                                <li><a href="lista.php?categoria="><div class="ico papinha"></div><h3>papinhas<br>04 a 12 meses</h3></a></li>
-                                <li><a href="lista.php?categoria="><div class="ico bercario"></div><h3>berçário</h3></a></li>
+								<?php foreach($servicos as $item){ ?>
+                                    <li><a href="?func=<?php echo $item->getClasse(); ?>"><div class="ico <?php echo $item->getClasse(); ?>"></div><h3><?php echo $item->getNome(); ?></h3></a></li>
+                                <?php } ?>
                             </ul>
                         </div>
                         <div class="btn proximo"><a id="proximo-servicos">&nbsp;</a></div>
