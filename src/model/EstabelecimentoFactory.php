@@ -84,7 +84,8 @@ class EstabelecimentoFactory extends AbstractFactory {
 	}
 
 	public function listarTopEstabelecimentos(){
-		$sql = "SELECT e.id_est, e.id_usu, e.nome, e.cep, e.rua, e.numero, e.complemento, e.bairro, e.cidade, e.estado, (SELECT url_imagem FROM estabelecimento_foto ef WHERE e.id_est = ef.id_est), (SELECT nome_completo FROM usuario u WHERE u.id_usu = e.id_usu) FROM " . $this->tb_estabelecimento . " e";
+		$sql = "SELECT e.id_est, e.id_usu, e.nome, e.cep, e.rua, e.numero, e.complemento, e.bairro, e.cidade, e.estado, (SELECT url_imagem FROM estabelecimento_foto ef WHERE e.id_est = ef.id_est), (SELECT nome_completo FROM usuario u WHERE u.id_usu = e.id_usu), (SELECT AVG(ava.pontuacao)
+  FROM avaliacao_servico ava, estabelecimento_servico ests, estabelecimento est where ava.id_ser = ests.id_ser and ests.id_est = est.id_est order by AVG(ava.pontuacao) desc) FROM " . $this->tb_estabelecimento . " e";
 
 		/* SELECT AVG(ava.pontuacao)
   FROM avaliacao_servico ava, estabelecimento_servico ests, estabelecimento est where ava.id_ser = ests.id_ser and ests.id_est = est.id_est order by AVG(ava.pontuacao) desc, ava.pontuacao limit 6;*/
