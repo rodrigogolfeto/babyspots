@@ -69,7 +69,11 @@ class EstabelecimentoController {
 	public function lista(){
 		if(isset($_GET['busca'])){
 			$conteudo = $_GET['busca'];
-		}else{
+		}
+		else if(isset($_GET['servico'])){
+			$conteudo = $_GET['servico'];
+		}
+		else{
 			$conteudo = '';
 		}
 

@@ -36,7 +36,6 @@ class Estabelecimento {
 		$this->estado = $estado;
 		$this->url_imagem = $url_imagem;
 		$this->usuario = new Usuario($nome_completo);
-		//$this->servicos = array();
 	}
 
 	public function getIdEst() {
