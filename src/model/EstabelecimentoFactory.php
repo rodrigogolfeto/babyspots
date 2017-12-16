@@ -78,11 +78,12 @@ class EstabelecimentoFactory extends AbstractFactory {
 	}
 
 	public function listarTopEstabelecimentos(){
-		$sql = "SELECT e.id_est, e.id_usu, e.nome, e.cep, e.rua, e.numero, e.complemento, e.bairro, e.cidade, e.estado, (SELECT url_imagem FROM estabelecimento_foto ef WHERE e.id_est = ef.id_est), (SELECT nome_completo FROM usuario u WHERE u.id_usu = e.id_usu) FROM " . $this->tb_estabelecimento . " e LIMIT 6";
+		$sql = "SELECT e.id_est, e.id_usu, e.nome, e.cep, e.rua, e.numero, e.complemento, e.bairro, e.cidade, e.estado, (SELECT url_imagem FROM estabelecimento_foto ef WHERE e.id_est = ef.id_est), (SELECT nome_completo FROM usuario u WHERE u.id_usu = e.id_usu) FROM " . $this->tb_estabelecimento . " e";
 
 		try {
 			$resultQuery = $this->db->query($sql);
 
+			
 			if(!($resultQuery instanceof PDOStatement)){
 				throw new Exception("SQL Error!");
 			}
