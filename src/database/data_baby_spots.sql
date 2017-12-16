@@ -28,6 +28,24 @@ INSERT INTO estabelecimento_foto (id_est, url_imagem, data_cadastro) VALUES
 (10, 'foto-estabelecimento-3.png', '2017-01-23'),
 (12, 'foto-estabelecimento-1.png', '2015-02-09');
 
+<<<<<<< HEAD
+INSERT INTO servico (nome, classe) VALUES 
+('berçário', 'bercario'),
+('trocador', 'trocador'),
+('playground', 'playground'),
+('estacionamento própio', 'estacio-pro'),
+('papinha', 'papinha'),
+('música ambiente', 'musica'),
+('banheiro p/ deficientes', 'ban-defi'),
+('banheiro familiar', 'ban-fam'),
+('cadeirão', 'cadeirao'),
+('comida vegana', 'com-vega'),
+('comida p/ lactointolerantes', 'com-lacto'),
+('comida p/ celíacas', 'com-celi'),
+('copa', 'copa'),
+('possibilidade de reserva', 'pos-rese'),
+('cuidador', 'cuidador');
+=======
 INSERT INTO avaliacao (id_est, id_usu, descricao) VALUES 
 (3,2,'Ótimo local para um almoço em familia.')  
 (4,3,'É um bom lugar.')  
@@ -70,3 +88,4 @@ INSERT INTO estabelecimento_servico (id_est, id_ser) VALUES
 ()
 ()
 ()
+>>>>>>> 3573b4f00fafa89b663172d78a2c5e40d30affed
