@@ -12,8 +12,8 @@
             <a href="?"><img src="view/images/logo-home.png" alt="Logo do site, está escrito: BabySpot's"></a>
         </div>
         <div class="conta">
-            <a class="botao entrar" href="#">entrar</a>
-            <a class="botao cadastrar" href="#">cadastrar</a>
+            <a class="botao entrar" href="#!">entrar</a>
+            <a class="botao cadastrar" href="?func=cadastrar">cadastrar</a>
         </div>
     </nav> <!--fim toolbar-->
 </header> <!-- fim do cabeçalho de navegação-->
