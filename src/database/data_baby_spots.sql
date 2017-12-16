@@ -150,4 +150,4 @@ INSERT INTO estabelecimento_servico (id_est, id_ser) VALUES
 (4, 09),
 (1, 10),
 (1, 11),
-(3, 12),
+(3, 12);
