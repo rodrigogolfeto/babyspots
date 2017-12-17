@@ -43,7 +43,7 @@ class EstabelecimentoController {
 			case 'editar':
 				$this->editar();
 				break;
-			case 'pagina_estabelecimento':
+			case 'pagina-estabelecimento':
 				$this->estabelecimento();
 				break;
             case 'cadastrar':

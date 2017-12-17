@@ -52,33 +52,32 @@
             <section class="top-estabelecimentos">
                 <h2 class="card label">Top Estabelecimentos</h2>
                 <div class="container">
-
                     <?php foreach ($result as $item) { ?>
                     <div class="item card">
-<!--                        <img class="foto" src="view/images/--><?php //echo $item->getUrlImagem(); ?><!--" alt="Foto do Estabelecimento">-->
+                        <img class="foto" src="view/images/<?php echo $item->getImagens()[0]->getEsfImagem(); ?>" alt="Foto do Estabelecimento">
                         <div class="infos">
                             <p><?php echo $item->getEstCidade()." - ".$item->getEstEstado(); ?></p>
                             <p><?php echo $item->getEstNome(); ?></p>
                             <p><?php echo $item->getEstRua().", ".$item->getEstNumero()." - ".$item->getEstBairro(); ?></p>
                             <div class="carrossel-servico">
-                                <div class="btn anterior"><a>&nbsp;</a></div>
+                                <?php if(count($item->getServicos())>5){ ?><div class="btn anterior"><a>&nbsp;</a></div><?php } ?>
                                 <div class="item-carrocel">
                                     <ul class="servicos-itens">
 										<?php foreach($item->getServicos() as $servico){ ?>
-                                            <li><a href=""><div class="ico <?php echo $servico->getClasse(); ?>"></div><h3><?php echo $servico->getNome(); ?></h3></a></li>
+                                            <li><a href=""><div class="ico <?php echo $servico->getSerClasse(); ?>"></div><h3><?php echo $servico->getSerNomeMin(); ?></h3></a></li>
 										<?php } ?>
                                     </ul>
                                 </div>
-                                <div class="btn proximo"><a>&nbsp;</a></div>
+                                <?php if(count($item->getServicos())>5){ ?><div class="btn proximo"><a>&nbsp;</a></div><?php } ?>
                             </div><!-- carrossel-servico -->
 
                             <div class="avaliacao">
-                                <span>70 avaliações</span>
-                                <p class="avali qt-strelas-5"></p> <!-- TODO COLOCAR A IMAGEM DA ESTRELA EQUIVALENTE -->
+                                <span><?=$item->getQuantidadeAvaliacao();?> avaliações</span>
+                                <p class="avali qt-strelas-<?=(int)$item->getQuantidadeAvaliacao();?>"></p> <!-- TODO COLOCAR A IMAGEM DA ESTRELA EQUIVALENTE -->
                             </div><!-- avaliacao -->
-                            <a class="botao detalhes" href="?func=pagina_estabelecimento&id_est=<?php echo $item->getIdEst(); ?>">detalhes</a>
+                            <a class="botao detalhes" href="?func=pagina-estabelecimento&id_est=<?php echo $item->getEstId(); ?>">detalhes</a>
                         </div>
-                    </div>
+                    </div><!-- item card -->
                     <?php } ?>
                 </div>
             </section>

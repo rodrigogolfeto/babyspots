@@ -11,12 +11,14 @@ class Servico {
 
 	private $ser_id;
 	private $ser_nome;
+	private $ser_nome_min;
     private $ser_classe;
     private $ser_cadastro;
 
-	public function __construct($ser_id, $ser_nome, $ser_classe, $ser_cadastro) {
+	public function __construct($ser_id, $ser_nome, $ser_nome_min, $ser_classe, $ser_cadastro) {
 		$this->ser_id = $ser_id;
-		$this->ser_nome = $ser_nome;
+        $this->ser_nome = $ser_nome;
+        $this->ser_nome_min = $ser_nome_min;
 		$this->ser_classe = $ser_classe;
 		$this->ser_cadastro = $ser_cadastro;
 	}
@@ -52,5 +54,15 @@ class Servico {
 	public function setSerCadastro($ser_cadastro) {
 		$this->ser_cadastro = $ser_cadastro;
 	}
+
+    public function getSerNomeMin(){
+        return $this->ser_nome_min;
+    }
+
+    public function setSerNomeMin($ser_nome_min){
+        $this->ser_nome_min = $ser_nome_min;
+    }
+
+
 
 }

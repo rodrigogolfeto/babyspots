@@ -13,10 +13,8 @@ class EstabelecimentoFoto {
 	private $esf_imagem;
 	private $esf_cadastro;
 
-	public function __construct($esf_est_id, $esf_imagem, $esf_cadastro) {
-		$this->esf_est_id = $esf_est_id;
+	public function __construct($esf_imagem) {
 		$this->esf_imagem = $esf_imagem;
-		$this->esf_cadastro = $esf_cadastro;
 	}
 
 	public function getEsfEstId() {
