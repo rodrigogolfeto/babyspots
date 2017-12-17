@@ -11,10 +11,11 @@ class Servico {
 
 	private $id_ser;
 	private $nome;
-
-	public function __construct($id_ser, $nome) {
+    private $classe;
+	public function __construct($id_ser, $nome, $classe) {
 		$this->id_ser = $id_ser;
-		$this->nome = $nome;
+        $this->nome = $nome;
+        $this->classe = $classe;
 	}
 
 	public function getIdSer() {
@@ -32,4 +33,21 @@ class Servico {
 	public function setNome($nome) {
 		$this->nome = $nome;
 	}
+
+    /**
+     * @return mixed
+     */
+    public function getClasse()
+    {
+        return $this->classe;
+    }
+
+    /**
+     * @param mixed $classe
+     */
+    public function setClasse($classe)
+    {
+        $this->classe = $classe;
+    }
+
 }
