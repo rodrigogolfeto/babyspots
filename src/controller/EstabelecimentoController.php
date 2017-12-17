@@ -125,6 +125,6 @@ class EstabelecimentoController {
 	}
 
 	public function cadastrar(){
-        require 'view/cadastroUsuario.php';
+        require 'view/cadastro-usuario.php';
     }
 }
