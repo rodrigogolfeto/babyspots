@@ -56,25 +56,24 @@ class EstabelecimentoController {
 
 	public function home(){
         //$result = $this->factory_estabelecimento->listar();
-
         $servicos = $this->factory_servico->listar();
-
 		$result = $this->factory_estabelecimento->listarTopEstabelecimentos();
+
 		require 'view/home.php';
 	}
 
 	public function lista(){
         if(isset($_GET['busca'])){
             $conteudo = $_GET['busca'];
+			$result = $this->factory_estabelecimento->buscar($conteudo);
         }
         else if(isset($_GET['servico'])){
             $conteudo = $_GET['servico'];
+			$result = $this->factory_estabelecimento->buscar_por_servicos($conteudo);
         }
         else{
             $conteudo = '';
         }
-
-        $result = $this->factory_estabelecimento->buscar($conteudo);
 
         require 'view/lista.php';
 

@@ -62,13 +62,11 @@
                             <div class="carrossel-servico">
                                 <div class="btn anterior"><a>&nbsp;</a></div>
                                 <div class="item-carrocel">
-                                    <ul class="servicos-itens">
-                                        <li><a><div class="ico bercario"></div><h3>berçário</h3></a></li>
-                                        <li><a><div class="ico trocador"></div><h3>trocador</h3></a></li>
-                                        <li><a><div class="ico playground"></div><h3>playground</h3></a></li>
-                                        <li><a><div class="ico estacionamento"></div><h3>estacion.</h3></a></li>
-                                        <li><a><div class="ico papinha"></div><h3>papinhas</h3></a></li>
-                                    </ul>
+<!--                                    <ul class="servicos-itens">-->
+<!--										--><?php //foreach($item->getServicos() as $servico){ ?>
+<!--                                            <li><a href=""><div class="ico --><?php //echo $servico->getClasse(); ?><!--"></div><h3>--><?php //echo $servico->getNome(); ?><!--</h3></a></li>-->
+<!--										--><?php //} ?>
+<!--                                    </ul>-->
                                 </div>
                                 <div class="btn proximo"><a>&nbsp;</a></div>
                             </div><!-- carrossel-servico -->
