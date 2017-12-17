@@ -9,37 +9,47 @@
 
 class AvaliacaoServico {
 
-	private $id_ava;
-	private $id_ser;
-	private $pontuacao;
+	private $avs_ava_id;
+	private $avs_ser_id;
+	private $avs_pontuacao;
+	private $avs_cadastro;
 
-	public function __construct($id_ava, $id_ser, $pontuacao) {
-		$this->id_ava = $id_ava;
-		$this->id_ser = $id_ser;
-		$this->pontuacao = $pontuacao;
+	public function __construct($avs_ava_id, $avs_ser_id, $avs_pontuacao, $avs_cadastro) {
+		$this->avs_ava_id = $avs_ava_id;
+		$this->avs_ser_id = $avs_ser_id;
+		$this->avs_pontuacao = $avs_pontuacao;
+		$this->avs_cadastro = $avs_cadastro;
 	}
 
-	public function getIdAva() {
-		return $this->id_ava;
+	public function getAvsAvaId() {
+		return $this->avs_ava_id;
 	}
 
-	public function setIdAva($id_ava) {
-		$this->id_ava = $id_ava;
+	public function setAvsAvaId($avs_ava_id) {
+		$this->avs_ava_id = $avs_ava_id;
 	}
 
-	public function getIdSer() {
-		return $this->id_ser;
+	public function getAvsSerId() {
+		return $this->avs_ser_id;
 	}
 
-	public function setIdSer($id_ser) {
-		$this->id_ser = $id_ser;
+	public function setAvsSerId($avs_ser_id) {
+		$this->avs_ser_id = $avs_ser_id;
 	}
 
-	public function getPontuacao() {
-		return $this->pontuacao;
+	public function getAvsPontuacao() {
+		return $this->avs_pontuacao;
 	}
 
-	public function setPontuacao($pontuacao) {
-		$this->pontuacao = $pontuacao;
+	public function setAvsPontuacao($avs_pontuacao) {
+		$this->avs_pontuacao = $avs_pontuacao;
+	}
+
+	public function getAvsCadastro() {
+		return $this->avs_cadastro;
+	}
+
+	public function setAvsCadastro($avs_cadastro) {
+		$this->avs_cadastro = $avs_cadastro;
 	}
 }

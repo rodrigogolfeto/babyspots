@@ -9,45 +9,48 @@
 
 class Servico {
 
-	private $id_ser;
-	private $nome;
-    private $classe;
-	public function __construct($id_ser, $nome, $classe) {
-		$this->id_ser = $id_ser;
-        $this->nome = $nome;
-        $this->classe = $classe;
+	private $ser_id;
+	private $ser_nome;
+    private $ser_classe;
+    private $ser_cadastro;
+
+	public function __construct($ser_id, $ser_nome, $ser_classe, $ser_cadastro) {
+		$this->ser_id = $ser_id;
+		$this->ser_nome = $ser_nome;
+		$this->ser_classe = $ser_classe;
+		$this->ser_cadastro = $ser_cadastro;
 	}
 
-	public function getIdSer() {
-		return $this->id_ser;
+	public function getSerId() {
+		return $this->ser_id;
 	}
 
-	public function setIdSer($id_ser) {
-		$this->id_ser = $id_ser;
+	public function setSerId($ser_id) {
+		$this->ser_id = $ser_id;
 	}
 
-	public function getNome() {
-		return $this->nome;
+	public function getSerNome() {
+		return $this->ser_nome;
 	}
 
-	public function setNome($nome) {
-		$this->nome = $nome;
+	public function setSerNome($ser_nome) {
+		$this->ser_nome = $ser_nome;
 	}
 
-    /**
-     * @return mixed
-     */
-    public function getClasse()
-    {
-        return $this->classe;
-    }
+	public function getSerClasse() {
+		return $this->ser_classe;
+	}
 
-    /**
-     * @param mixed $classe
-     */
-    public function setClasse($classe)
-    {
-        $this->classe = $classe;
-    }
+	public function setSerClasse($ser_classe) {
+		$this->ser_classe = $ser_classe;
+	}
+
+	public function getSerCadastro() {
+		return $this->ser_cadastro;
+	}
+
+	public function setSerCadastro($ser_cadastro) {
+		$this->ser_cadastro = $ser_cadastro;
+	}
 
 }

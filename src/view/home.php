@@ -35,11 +35,11 @@
                     <div class="carrossel">
                         <div class="btn anterior"><a id="anterior-servicos">&nbsp;</a></div>
                         <div class="item">
-                            <ul id="servicos-busca" class="servicos-busca">
-                                <?php foreach($servicos as $item){ ?>
-                                    <li><a href="?func=lista&servico=<?php echo $item->getClasse(); ?>"><div class="ico <?php echo $item->getClasse(); ?>"></div><h3><?php echo $item->getNome(); ?></h3></a></li>
-                                <?php } ?>
-                            </ul>
+<!--                            <ul id="servicos-busca" class="servicos-busca">-->
+<!--                                --><?php //foreach($servicos as $item){ ?>
+<!--                                    <li><a href="?func=lista&servico=--><?php //echo $item->getClasse(); ?><!--"><div class="ico --><?php //echo $item->getClasse(); ?><!--"></div><h3>--><?php //echo $item->getNome(); ?><!--</h3></a></li>-->
+<!--                                --><?php //} ?>
+<!--                            </ul>-->
                         </div>
                         <div class="btn proximo"><a id="proximo-servicos">&nbsp;</a></div>
                     </div>
@@ -52,21 +52,22 @@
             <section class="top-estabelecimentos">
                 <h2 class="card label">Top Estabelecimentos</h2>
                 <div class="container">
+
                     <?php foreach ($result as $item) { ?>
                     <div class="item card">
-                        <img class="foto" src="view/images/<?php echo $item->getUrlImagem(); ?>" alt="Foto do Estabelecimento">
+<!--                        <img class="foto" src="view/images/--><?php //echo $item->getUrlImagem(); ?><!--" alt="Foto do Estabelecimento">-->
                         <div class="infos">
-                            <p><?php echo $item->getCidade()." - ".$item->getEstado(); ?></p>
-                            <p><?php echo $item->getNomeEstabelecimento(); ?></p>
-                            <p><?php echo $item->getRua().", ".$item->getNumero()." - ".$item->getBairro(); ?></p>
+                            <p><?php echo $item->getEstCidade()." - ".$item->getEstEstado(); ?></p>
+                            <p><?php echo $item->getEstNome(); ?></p>
+                            <p><?php echo $item->getEstRua().", ".$item->getEstNumero()." - ".$item->getEstBairro(); ?></p>
                             <div class="carrossel-servico">
                                 <div class="btn anterior"><a>&nbsp;</a></div>
                                 <div class="item-carrocel">
-<!--                                    <ul class="servicos-itens">-->
-<!--										--><?php //foreach($item->getServicos() as $servico){ ?>
-<!--                                            <li><a href=""><div class="ico --><?php //echo $servico->getClasse(); ?><!--"></div><h3>--><?php //echo $servico->getNome(); ?><!--</h3></a></li>-->
-<!--										--><?php //} ?>
-<!--                                    </ul>-->
+                                    <ul class="servicos-itens">
+										<?php foreach($item->getServicos() as $servico){ ?>
+                                            <li><a href=""><div class="ico <?php echo $servico->getClasse(); ?>"></div><h3><?php echo $servico->getNome(); ?></h3></a></li>
+										<?php } ?>
+                                    </ul>
                                 </div>
                                 <div class="btn proximo"><a>&nbsp;</a></div>
                             </div><!-- carrossel-servico -->

@@ -9,47 +9,47 @@
 
 class Avaliacao {
 
-	private $id_ava;
-	private $id_est;
-	private $id_usu;
-	private $descricao;
+	private $ava_id;
+	private $ava_est_id;
+	private $ava_usu_id;
+	private $ava_descricao;
 
-	public function __construct($id_ava, $id_est, $id_usu, $descricao) {
-		$this->id_ava = $id_ava;
-		$this->id_est = $id_est;
-		$this->id_usu = $id_usu;
-		$this->descricao = $descricao;
+	public function __construct($ava_id, $ava_est_id, $ava_usu_id, $ava_descricao) {
+		$this->ava_id = $ava_id;
+		$this->ava_est_id = $ava_est_id;
+		$this->ava_usu_id = $ava_usu_id;
+		$this->ava_descricao = $ava_descricao;
 	}
 
-	public function getIdAva() {
-		return $this->id_ava;
+	public function getAvaId() {
+		return $this->ava_id;
 	}
 
-	public function setIdAva($id_ava) {
-		$this->id_ava = $id_ava;
+	public function setAvaId($ava_id) {
+		$this->ava_id = $ava_id;
 	}
 
-	public function getIdEst() {
-		return $this->id_est;
+	public function getAvaEstId() {
+		return $this->ava_est_id;
 	}
 
-	public function setIdEst($id_est) {
-		$this->id_est = $id_est;
+	public function setAvaEstId($ava_est_id) {
+		$this->ava_est_id = $ava_est_id;
 	}
 
-	public function getIdUsu() {
-		return $this->id_usu;
+	public function getAvaUsuId() {
+		return $this->ava_usu_id;
 	}
 
-	public function setIdUsu($id_usu) {
-		$this->id_usu = $id_usu;
+	public function setAvaUsuId($ava_usu_id) {
+		$this->ava_usu_id = $ava_usu_id;
 	}
 
-	public function getDescricao() {
-		return $this->descricao;
+	public function getAvaDescricao() {
+		return $this->ava_descricao;
 	}
 
-	public function setDescricao($descricao) {
-		$this->descricao = $descricao;
+	public function setAvaDescricao($ava_descricao) {
+		$this->ava_descricao = $ava_descricao;
 	}
 }

@@ -55,8 +55,7 @@ class EstabelecimentoController {
 	}
 
 	public function home(){
-        //$result = $this->factory_estabelecimento->listar();
-        $servicos = $this->factory_servico->listar();
+        //$servicos = $this->factory_servico->listar();
 		$result = $this->factory_estabelecimento->listarTopEstabelecimentos();
 
 		require 'view/home.php';

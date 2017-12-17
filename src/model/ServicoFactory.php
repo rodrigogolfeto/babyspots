@@ -11,7 +11,7 @@ require_once ("AbstractFactory.php");
 
 class ServicoFactory extends AbstractFactory {
 
-	private $tb_servico = "servico";
+	private $tb_servico = "bs_servico";
 
 	public function add($obj) {
 		// TODO: Implement add() method.
@@ -26,7 +26,7 @@ class ServicoFactory extends AbstractFactory {
 	}
 
 	public function listar(){
-		$sql = "SELECT id_ser, nome, classe FROM " . $this->tb_servico;
+		$sql = "SELECT ser_id, ser_nome, ser_classe, ser_cadastro FROM " . $this->tb_servico;
 
 		try {
 			$resultQuery = $this->db->query($sql);

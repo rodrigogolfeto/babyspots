@@ -7,146 +7,119 @@
  */
 
 class Estabelecimento {
-	private $id_est;
-	private $id_usu;
-	private $nome_est;
-	private $data_cadastro;
-	private $cep;
-	private $rua;
-	private $numero;
-	private $complemento;
-	private $bairro;
-	private $cidade;
-	private $estado;
-	private $avaliacao_geral;
-	private $url_imagem;
+	private $est_id;
+	private $est_usu_id;
+	private $est_nome;
+	private $est_cep;
+	private $est_rua;
+	private $est_numero;
+	private $est_complemento;
+	private $est_bairro;
+	private $est_cidade;
+	private $est_estado;
+	private $est_cadastro;
 	private $usuario;
-	private $servicos;
 
-	public function __construct($id_est, $id_usu, $nome_est, $cep, $rua, $numero, $complemento, $bairro, $cidade, $estado, $url_imagem, $nome_completo) {
-		$this->id_est = $id_est;
-		$this->id_usu = $id_usu;
-		$this->nome_est = $nome_est;
-		$this->cep = $cep;
-		$this->rua = $rua;
-		$this->numero = $numero;
-		$this->complemento = $complemento;
-		$this->bairro = $bairro;
-		$this->cidade = $cidade;
-		$this->estado = $estado;
-		$this->url_imagem = $url_imagem;
-		$this->usuario = new Usuario($nome_completo);
+	public function __construct($est_id, $est_usu_id, $est_nome, $est_cep, $est_rua, $est_numero, $est_complemento, $est_bairro, $est_cidade, $est_estado, $est_cadastro, $usu_id, $usu_nome, $usu_email, $usu_senha, $usu_imagem, $usu_cadastro) {
+		$this->est_id = $est_id;
+		$this->est_usu_id = $est_usu_id;
+		$this->est_nome = $est_nome;
+		$this->est_cep = $est_cep;
+		$this->est_rua = $est_rua;
+		$this->est_numero = $est_numero;
+		$this->est_complemento = $est_complemento;
+		$this->est_bairro = $est_bairro;
+		$this->est_cidade = $est_cidade;
+		$this->est_estado = $est_estado;
+		$this->est_cadastro = $est_cadastro;
+		$this->usuario = new Usuario($usu_id, $usu_nome, $usu_email, $usu_senha, $usu_imagem, $usu_cadastro);
 	}
 
-	public function getIdEst() {
-		return $this->id_est;
+	public function getEstId() {
+		return $this->est_id;
 	}
 
-	public function setIdEst($id_est) {
-		$this->id_est= $id_est;
+	public function setEstId($est_id) {
+		$this->est_id = $est_id;
 	}
 
-	public function getIdUsu() {
-		return $this->id_usu;
+	public function getEstUsuId() {
+		return $this->est_usu_id;
 	}
 
-	public function setIdUsu($id_usu) {
-		$this->id_usu = $id_usu;
+	public function setEstUsuId($est_usu_id) {
+		$this->est_usu_id = $est_usu_id;
 	}
 
-	public function getNomeEstabelecimento() {
-		return $this->nome_est;
+	public function getEstNome() {
+		return $this->est_nome;
 	}
 
-	public function setNomeEst($nome_est) {
-		$this->nome_est = $nome_est;
+	public function setEstNome($est_nome) {
+		$this->est_nome = $est_nome;
 	}
 
-	public function getDataCadastro() {
-		return $this->data_cadastro;
+	public function getEstCep() {
+		return $this->est_cep;
 	}
 
-	public function setDataCadastro($data_cadastro) {
-		$this->data_cadastro = $data_cadastro;
+	public function setEstCep($est_cep) {
+		$this->est_cep = $est_cep;
 	}
 
-	public function getCep() {
-		return $this->cep;
+	public function getEstRua() {
+		return $this->est_rua;
 	}
 
-	public function setCep($cep) {
-		$this->cep = $cep;
+	public function setEstRua($est_rua) {
+		$this->est_rua = $est_rua;
 	}
 
-	public function getRua() {
-		return $this->rua;
+	public function getEstNumero() {
+		return $this->est_numero;
 	}
 
-	public function setRua($rua) {
-		$this->rua = $rua;
+	public function setEstNumero($est_numero) {
+		$this->est_numero = $est_numero;
 	}
 
-	public function getNumero() {
-		return $this->numero;
+	public function getEstComplemento() {
+		return $this->est_complemento;
 	}
 
-	public function setNumero($numero) {
-		$this->numero = $numero;
+	public function setEstComplemento($est_complemento) {
+		$this->est_complemento = $est_complemento;
 	}
 
-	public function getComplemento() {
-		return $this->complemento;
+	public function getEstBairro() {
+		return $this->est_bairro;
 	}
 
-	public function setComplemento($complemento) {
-		$this->complemento = $complemento;
+	public function setEstBairro($est_bairro) {
+		$this->est_bairro = $est_bairro;
 	}
 
-	public function getBairro() {
-		return $this->bairro;
+	public function getEstCidade() {
+		return $this->est_cidade;
 	}
 
-	public function setBairro($bairro) {
-		$this->bairro = $bairro;
+	public function setEstCidade($est_cidade) {
+		$this->est_cidade = $est_cidade;
 	}
 
-	public function getCidade() {
-		return $this->cidade;
+	public function getEstEstado() {
+		return $this->est_estado;
 	}
 
-	public function setCidade($cidade) {
-		$this->cidade = $cidade;
+	public function setEstEstado($est_estado) {
+		$this->est_estado = $est_estado;
 	}
 
-	public function getEstado() {
-		return $this->estado;
+	public function getEstCadastro() {
+		return $this->est_cadastro;
 	}
 
-	public function setEstado($estado) {
-		$this->estado = $estado;
-	}
-
-	public function getAvaliacaoGeral() {
-		return $this->avaliacao_geral;
-	}
-
-	public function setAvaliacaoGeral($avaliacao_geral) {
-		$this->avaliacao_geral = $avaliacao_geral;
-	}
-
-	public function getUrlImagem() {
-		return $this->url_imagem;
-	}
-
-	public function setUrlImagem($url_imagem) {
-		$this->url_imagem = $url_imagem;
-	}
-
-	public function getUsuario() {
-		return $this->usuario;
-	}
-
-	public function setUsuario($usuario) {
-		$this->usuario = $usuario;
+	public function setEstCadastro($est_cadastro) {
+		$this->est_cadastro = $est_cadastro;
 	}
 }

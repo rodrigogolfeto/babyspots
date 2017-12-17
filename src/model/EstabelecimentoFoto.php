@@ -9,47 +9,37 @@
 
 class EstabelecimentoFoto {
 
-	private $id_esf;
-	private $id_est;
-	private $url_imagem;
-	private $data_cadastro;
+	private $esf_est_id;
+	private $esf_imagem;
+	private $esf_cadastro;
 
-	public function __construct($id_esf, $id_est, $url_imagem, $data_cadastro) {
-		$this->id_esf = $id_esf;
-		$this->id_est = $id_est;
-		$this->url_imagem = $url_imagem;
-		$this->data_cadastro = $data_cadastro;
+	public function __construct($esf_est_id, $esf_imagem, $esf_cadastro) {
+		$this->esf_est_id = $esf_est_id;
+		$this->esf_imagem = $esf_imagem;
+		$this->esf_cadastro = $esf_cadastro;
 	}
 
-	public function getIdEsf() {
-		return $this->id_esf;
+	public function getEsfEstId() {
+		return $this->esf_est_id;
 	}
 
-	public function setIdEsf($id_esf) {
-		$this->id_esf = $id_esf;
+	public function setEsfEstId($esf_est_id) {
+		$this->esf_est_id = $esf_est_id;
 	}
 
-	public function getIdEst() {
-		return $this->id_est;
+	public function getEsfImagem() {
+		return $this->esf_imagem;
 	}
 
-	public function setIdEst($id_est) {
-		$this->id_est = $id_est;
+	public function setEsfImagem($esf_imagem) {
+		$this->esf_imagem = $esf_imagem;
 	}
 
-	public function getUrlImagem() {
-		return $this->url_imagem;
+	public function getEsfCadastro() {
+		return $this->esf_cadastro;
 	}
 
-	public function setUrlImagem($url_imagem) {
-		$this->url_imagem = $url_imagem;
-	}
-
-	public function getDataCadastro() {
-		return $this->data_cadastro;
-	}
-
-	public function setDataCadastro($data_cadastro) {
-		$this->data_cadastro = $data_cadastro;
+	public function setEsfCadastro($esf_cadastro) {
+		$this->esf_cadastro = $esf_cadastro;
 	}
 }

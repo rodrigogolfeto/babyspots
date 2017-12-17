@@ -6,13 +6,16 @@
  * Time: 6:09 AM
  */
 
+require_once ("database/BD_config.php");
+
 abstract class AbstractFactory {
 	protected $db;
 
 	public function __construct() {
 		try {
-			$this->db = new PDO("sqlite:database/baby_spots.db");
+			$this->db = new PDO( 'mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
 			$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$this->db->exec("set names utf8");
 		} catch (PDOException $exception) {
 			echo $exception->getMessage();
 		} catch (Exception $exception) {

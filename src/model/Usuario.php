@@ -7,71 +7,68 @@
  */
 
 class Usuario {
-	private $id_usu;
-	private $nome_completo;
-	private $email;
-	private $senha;
-	private $cidade;
-	private $estado;
-	private $foto_url;
+	private $usu_id;
+	private $usu_nome;
+	private $usu_email;
+	private $usu_senha;
+	private $usu_imagem;
+	private $usu_cadastro;
 
-	public function __construct($nome_completo) {
-		$this->nome_completo = $nome_completo;
+	public function __construct($usu_id, $usu_nome, $usu_email, $usu_senha, $usu_imagem, $usu_cadastro) {
+		$this->usu_id = $usu_id;
+		$this->usu_nome = $usu_nome;
+		$this->usu_email = $usu_email;
+		$this->usu_senha = $usu_senha;
+		$this->usu_imagem = $usu_imagem;
+		$this->usu_cadastro = $usu_cadastro;
 	}
 
-	public function getIdUsuario() {
-		return $this->id_usuario;
+	public function getUsuId() {
+		return $this->usu_id;
 	}
 
-	public function setIdUsuario($id_usuario) {
-		$this->id_usuario = $id_usuario;
+	public function setUsuId($usu_id) {
+		$this->usu_id = $usu_id;
 	}
 
-	public function getNomeCompleto() {
-		return $this->nome_completo;
+	public function getUsuNome() {
+		return $this->usu_nome;
 	}
 
-	public function setNomeCompleto($nome_completo) {
-		$this->nome_completo = $nome_completo;
+	public function setUsuNome($usu_nome) {
+		$this->usu_nome = $usu_nome;
 	}
 
-	public function getEmail() {
-		return $this->email;
+	public function getUsuEmail() {
+		return $this->usu_email;
 	}
 
-	public function setEmail($email) {
-		$this->email = $email;
+	public function setUsuEmail($usu_email) {
+		$this->usu_email = $usu_email;
 	}
 
-	public function getSenha() {
-		return $this->senha;
+	public function getUsuSenha() {
+		return $this->usu_senha;
 	}
 
-	public function setSenha($senha) {
-		$this->senha = $senha;
+	public function setUsuSenha($usu_senha) {
+		$this->usu_senha = $usu_senha;
 	}
 
-	public function getCidade() {
-		return $this->cidade;
+	public function getUsuImagem() {
+		return $this->usu_imagem;
 	}
 
-	public function setCidade($cidade) {
-		$this->cidade = $cidade;
+	public function setUsuImagem($usu_imagem) {
+		$this->usu_imagem = $usu_imagem;
 	}
 
-	public function getEstado() {
-		return $this->estado;
+	public function getUsuCadastro() {
+		return $this->usu_cadastro;
 	}
 
-	public function setEstado($estado) {
-		$this->estado = $estado;
+	public function setUsuCadastro($usu_cadastro) {
+		$this->usu_cadastro = $usu_cadastro;
 	}
 
-	public function getFotoUrl() {
-		return $this->foto_url;
-	}
-
-	public function setFotoUrl($foto_url) {
-		$this->foto_url = $foto_url;
-	}
 }

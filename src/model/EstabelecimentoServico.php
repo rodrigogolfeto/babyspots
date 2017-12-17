@@ -9,27 +9,27 @@
 
 class EstabelecimentoServico {
 
-	private $id_est;
-	private $id_ser;
+	private $ess_est_id;
+	private $ess_ser_id;
 
-	public function __construct($id_est, $id_ser) {
-		$this->id_est = $id_est;
-		$this->id_ser = $id_ser;
+	public function __construct($ess_est_id, $ess_ser_id) {
+		$this->ess_est_id = $ess_est_id;
+		$this->ess_ser_id = $ess_ser_id;
 	}
 
-	public function getIdEst() {
-		return $this->id_est;
+	public function getEssEstId() {
+		return $this->ess_est_id;
 	}
 
-	public function setIdEst($id_est) {
-		$this->id_est = $id_est;
+	public function setEssEstId($ess_est_id) {
+		$this->ess_est_id = $ess_est_id;
 	}
 
-	public function getIdSer() {
-		return $this->id_ser;
+	public function getEssSerId() {
+		return $this->ess_ser_id;
 	}
 
-	public function setIdSer($id_ser) {
-		$this->id_ser = $id_ser;
+	public function setEssSerId($ess_ser_id) {
+		$this->ess_ser_id = $ess_ser_id;
 	}
 }
