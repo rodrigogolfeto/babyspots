@@ -12,8 +12,15 @@
             <a href="?"><img src="view/images/logo-home.png" alt="Logo do site, está escrito: BabySpot's"></a>
         </div>
         <div class="conta">
-            <a class="botao entrar" href="#!">entrar</a>
+            <a class="botao entrar" href="javascript:;">entrar</a>
             <a class="botao cadastrar" href="?func=cadastrar">cadastrar</a>
         </div>
+        <div class="login-suspenso">
+            <div class="login-suspenso-seta"></div><!-- login-suspenso-seta -->
+            <form id="" name="" method="" action="">
+                <input type="text" name="login-email">
+                <input type="password" name="login-seha">
+            </form>
+        </div><!-- login-suspenso -->
     </nav> <!--fim toolbar-->
 </header> <!-- fim do cabeçalho de navegação-->

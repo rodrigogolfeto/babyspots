@@ -21,5 +21,16 @@ $(document).ready(function() {
         $('#proximo-servicos-item-'+(index+1)).on('click',function(){ sliderServicosItem[index+1].goToNextSlide(); });
     });
     // -- CARROCEL ITENS ------------------------------------------------------------------------------------------------------------------
-    
+
+    $('.entrar').on('click', function(event) {
+        $('.login-suspenso').addClass('aberto');
+    });
+
+    $('body').click(function (event) {
+        var classeAtual = $(event.target).attr('class');
+        if(classeAtual!='login-suspenso aberto' && classeAtual!='botao entrar'){
+            //alert(classeAtual);
+            $('.login-suspenso').removeClass('aberto');
+        }
+    });
 });

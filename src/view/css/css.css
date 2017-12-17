@@ -45,6 +45,7 @@ html, body{
     justify-content: space-between;
     width: 1000px;
     margin: auto;
+    position:relative;
 }
 
 header.cabecalho-principal {
@@ -314,8 +315,11 @@ input[type=checkbox]:checked:before {
 .avali.qt-strelas-4 { background-position:0 -20px; }
 .avali.qt-strelas-5 { background-position:0 0; }
 
-
 .hidden-element {
     visibility: hidden;
     height: 0;
 }
+
+.login-suspenso { width:213px;height:148px;background-color:#FFF;position:absolute;right:68px;top:63px;z-index:999;border:1px solid #e9e9e9;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;display:none; }
+.login-suspenso .login-suspenso-seta { width:14px;height:8px;display:block;background:url(../images/seta-cima.png) no-repeat;position:absolute;right:105px;top:-8px; }
+.login-suspenso.aberto { display:block !important; }

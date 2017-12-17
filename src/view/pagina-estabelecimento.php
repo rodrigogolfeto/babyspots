@@ -8,7 +8,7 @@
         <link rel="application/x-font-ttf" href="view/fonts/ubuntu/Ubuntu-B.ttf">
         <link rel="application/x-font-ttf" href="view/fonts/ubuntu/Ubuntu-R.ttf">
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script type="text/javascript" src="view/js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="view/scripts/jquery-3.2.1.min.js"></script>
 
     </head>
 
