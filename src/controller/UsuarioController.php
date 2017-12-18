@@ -28,10 +28,20 @@ class UsuarioController {
 			$sys = "";
 
 		switch ($sys){
+			case 'cadastro-usuario':
+				$this->cadastro_usuario();
+				break;
+			case 'cadastrar':
+				$this->cadastrar_usuario();
+				break;
 			case 'logar':
 				$this->login();
 				break;
 		}
+	}
+
+	public function cadastro_usuario(){
+		require 'view/cadastro-usuario.php';
 	}
 
 	public function login(){
@@ -58,6 +68,17 @@ class UsuarioController {
 				$e->getMessage();
 			}
 		}
+	}
+
+	public function cadastrar_usuario(){
+		$nome = $_POST['nome'];
+		$email = $_POST['email'];
+		$senha = $_POST['senha'];
+		//$imagem = $_POST[''];
+
+		$usuario = new Usuario(null, $nome, $email, $senha, null);
+
+		require 'view/cadastro-usuario.php';
 	}
 
 	public function recuperar_senha($email){
