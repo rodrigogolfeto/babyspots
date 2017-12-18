@@ -44,20 +44,8 @@ main.container .buscar .container h2 + p {
 	font-family:'Ubuntu', sans-serif;
 }
 
-.buscar .container .campo-busca input[type="submit"] {
-	box-sizing:border-box;
-	width:130px;
-	height:50px;
-	font-size:16px;
-	border:none;
-	color:white;
-	background:#166bf8 url("../images/icone-busca.png") no-repeat local 30px;
-	padding-left:55px;
-	padding-right:30px;
-	border-radius:5px;
-	font-family:'Ubuntu', sans-serif;
-	cursor:pointer;
-}
+.buscar .container .campo-busca input[type="submit"] { box-sizing:border-box;width:130px;height:50px;font-size:16px;border:none;color:white;background:#166bf8 url("../images/icone-busca.png") no-repeat local 30px;padding-left:55px;padding-right:30px;border-radius:5px;font-family:'Ubuntu', sans-serif;cursor:pointer;transition:background-color.3s; }
+.buscar .container .campo-busca input[type="submit"]:hover { background-color: #0D56F8; }
 
 main.container .buscar .container p {
 	font-size:1.5ch;

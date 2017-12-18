@@ -12,14 +12,27 @@
             <a href="?"><img src="view/images/logo-home.png" alt="Logo do site, está escrito: BabySpot's"></a>
         </div>
         <div class="conta">
-            <a class="botao entrar" href="javascript:;">entrar</a>
+            <a class="botao entrar abrir-login-suspenso" href="javascript:;" data-id="ns">entrar</a>
             <a class="botao cadastrar" href="?sys=cadastro-usuario">cadastrar</a>
         </div>
-        <div class="login-suspenso">
-            <div class="login-suspenso-seta"></div><!-- login-suspenso-seta -->
-            <form id="" name="" method="" action="">
-                <input type="text" name="login-email">
-                <input type="password" name="login-seha">
+        <div class="login-suspenso" data-id="ns">
+            <div class="login-suspenso-seta" data-id="ns"></div><!-- login-suspenso-seta -->
+            <form class="formulario-entrar" name="" method="" action="" data-id="ns">
+                <input type="text" name="login-email" class="login-senha" placeholder="E-mail" data-id="ns">
+                <input type="password" name="login-seha" class="login-senha" placeholder="Senha" data-id="ns">
+                <div class="divisao" data-id="ns"></div>
+                <div class="acoes" data-id="ns">
+                    <a href="javascript:;" class="link-recuperar-senha" data-id="link-recuperar-senha">recuperar senha?</a>
+                    <div class="btn entrar" data-id="ns">entrar</div>
+                </div>
+            </form>
+            <form class="formulario-recuperar" name="" method="" action="" data-id="ns">
+                <input type="text" name="login-email" placeholder="E-mail" data-id="ns">
+                <div class="divisao" data-id="ns"></div>
+                <div class="acoes" data-id="ns">
+                    <a href="javascript:;" class="link-voltar" data-id="link-voltar">voltar</a>
+                    <div class="btn entrar" data-id="ns">enviar</div>
+                </div>
             </form>
         </div><!-- login-suspenso -->
     </nav> <!--fim toolbar-->

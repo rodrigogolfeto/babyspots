@@ -150,7 +150,11 @@ class Estabelecimento {
 	}
 
 	public function getMedia() {
-		return $this->media;
+    	$mediaAva = (int)$this->media;
+    	if($mediaAva<1){
+			$mediaAva = 1;
+		}
+		return $mediaAva;
 	}
 
 	public function setMedia($media) {

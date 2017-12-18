@@ -73,7 +73,7 @@
 
                             <div class="avaliacao">
                                 <span><?=$item->getQuantidadeAvaliacao();?> avaliações</span>
-                                <p class="avali qt-strelas-<?=(int)$item->getQuantidadeAvaliacao();?>"></p> <!-- TODO COLOCAR A IMAGEM DA ESTRELA EQUIVALENTE -->
+                                <p class="avali qt-strelas-<?=$item->getMedia();?>"></p> <!-- TODO COLOCAR A IMAGEM DA ESTRELA EQUIVALENTE -->
                             </div><!-- avaliacao -->
                             <a class="botao detalhes" href="?func=pagina-estabelecimento&id_est=<?php echo $item->getEstId(); ?>">detalhes</a>
                         </div>
