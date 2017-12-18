@@ -173,6 +173,14 @@ class Estabelecimento {
         $this->imagens = $imagens;
     }
 
+	public function getAvaliacoes() {
+		return $this->avaliacoes;
+	}
+
+	public function setAvaliacoes($avaliacoes) {
+		$this->avaliacoes = $avaliacoes;
+	}
+
 	public function adicionarServico($servico){
         array_push($this->servicos,$servico);
     }

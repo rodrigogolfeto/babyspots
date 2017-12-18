@@ -13,14 +13,16 @@ class Servico {
 	private $ser_nome;
 	private $ser_nome_min;
     private $ser_classe;
-    private $ser_cadastro;
 
-	public function __construct($ser_id, $ser_nome, $ser_nome_min, $ser_classe, $ser_cadastro) {
+    //OBJETOS E ATRIBUTOS ADICIONAIS
+    private $nota;
+
+	public function __construct($ser_id, $ser_nome, $ser_nome_min, $ser_classe, $nota) {
 		$this->ser_id = $ser_id;
         $this->ser_nome = $ser_nome;
         $this->ser_nome_min = $ser_nome_min;
 		$this->ser_classe = $ser_classe;
-		$this->ser_cadastro = $ser_cadastro;
+		$this->nota = $nota;
 	}
 
 	public function getSerId() {
@@ -39,6 +41,14 @@ class Servico {
 		$this->ser_nome = $ser_nome;
 	}
 
+	public function getSerNomeMin(){
+		return $this->ser_nome_min;
+	}
+
+	public function setSerNomeMin($ser_nome_min){
+		$this->ser_nome_min = $ser_nome_min;
+	}
+
 	public function getSerClasse() {
 		return $this->ser_classe;
 	}
@@ -47,22 +57,11 @@ class Servico {
 		$this->ser_classe = $ser_classe;
 	}
 
-	public function getSerCadastro() {
-		return $this->ser_cadastro;
+	public function getNota() {
+		return $this->nota;
 	}
 
-	public function setSerCadastro($ser_cadastro) {
-		$this->ser_cadastro = $ser_cadastro;
+	public function setNota($nota) {
+		$this->nota = $nota;
 	}
-
-    public function getSerNomeMin(){
-        return $this->ser_nome_min;
-    }
-
-    public function setSerNomeMin($ser_nome_min){
-        $this->ser_nome_min = $ser_nome_min;
-    }
-
-
-
 }

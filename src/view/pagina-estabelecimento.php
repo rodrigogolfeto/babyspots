@@ -52,13 +52,14 @@
                 <div class="comentarios">
                     <h2 class="card label">Avaliações Recentes</h2>
                     <section class="card container">
+						<?php foreach ($item[0]->getAvaliacoes() as $avaliacao){ ?>
                         <div class="comentario"> <!-- inicio comentario-->
                             <div class="informacoes-commentario"> <!--inicio informações do usuario que comentou-->
                                 <figure class="foto-usuario-comentario"> <!-- foto de perfim do usuario-->
                                     <img src="view/images/foto-perfil-usuario-exp.png">
                                     <figcaption>
                                         <p>Nome Do Usuario</p>
-                                        <p>Data da avaliação</p>
+                                        <p><?php echo $avaliacao->getAvaCadastro(); ?></p>
                                     </figcaption>
                                 </figure> <!-- final foto de perfil do usuario -->
                                 <div class="nota">
@@ -67,21 +68,18 @@
                                 </div>
                             </div> <!--final informações do usuario que comentou-->
                             <div class="texto"> <!--avaliação textual do usuario-->
-                                <p>O filme é RUIM! A primeira constatação é a de que o Tom Cruise está velho demais para fazer esse tipo de filme. Ele não combinava com o personagem. O filme tenta repetir a fórmula do filme do Brendan Frasier, sem sucesso. O humor, quando existiu, foi insignificante. A história é um absurdo difícil de engolir até em filmes de ficção: faltou colocar alienígenas e transformers na história. Lamento pelo papel ridículo que Tom Cruise e Russel Crowe tiveram nesse filme. Este último, NÃO SEI COMO ACEITOU ESSE PAPEL. Deve ter sido pelo dinheiro. Vc passa o tempo todo esperando "o filme decolar". Uma história sem pé nem cabeça em que se tem que absorver as resoluções absurdas e sem sentido das situações absurdas e sem sentido criadas no filme. Vergonhoso.</p>
+                                <p><?php echo $avaliacao->getAvaDescricao(); ?></p>
                             </div>
                             <div class="detalhes">
                                 <p>detalhes</p>
                                 <ul>
-                                    <li><span class="avali qt-strelas-1"></span>Serviço</li>
-                                    <li><span class="avali qt-strelas-1"></span>Serviço</li>
-                                    <li><span class="avali qt-strelas-1"></span>Serviço</li>
-                                    <li><span class="avali qt-strelas-1"></span>Serviço</li>
-                                    <li><span class="avali qt-strelas-1"></span>Serviço</li>
-                                    <li><span class="avali qt-strelas-1"></span>Serviço</li>
+                                    <?php foreach ($avaliacao->getServicos() as $servico) { ?>
+                                        <li><span class="avali qt-strelas-<?=(int)$servico->getNota();?>"></span><?php echo $servico->getSerNome(); ?></li>
+                                    <?php } ?>
                                 </ul>
                             </div>
                         </div> <!-- final comentario-->
-
+						<?php } ?>
                         <a class="ver-mais-commentarios">ver mais</a>
                     </section>
                     <a class="btn-avaliar botao">avaliar estabelecimento</a>
