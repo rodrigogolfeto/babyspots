@@ -14,13 +14,12 @@ class Usuario {
 	private $usu_imagem;
 	private $usu_cadastro;
 
-	public function __construct($usu_id, $usu_nome, $usu_email, $usu_senha, $usu_imagem, $usu_cadastro) {
+	public function __construct($usu_id, $usu_nome, $usu_email, $usu_senha, $usu_imagem) {
 		$this->usu_id = $usu_id;
 		$this->usu_nome = $usu_nome;
 		$this->usu_email = $usu_email;
 		$this->usu_senha = $usu_senha;
 		$this->usu_imagem = $usu_imagem;
-		$this->usu_cadastro = $usu_cadastro;
 	}
 
 	public function getUsuId() {

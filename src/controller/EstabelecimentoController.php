@@ -2,6 +2,7 @@
 require_once ("model/Estabelecimento.php");
 require_once ("model/EstabelecimentoFactory.php");
 require_once ("model/ServicoFactory.php");
+
 /**
  *
  * Created by PhpStorm.
@@ -37,25 +38,19 @@ class EstabelecimentoController {
 			case 'lista':
 				$this->lista();
 				break;
-			case 'estabelecimento': //IRÁ COLOCAR NO BOTÃO DETALHES OU NA DIV 'ITEM-CARD'
-				$this->estabelecimento();
-				break;
 			case 'editar':
 				$this->editar();
 				break;
 			case 'pagina-estabelecimento':
 				$this->estabelecimento();
 				break;
-            case 'cadastrar':
-                $this->cadastrar();
-                break;
 			default:
 				$this->home();
 		}
 	}
 
 	public function home(){
-        //$servicos = $this->factory_servico->listar();
+        $servicos = $this->factory_servico->listar();
 		$result = $this->factory_estabelecimento->listarTopEstabelecimentos();
 
 		require 'view/home.php';
@@ -81,6 +76,7 @@ class EstabelecimentoController {
 	public function estabelecimento(){
 		$id = $_GET['id_est'];
 
+		//$servicos = $this->factory_servico->listar();
 		$item = $this->factory_estabelecimento->find($id);
 
 		require 'view/pagina-estabelecimento.php';
@@ -122,8 +118,4 @@ class EstabelecimentoController {
 	public function avaliar($estabelecimento, $usuario, $descricao, $avaliacao_servico){
 
 	}
-
-	public function cadastrar(){
-        require 'view/cadastro-usuario.php';
-    }
 }

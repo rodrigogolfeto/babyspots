@@ -25,6 +25,7 @@ class Estabelecimento {
     private $media;
     private $quantidade_avaliacao;
     private $imagens;
+    private $avaliacoes;
 
     public function __construct($media,$quantidade,$est_id,$est_nome,$est_cep,$est_rua,$est_numero,$est_complemento,$est_bairro,$est_cidade,$est_estado) {
         $this->media = $media;
@@ -41,6 +42,7 @@ class Estabelecimento {
 
         $this->servicos = array();
         $this->imagens = array();
+        $this->avaliacoes = array();
     }
 
 	public function getEstId() {
@@ -179,6 +181,9 @@ class Estabelecimento {
         array_push($this->imagens,$imagem);
     }
 
+    public function adicionarAvaliacao($avaliacao){
+    	array_push($this->avaliacoes, $avaliacao);
+	}
 
 
 

@@ -26,7 +26,7 @@ class ServicoFactory extends AbstractFactory {
 	}
 
 	public function listar(){
-		$sql = "SELECT ser_id, ser_nome, ser_classe, ser_cadastro FROM " . $this->tb_servico;
+		$sql = "SELECT ser_id, ser_nome, ser_nome_min, ser_classe, ser_cadastro FROM " . $this->tb_servico;
 
 		try {
 			$resultQuery = $this->db->query($sql);

@@ -13,7 +13,7 @@
         </div>
         <div class="conta">
             <a class="botao entrar" href="javascript:;">entrar</a>
-            <a class="botao cadastrar" href="?func=cadastrar">cadastrar</a>
+            <a class="botao cadastrar" href="?sys=cadastro-usuario">cadastrar</a>
         </div>
         <div class="login-suspenso">
             <div class="login-suspenso-seta"></div><!-- login-suspenso-seta -->
