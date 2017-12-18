@@ -9,7 +9,7 @@
             </select>
         </div><!-- final locacalizacão-->
         <div class="logo-home">
-            <a href="?"><img src="view/images/logo-home.png" alt="Logo do site, está escrito: BabySpot's"></a>
+            <a href="?func=home"><img src="view/images/logo-home.png" alt="Logo do site, está escrito: BabySpot's"></a>
         </div>
         <div class="conta">
             <a class="botao entrar abrir-login-suspenso" href="javascript:;" data-id="ns">entrar</a>

@@ -20,12 +20,12 @@ class Estabelecimento {
 	private $est_cadastro;
 
 	//OBJETOS E ATRIBUTOS ADICIONAIS
-	private $usuario;
-    private $servicos;
-    private $media;
-    private $quantidade_avaliacao;
-    private $imagens;
-    private $avaliacoes;
+	private $usuario; // QUEM CADASTROU O ESTABELECIMENTO
+    private $servicos; // LISTA DE SERVIÇOS OFERECIDOS PELO ESTABELECIMENTO
+    private $media; // AVALIAÇÃO MÉDIA DO ESTABELECIMENTO
+    private $quantidade_avaliacao; // QUANTIDADE DE AVALIAÇÕES REALIZADAS
+    private $imagens; // LISTA DE IMAGENS
+    private $avaliacoes; //LISTA DE AVALIAÇÕES
 
     public function __construct($media,$quantidade,$est_id,$est_nome,$est_cep,$est_rua,$est_numero,$est_complemento,$est_bairro,$est_cidade,$est_estado) {
         $this->media = $media;

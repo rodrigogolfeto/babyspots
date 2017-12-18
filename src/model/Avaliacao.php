@@ -16,9 +16,9 @@ class Avaliacao {
 	private $ava_cadastro;
 
 	//OBJETOS E ATRIBUTOS ADICIONAIS
-	private $usuario;
-	private $nota;
-	private $servicos;
+	private $usuario; // OBJETO DE USUARIO
+	private $nota; // MÉDIA DAS NOTAS DE SERVIÇOS DAS AVALIAÇÕES
+	private $servicos; // LISTA DE SERVICÇOS DA AVALIAÇÃO
 
 	public function __construct($ava_id, $ava_est_id, $ava_usu_id, $ava_descricao, $ava_cadastro) {
 		$this->ava_id = $ava_id;
@@ -27,6 +27,7 @@ class Avaliacao {
 		$this->ava_descricao = $ava_descricao;
 		$this->ava_cadastro = $ava_cadastro;
 
+		//ATRIBUTOS ADICIONAIS
 		$this->servicos = array();
 	}
 

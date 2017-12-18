@@ -1,3 +1,10 @@
+<?php
+/*
+echo '<pre>';
+print_r($item[0]);
+echo '</pre>';
+*/
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -53,24 +60,25 @@
                     <h2 class="card label">Avaliações Recentes</h2>
                     <section class="card container">
 						<?php foreach ($item[0]->getAvaliacoes() as $avaliacao){ ?>
-                        <div class="comentario"> <!-- inicio comentario-->
+                        <div class="comentario"><!-- inicio comentario-->
                             <div class="informacoes-commentario"> <!--inicio informações do usuario que comentou-->
                                 <figure class="foto-usuario-comentario"> <!-- foto de perfim do usuario-->
-                                    <img src="view/images/foto-perfil-usuario-exp.png">
+                                    <img src="uploads/<?php echo $avaliacao->getUsuario()->getUsuImagem(); ?>">
                                     <figcaption>
-                                        <p>Nome Do Usuario</p>
+                                        <p><?php echo $avaliacao->getUsuario()->getUsuNome(); ?></p>
                                         <p><?php echo $avaliacao->getAvaCadastro(); ?></p>
                                     </figcaption>
                                 </figure> <!-- final foto de perfil do usuario -->
                                 <div class="nota">
-                                    <p>Nota: <span class="avali qt-strelas-5"></span></p>
-                                    <a class="ver-detalhes" src="#">esconder detalhes</a>
+                                    <p class="avaliacao-estrela">Nota: <span class="avali qt-strelas-<?php echo $avaliacao->getNota(); ?>"></span></p>
+									<?php if(count($avaliacao->getServicos())>0){ ?><a class="ver-detalhes" src="#">mostrar detalhes</a><?php } ?>
                                 </div>
                             </div> <!--final informações do usuario que comentou-->
                             <div class="texto"> <!--avaliação textual do usuario-->
                                 <p><?php echo $avaliacao->getAvaDescricao(); ?></p>
                             </div>
-                            <div class="detalhes">
+                            <?php if(count($avaliacao->getServicos())>0){ ?>
+                            <div class="detalhes" style="display:none">
                                 <p>detalhes</p>
                                 <ul>
                                     <?php foreach ($avaliacao->getServicos() as $servico) { ?>
@@ -78,13 +86,15 @@
                                     <?php } ?>
                                 </ul>
                             </div>
+                            <?php } ?>
                         </div> <!-- final comentario-->
-						<?php } ?>
-                        <a class="ver-mais-commentarios">ver mais</a>
+						<?php }
+                        // TODO : CHAMAR ESSA PARTE CASO TENHA UMA QUANTIDADE GRANDE DE COMENTÁRIOS
+                        // <a class="ver-mais-commentarios">ver mais</a>
+                        ?>
                     </section>
                     <a class="btn-avaliar botao">avaliar estabelecimento</a>
                 </div>
-
 
                 <section id="servicos"> <!-- inicio servicos-->
                     <h2 class="card label">Serviços</h2>
@@ -97,37 +107,48 @@
         </main>
 
         <section class="popoup-critica"> <!--inicio popup com o formulario e avaliação e a msg de sucesso-->
-                <div class="card">
-                    <span></span>
-                    <div class="conteudo">
-                        <a class="btn-close"></a>
-                        <form> <!--inicio formulario de avaliação-->
-                            <h2>Nome Estabelecimento</h2>
-                            <div class="comment">
-                                <p>Informe sua crítica aqui</p>
-                                <textarea name="comentario"></textarea>
-                                <p><span class="max-char">Mínimo de 100 caracteres</span><span class="digit"><span class="qt-chars">0</span> caractere.</span></p>
-                            </div>
-                            <div class="container">
-                                <div class="detalhes">
-                                    <p>detalhes</p>
-                                    <ul>
+            <div class="card">
+                <span></span>
+                <div class="conteudo">
+                    <a class="btn-close"></a>
+                    <form> <!--inicio formulario de avaliação-->
+                        <h2><?php echo $item[0]->getEstNome(); ?></h2>
+                        <div class="comment">
+                            <p>Informe sua crítica aqui</p>
+                            <textarea name="comentario"></textarea>
+                            <p><span class="max-char">Mínimo de 100 caracteres</span><span class="digit"><span class="qt-chars">0</span> caractere.</span></p>
+                        </div>
+                        <div class="container">
+                            <div class="detalhes">
+                                <p>serviço<?php if(count($item[0]->getServicos())>1){ ?>s<?php } ?></p>
+                                <?php
+                                if(count($item[0]->getServicos())>8){
+                                    ?><ul class="coluna-1"><?php
+                                    for($i=0;$i<count($item[0]->getServicos());$i++){
+                                        if($i==8){ ?></ul><ul class="coluna-2"><?php }
+                                        ?><li><span class="avali qt-strelas-1"><input type="hidden" name="Servico" value=""></span><i title="<?php echo $item[0]->getServicos()[$i]->getSerNome(); ?>"><?php echo $item[0]->getServicos()[$i]->getSerNomeReduzido(); ?></i></li><?php
+                                    }
+                                    ?></ul><?php
+                                }else{
+                                    ?><ul>
 										<?php foreach($item[0]->getServicos() as $servico){ ?>
                                             <li><span class="avali qt-strelas-1"><input type="hidden" name="Servico" value=""></span><?php echo $servico->getSerNome(); ?></li>
 										<?php } ?>
-                                    </ul>
-                                </div>
-                                <button class="botao" src="#">Publicar sua Crítica</button>
+                                    </ul><?php
+                                }
+                                ?>
                             </div>
+                            <button class="botao" src="#">Publicar sua Crítica</button>
+                        </div>
 
-                        </form> <!--final formulario de avaliação-->
-                        <p>
-                            Gostaríamos de lembrar que quaisquer observações violentas, caluniosas ou discriminatórias não serão toleradas. Todas as críticas que não estiverem de acordo com nossas <a href="">condições de uso</a> serão removidas.
-                            <br>Agradecemos pela compreensão<br><br>
-                            Ao clicar no botão "Publicar sua crítica", você aceita nossos <a href="">termos de uso</a>.
-                        </p>
-                    </div>
+                    </form> <!--final formulario de avaliação-->
+                    <p>
+                        Gostaríamos de lembrar que quaisquer observações violentas, caluniosas ou discriminatórias não serão toleradas. Todas as críticas que não estiverem de acordo com nossas <a href="">condições de uso</a> serão removidas.
+                        <br>Agradecemos pela compreensão<br><br>
+                        Ao clicar no botão "Publicar sua crítica", você aceita nossos <a href="">termos de uso</a>.
+                    </p>
                 </div>
+            </div>
             <div class="msg-status-avaliacao">
                 <div class="card conteudo">
                     <a class="btn-close"></a>

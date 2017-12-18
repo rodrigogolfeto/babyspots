@@ -3,6 +3,8 @@
 
 $(document).ready(function() {
 
+    $(".comentario").last().attr('style','box-shadow:none;');
+
     var sliderServicosBusca = $("#servicos-busca").lightSlider({ loop:false,keyPress:true,item:5,pager:false,controls:false });
     $('#anterior-servicos').on('click',function(){ sliderServicosBusca.goToPrevSlide(); });
     $('#proximo-servicos').on('click',function(){ sliderServicosBusca.goToNextSlide(); });

@@ -54,7 +54,7 @@
                 <div class="container">
                     <?php foreach ($result as $item) { ?>
                     <div class="item card">
-                        <img class="foto" src="view/images/<?php echo $item->getImagens()[0]->getEsfImagem(); ?>" alt="Foto do Estabelecimento">
+                        <img class="foto" src="uploads/<?php echo $item->getImagens()[0]->getEsfImagem(); ?>" alt="Foto do Estabelecimento">
                         <div class="infos">
                             <p><?php echo $item->getEstCidade()." - ".$item->getEstEstado(); ?></p>
                             <p><?php echo $item->getEstNome(); ?></p>
@@ -64,7 +64,7 @@
                                 <div class="item-carrocel">
                                     <ul class="servicos-itens">
 										<?php foreach($item->getServicos() as $servico){ ?>
-                                            <li><a href=""><div class="ico <?php echo $servico->getSerClasse(); ?>"></div><h3><?php echo $servico->getSerNomeMin(); ?></h3></a></li>
+                                            <li><a href="javascript:;"><div class="ico <?php echo $servico->getSerClasse(); ?>"></div><h3><?php echo $servico->getSerNomeMin(); ?></h3></a></li>
 										<?php } ?>
                                     </ul>
                                 </div>

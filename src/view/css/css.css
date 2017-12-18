@@ -24,7 +24,7 @@ html, body{
 /*modela a aparencia de um cartão.*/
 .card {
     border-radius: 5px;
-    box-shadow: 0 2px #dedede;
+    box-shadow: 0 1px #dedede;
     background-color: white;
 }
 
