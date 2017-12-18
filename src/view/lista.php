@@ -60,7 +60,7 @@
                             foreach ($servicosAll as $itemServico){ ?>
                                 <label><input type="checkbox" name="servico" value=""<?php if(in_array($itemServico->getSerClasse(),$servicosUrl)){ ?> checked<?php } ?>><?php echo $itemServico->getSerNome(); ?></label>
                             <?php } ?>
-                            <? /*
+                            <?php /*
                             <label><input type="checkbox" value="<!-- TODO -->">Música Ambiente</label>
                             <label><input type="checkbox" value="<!-- TODO -->">Música Ao Vivo</label>
                             <label><input type="checkbox" value="<!-- TODO -->">Comida Vegana</label>

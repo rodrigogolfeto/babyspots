@@ -44,6 +44,6 @@
                     </div>
                 </form>
             </div><!-- login-suspenso -->
-        <? } ?>
+        <?php } ?>
     </nav> <!--fim toolbar-->
 </header> <!-- fim do cabeçalho de navegação-->

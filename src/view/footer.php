@@ -27,9 +27,9 @@
         </div>
         <div class="newsletter">
             <h2>Newsletter</h2>
-            <form>
+            <form action="javascript:;">
                 <input type="email" name="email" placeholder="Informe o seu E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
-                <input class="botao" type="submit" name="pedidoDeNewletter" value="enviar">
+                <input class="botao" type="submit" name="" value="enviar">
             </form>
             <ul>
                 <li><a class="icone-social" href="https://www.facebook.com/"></a></li>

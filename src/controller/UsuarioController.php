@@ -107,7 +107,7 @@ class UsuarioController {
 		$servicos = $this->servicoFactory->listar();
 		$result = $this->estabelecimentoFactory->listarTopEstabelecimentos();
 
-		?><script>window.open('?func=home', '_self');</script><?
+		?><script>window.open('?func=home', '_self');</script><?php
 	}
 
 	public function formulario_usuario(){
