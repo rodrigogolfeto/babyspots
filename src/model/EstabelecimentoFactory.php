@@ -2,6 +2,7 @@
 require_once ("Estabelecimento.php");
 require_once ("EstabelecimentoFoto.php");
 require_once ("AbstractFactory.php");
+require_once ("Avaliacao.php");
 /**
  *
  * Created by PhpStorm.
@@ -26,8 +27,8 @@ class EstabelecimentoFactory extends AbstractFactory {
 
 	}
 
-	public function find($idServico){
-        $sql = "SELECT (SELECT AVG(avs_pontuacao) FROM bs_avaliacao_servico,bs_avaliacao WHERE avs_ava_id=ava_id AND avs_ava_id=ava_id AND ava_est_id=est_id) AS 'media',(SELECT COUNT(*) FROM bs_avaliacao WHERE ava_est_id=est_id GROUP BY est_id) AS 'quantidade',est_id,est_nome,est_cep,est_rua,est_numero,est_complemento,est_bairro,est_cidade,est_estado FROM bs_estabelecimento WHERE est_id='".$idServico."' LIMIT 1";
+	public function find($idEstabelecimento){
+        $sql = "SELECT (SELECT AVG(avs_pontuacao) FROM bs_avaliacao_servico, bs_avaliacao WHERE avs_ava_id = ava_id AND avs_ava_id = ava_id AND ava_est_id = est_id) AS 'media', (SELECT COUNT(*) FROM bs_avaliacao WHERE ava_est_id = est_id GROUP BY est_id) AS 'quantidade', est_id, est_nome, est_cep, est_rua, est_numero, est_complemento, est_bairro, est_cidade, est_estado FROM bs_estabelecimento WHERE est_id='" . $idEstabelecimento . "' LIMIT 1";
 
 		try {
 			$resultQuery = $this->db->query($sql);
@@ -36,35 +37,43 @@ class EstabelecimentoFactory extends AbstractFactory {
 				throw new Exception("SQL Error!");
 			}
 
-			$estabelecimentos = $this->queryRowsToListOfObjects($resultQuery, "Estabelecimento");
+			$estabelecimento = $this->queryRowsToListOfObjects($resultQuery, "Estabelecimento");
 
 			//ADICIONA SERVICOS
-			$sqlServico = "SELECT ser_id,ser_nome,ser_nome_min,ser_classe,ser_cadastro FROM bs_estabelecimento_servico,bs_servico WHERE ess_ser_id=ser_id AND ess_est_id='".$estabelecimentos[0]->getEstId()."'";
+			$sqlServico = "SELECT ser_id, ser_nome, ser_nome_min, ser_classe, ser_cadastro, avs_pontuacao as 'nota' FROM bs_estabelecimento_servico, bs_servico, bs_avaliacao_servico WHERE ess_est_id = " . $estabelecimento[0]->getEstId() . " AND ess_ser_id = ser_id AND avs_ser_id = ser_id";
 			$resultQueryServico = $this->db->query($sqlServico);
 			$servicos = $this->queryRowsToListOfObjects($resultQueryServico, "Servico");
 			foreach ($servicos as $itemServico){
-				$estabelecimentos[0]->adicionarServico($itemServico);
+				$estabelecimento[0]->adicionarServico($itemServico);
 			}
 
 			//ADICIONA IMAGENS
-			$sqlImagem = "SELECT esf_imagem FROM bs_estabelecimento_foto WHERE esf_est_id='".$estabelecimentos[0]->getEstId()."'";
+			$sqlImagem = "SELECT esf_imagem FROM bs_estabelecimento_foto WHERE esf_est_id = " . $estabelecimento[0]->getEstId();
 			$resultQueryImagem = $this->db->query($sqlImagem);
 
 			//ADICIONA AVALIACOES
-//			AINDA FALTA FAZER
-// 			$sqlAvaliacao = "SELECT ser_id,ser_nome,ser_nome_min,ser_classe,ser_cadastro FROM bs_estabelecimento_servico,bs_servico WHERE ess_ser_id=ser_id AND ess_est_id='".$estabelecimentos[0]->getEstId()."'";
-//			$resultQueryAvaliacao = $this->db->query($sqlAvaliacao);
-//			$avaliacoes = $this->queryRowsToListOfObjects($resultQueryAvaliacao, "Avaliacao");
-//			foreach ($avaliacoes as $itemAvaliacao){
-//				$estabelecimentos[0]->adicionarAvaliacao($itemAvaliacao);
-//			}
+ 			$sqlAvaliacao = "SELECT ava_id, ava_est_id, ava_usu_id, ava_descricao, ava_cadastro FROM bs_avaliacao, bs_usuario WHERE ava_est_id = " . $estabelecimento[0]->getEstId() . " AND ava_usu_id = usu_id";
+			$resultQueryAvaliacao = $this->db->query($sqlAvaliacao);
+			$avaliacoes = $this->queryRowsToListOfObjects($resultQueryAvaliacao, "Avaliacao");
+			foreach ($avaliacoes as $itemAvaliacao){
+				//ADICIONA SERVICOS DE AVALIACOES
+				$sqlServicoAvaliacao = "SELECT ser_id, ser_nome, ser_nome_min, ser_classe, ser_cadastro, avs_pontuacao as 'nota' FROM bs_estabelecimento_servico, bs_servico, bs_avaliacao_servico WHERE ess_est_id = " . $estabelecimento[0]->getEstId() . " AND ess_ser_id = ser_id AND avs_ser_id = ser_id";
+				$resultQueryServicoAvaliacao = $this->db->query($sqlServicoAvaliacao);
+				$servicos_avaliacoes = $this->queryRowsToListOfObjects($resultQueryServicoAvaliacao, "Servico");
+
+				foreach ($servicos_avaliacoes as $itemServico){
+					$itemAvaliacao->adicionarServico($itemServico);
+				}
+
+				$estabelecimento[0]->adicionarAvaliacao($itemAvaliacao);
+			}
 
 			$imagens = $this->queryRowsToListOfObjects($resultQueryImagem, "EstabelecimentoFoto");
 			foreach ($imagens as $itemImagem){
-				$estabelecimentos[0]->adicionarImagem($itemImagem);
+				$estabelecimento[0]->adicionarImagem($itemImagem);
 			}
 
-			return $estabelecimentos;
+			return $estabelecimento;
 
 		} catch (Exception $ex) {
 			echo $ex->getMessage();
@@ -155,7 +164,7 @@ class EstabelecimentoFactory extends AbstractFactory {
 			for ($i = 0; $i < count($estabelecimentos); $i++){
 
                 //ADICIONA SERVICOS
-				$sqlServico = "SELECT ser_id,ser_nome,ser_nome_min,ser_classe,ser_cadastro FROM bs_estabelecimento_servico,bs_servico WHERE ess_ser_id=ser_id AND ess_est_id='".$estabelecimentos[$i]->getEstId()."'";
+				$sqlServico = "SELECT ser_id, ser_nome, ser_nome_min, ser_classe, ser_cadastro, avs_pontuacao as 'nota' FROM bs_estabelecimento_servico, bs_servico, bs_avaliacao_servico WHERE ess_est_id = " . $estabelecimentos[$i]->getEstId() . " AND ess_ser_id = ser_id AND avs_ser_id = ser_id";
                 $resultQueryServico = $this->db->query($sqlServico);
                 $servicos = $this->queryRowsToListOfObjects($resultQueryServico, "Servico");
                 foreach ($servicos as $itemServico){
@@ -165,7 +174,6 @@ class EstabelecimentoFactory extends AbstractFactory {
                 //ADICIONA IMAGENS
                 $sqlImagem = "SELECT esf_imagem FROM bs_estabelecimento_foto WHERE esf_est_id='".$estabelecimentos[$i]->getEstId()."'";
                 $resultQueryImagem = $this->db->query($sqlImagem);
-
 
                 $imagens = $this->queryRowsToListOfObjects($resultQueryImagem, "EstabelecimentoFoto");
                 foreach ($imagens as $itemImagem){
@@ -179,13 +187,5 @@ class EstabelecimentoFactory extends AbstractFactory {
 			echo $ex->getMessage();
 			return null;
 		}
-	}
-
-	public function listarEstabelecimentos(){
-
-	}
-
-	public function listarAvaliacoes(){
-
 	}
 }
