@@ -71,4 +71,10 @@ class Usuario {
 		$this->usu_cadastro = $usu_cadastro;
 	}
 
+	public function getNomeSobrenome(){
+		$nome = $this->getUsuNome();
+		$nome = explode(' ',$nome);
+		return $nome[0]." ".$nome[1];
+	}
+
 }

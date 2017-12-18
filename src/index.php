@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 require_once 'controller/EstabelecimentoController.php';
 require_once 'controller/UsuarioController.php';
 
@@ -15,8 +18,7 @@ error_reporting(E_ALL);
 if(isset($_GET['sys'])){
 	$usuario_controller = new UsuarioController();
 	$usuario_controller->init();
-}
-else{
+}else{
 	$estabelecimento_controller = new EstabelecimentoController();
 	$estabelecimento_controller->init();
 }

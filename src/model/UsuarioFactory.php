@@ -37,15 +37,18 @@ class UsuarioFactory extends AbstractFactory {
 	}
 
 	public function find($obj){
-		$query = "SELECT usu_id, usu_nome, usu_email, usu_senha, usu_imagem, usu_cadastro FROM " . $this->table . " WHERE usu_email = '" . $obj->getUsuEmail() . "' AND usu_senha = '" . $obj->getUsuSenha() . "';";
+		$idUsuario = $obj->getUsuId();
+		if(isset($idUsuario) && !empty($idUsuario)){
+			$query = "SELECT usu_id, usu_nome, usu_email, usu_senha, usu_imagem, usu_cadastro FROM " . $this->table . " WHERE usu_id = '" . $obj->getUsuId() . "'";
+		}else{
+			$query = "SELECT usu_id, usu_nome, usu_email, usu_senha, usu_imagem, usu_cadastro FROM " . $this->table . " WHERE usu_email = '" . $obj->getUsuEmail() . "' AND usu_senha = '" . $obj->getUsuSenha() . "';";
+		}
 
 		try {
 			$resultQuery = $this->db->query($query);
-
 			if(!($resultQuery instanceof PDOStatement)){
 				throw new Exception("SQL Error!");
 			}
-
 			return $this->queryRowsToListOfObjects($resultQuery, "Usuario");
 		} catch (Exception $ex) {
 			echo $ex->getMessage();

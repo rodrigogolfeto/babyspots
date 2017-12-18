@@ -22,28 +22,48 @@ $(document).ready(function() {
     });
     // -- CARROCEL ITENS ------------------------------------------------------------------------------------------------------------------
 
+    $('input').focus(function(event){
+        var dataId = $(event.target).attr('id');
+        if(dataId=='login-email' || dataId=='login-senha'){
+            $(this).removeClass('campo-invalido');
+            $('.login-callback').slideUp(200);
+        }
+    });
+
     $('.entrar').on('click', function(event) {
         $('.login-suspenso').addClass('aberto');
     });
 
+    $('.abrir-menu').on('click', function(event) {
+        $('.menu-suspenso').addClass('aberto');
+    });
+
     $('body').click(function(event){
+        //login suspenso
         var dataId = $(event.target).attr('data-id');
         if(dataId=='link-recuperar-senha'){
             $('.formulario-entrar').attr('style','display:none !important;');
             $('.formulario-recuperar').attr('style','display:block !important;');
-            $('.login-suspenso').addClass('recuperar');
         }else if(dataId=='link-voltar'){
             $('.formulario-entrar').attr('style','display:block !important;');
             $('.formulario-recuperar').attr('style','display:none !important;');
-            $('.login-suspenso').removeClass('recuperar');
         }else if(dataId!='ns'){
             $('.login-suspenso').removeClass('aberto');
             $('.abrir-login-suspenso').attr('data-id','ns');
             $('.formulario-entrar').attr('style','display:block !important;');
             $('.formulario-recuperar').attr('style','display:none !important;');
-            $('.login-suspenso').removeClass('recuperar');
         }else{
             $('.abrir-login-suspenso').attr('data-id','');
+        }
+
+        //menu suspenso
+
+        var dataId = $(event.target).attr('data-id');
+        if(dataId!='ms'){
+            $('.menu-suspenso').removeClass('aberto');
+            $('.abrir-menu').attr('data-id','ms');
+        }else{
+            $('.abrir-menu').attr('data-id','');
         }
     });
 
@@ -98,3 +118,38 @@ $(document).ready(function() {
     });
 
 });
+
+
+function usuarioLogin(){
+    var campo_email = $('#login-email').val();
+    var campo_senha = $('#login-senha').val();
+    var validacoes = "";
+
+    if(campo_email==""){ validacoes+=",login-email"; }
+    if(campo_senha==""){ validacoes+=",login-senha"; }
+
+    if(validacoes==""){
+        $.ajax({
+            type: "POST",
+            data: { campo_email:campo_email,campo_senha:campo_senha },
+            url: "?sys=logar",
+            dataType: "html",
+            success: function(result){
+                if(result=='sucesso'){
+                    //atualizar página
+                    location.reload();
+                }else{
+                    //mostrar mensagem de erro
+                    $('.login-callback').html(result).slideDown(300);
+                }
+            }
+        });
+    }else{
+        valor = validacoes.split(',');
+        for(i=0;i<valor.length;i++){
+            if(valor[i]!=""){
+                $('#'+valor[i]).addClass('campo-invalido');
+            }
+        }
+    }
+}

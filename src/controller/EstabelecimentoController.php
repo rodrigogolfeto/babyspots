@@ -2,6 +2,8 @@
 require_once ("model/Estabelecimento.php");
 require_once ("model/EstabelecimentoFactory.php");
 require_once ("model/ServicoFactory.php");
+require_once ("model/Usuario.php");
+require_once ("model/UsuarioFactory.php");
 
 /**
  *
@@ -14,10 +16,13 @@ require_once ("model/ServicoFactory.php");
 class EstabelecimentoController {
 
 	private $factory_estabelecimento;
-    private $factory_servico;
+	private $factory_servico;
+	private $factory_usuario;
+
 	public function __construct() {
 		$this->factory_estabelecimento = new EstabelecimentoFactory();
         $this->factory_servico = new ServicoFactory();
+        $this->factory_usuario = new UsuarioFactory();
 		ini_set('error_reporting', E_ALL);
 		ini_set('display_errors', 1);
 	}
@@ -52,6 +57,11 @@ class EstabelecimentoController {
 	public function home(){
         $servicos = $this->factory_servico->listar();
 		$result = $this->factory_estabelecimento->listarTopEstabelecimentos();
+
+		if(isset($_SESSION['usu_id'])){
+			$user = new Usuario($_SESSION['usu_id'],'','','','','');
+			$usuarioLogado = $this->factory_usuario->find($user);
+		}
 
 		require 'view/home.php';
 	}
