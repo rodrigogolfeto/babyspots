@@ -36,7 +36,36 @@ class EstabelecimentoFactory extends AbstractFactory {
 				throw new Exception("SQL Error!");
 			}
 
-			return $this->queryRowsToListOfObjects($resultQuery, "Estabelecimento");
+			$estabelecimentos = $this->queryRowsToListOfObjects($resultQuery, "Estabelecimento");
+
+			//ADICIONA SERVICOS
+			$sqlServico = "SELECT ser_id,ser_nome,ser_nome_min,ser_classe,ser_cadastro FROM bs_estabelecimento_servico,bs_servico WHERE ess_ser_id=ser_id AND ess_est_id='".$estabelecimentos[0]->getEstId()."'";
+			$resultQueryServico = $this->db->query($sqlServico);
+			$servicos = $this->queryRowsToListOfObjects($resultQueryServico, "Servico");
+			foreach ($servicos as $itemServico){
+				$estabelecimentos[0]->adicionarServico($itemServico);
+			}
+
+			//ADICIONA IMAGENS
+			$sqlImagem = "SELECT esf_imagem FROM bs_estabelecimento_foto WHERE esf_est_id='".$estabelecimentos[0]->getEstId()."'";
+			$resultQueryImagem = $this->db->query($sqlImagem);
+
+			//ADICIONA AVALIACOES
+//			AINDA FALTA FAZER
+// 			$sqlAvaliacao = "SELECT ser_id,ser_nome,ser_nome_min,ser_classe,ser_cadastro FROM bs_estabelecimento_servico,bs_servico WHERE ess_ser_id=ser_id AND ess_est_id='".$estabelecimentos[0]->getEstId()."'";
+//			$resultQueryAvaliacao = $this->db->query($sqlAvaliacao);
+//			$avaliacoes = $this->queryRowsToListOfObjects($resultQueryAvaliacao, "Avaliacao");
+//			foreach ($avaliacoes as $itemAvaliacao){
+//				$estabelecimentos[0]->adicionarAvaliacao($itemAvaliacao);
+//			}
+
+			$imagens = $this->queryRowsToListOfObjects($resultQueryImagem, "EstabelecimentoFoto");
+			foreach ($imagens as $itemImagem){
+				$estabelecimentos[0]->adicionarImagem($itemImagem);
+			}
+
+			return $estabelecimentos;
+
 		} catch (Exception $ex) {
 			echo $ex->getMessage();
 			return null;
@@ -120,8 +149,6 @@ class EstabelecimentoFactory extends AbstractFactory {
 			if(!($resultQuery instanceof PDOStatement)){
 				throw new Exception("SQL Error!");
 			}
-
-			//return $this->queryRowsToListOfObjects($resultQuery, "Estabelecimento");
 
 			$estabelecimentos = $this->queryRowsToListOfObjects($resultQuery, "Estabelecimento");
 

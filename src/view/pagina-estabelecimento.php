@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>BabySpot's | <?php echo $item[0]->getNomeEstabelecimento() ?></title>
+        <title>BabySpot's | <?php echo $item[0]->getEstNome() ?></title>
         <meta charset="UTF-8">
         <link type="text/css" rel="stylesheet" href="view/css/css.css">
         <link type="text/css" rel="stylesheet" href="view/css/pagina-estabelecimento.css">
@@ -19,7 +19,7 @@
             <ul>
                 <li><a href="?">Home</a></li>
                 <li><a href="?func=lista&busca=">Estabelecimentos</a></li>
-                <li><a href="#"><?php echo $item[0]->getNomeEstabelecimento(); ?></a></li>
+                <li><a href="#"><?php echo $item[0]->getEstNome(); ?></a></li>
             </ul>
         </div>
 
@@ -36,14 +36,14 @@
                 <div class="info-estab">
                     <div class="infos card">
                         <div>
-                            <p><?php echo $item[0]->getCidade()." - ".$item[0]->getEstado(); ?></p>
-                            <p><?php echo $item[0]->getNomeEstabelecimento(); ?></p>
-                            <p><?php echo $item[0]->getRua().", ".$item[0]->getNumero()." - ".$item[0]->getBairro(); ?></p>
+                            <p><?php echo $item[0]->getEstCidade()." - ".$item[0]->getEstEstado(); ?></p>
+                            <p><?php echo $item[0]->getEstNome(); ?></p>
+                            <p><?php echo $item[0]->getEstRua().", ".$item[0]->getEstNumero()." - ".$item[0]->getEstBairro(); ?></p>
                         </div>
                         <div class="avaliacao">
-                            <span>70 avaliações</span>
-                            <p class="avali qt-strelas-5"></p> <!-- TODO COLOCAR A IMAGEM DA ESTRELA EQUIVALENTE -->
-                        </div>
+                            <span><?=$item[0]->getQuantidadeAvaliacao();?> avaliações</span>
+                            <p class="avali qt-strelas-<?=(int)$item[0]->getQuantidadeAvaliacao();?>"></p> <!-- TODO COLOCAR A IMAGEM DA ESTRELA EQUIVALENTE -->
+                        </div><!-- avaliacao -->
                     </div>
                     <a href="#avaliacoes" class="botao" id="ver-avaliacoes">ver avaliações</a>
                 </div>
@@ -55,7 +55,7 @@
                         <div class="comentario"> <!-- inicio comentario-->
                             <div class="informacoes-commentario"> <!--inicio informações do usuario que comentou-->
                                 <figure class="foto-usuario-comentario"> <!-- foto de perfim do usuario-->
-                                    <img src="images/foto-perfil-usuario-exp.png">
+                                    <img src="view/images/foto-perfil-usuario-exp.png">
                                     <figcaption>
                                         <p>Nome Do Usuario</p>
                                         <p>Data da avaliação</p>
@@ -114,24 +114,9 @@
                                 <div class="detalhes">
                                     <p>detalhes</p>
                                     <ul>
-                                        <li><span class="avali qt-strelas-1">
-                                                <input type="hidden" name="Servico" value="">
-                                            </span>Serviço</li>
-                                        <li><span class="avali qt-strelas-1">
-                                                <input type="hidden" name="Servico" value="">
-                                            </span>Serviço</li>
-                                        <li><span class="avali qt-strelas-1">
-                                                <input type="hidden" name="Servico" value="">
-                                            </span>Serviço</li>
-                                        <li><span class="avali qt-strelas-1">
-                                                <input type="hidden" name="Servico" value="">
-                                            </span>Serviço</li>
-                                        <li><span class="avali qt-strelas-1">
-                                                <input type="hidden" name="Servico" value="">
-                                            </span>Serviço</li>
-                                        <li><span class="avali qt-strelas-1">
-                                                <input type="hidden" name="Servico" value="">
-                                            </span>Serviço</li>
+										<?php foreach($item[0]->getServicos() as $servico){ ?>
+                                            <li><span class="avali qt-strelas-1"><input type="hidden" name="Servico" value=""></span><?php echo $servico->getSerNome(); ?></li>
+										<?php } ?>
                                     </ul>
                                 </div>
                                 <button class="botao" src="#">Publicar sua Crítica</button>

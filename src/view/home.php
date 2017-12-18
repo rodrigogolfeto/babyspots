@@ -35,11 +35,11 @@
                     <div class="carrossel">
                         <div class="btn anterior"><a id="anterior-servicos">&nbsp;</a></div>
                         <div class="item">
-<!--                            <ul id="servicos-busca" class="servicos-busca">-->
-<!--                                --><?php //foreach($servicos as $item){ ?>
-<!--                                    <li><a href="?func=lista&servico=--><?php //echo $item->getClasse(); ?><!--"><div class="ico --><?php //echo $item->getClasse(); ?><!--"></div><h3>--><?php //echo $item->getNome(); ?><!--</h3></a></li>-->
-<!--                                --><?php //} ?>
-<!--                            </ul>-->
+                            <ul id="servicos-busca" class="servicos-busca">
+                                <?php foreach($servicos as $item){ ?>
+                                    <li><a href="?func=lista&servico=<?php echo $item->getSerClasse(); ?>"><div class="ico <?php echo $item->getSerClasse(); ?>"></div><h3><?php echo $item->getSerNome(); ?></h3></a></li>
+                                <?php } ?>
+                            </ul>
                         </div>
                         <div class="btn proximo"><a id="proximo-servicos">&nbsp;</a></div>
                     </div>
