@@ -13,8 +13,8 @@
             <div class="menu-suspenso" data-id="ms">
                 <div class="menu-suspenso-seta" data-id="ms"></div><!-- menu-suspenso-seta -->
                 <ul data-id="ms">
-                    <a href="" data-id="ms"><li class="sbt" data-id="ms">Dados Cadastrais</li></a>
-                    <a href="" data-id="ms"><li data-id="ms" data-id="ms">Novo Estabelecimento</li></a>
+                    <a href="?sys=dados-cadastrais" data-id="ms"><li class="sbt" data-id="ms">Dados Cadastrais</li></a>
+                    <a href="?func=novo-estabelecimento" data-id="ms"><li data-id="ms" data-id="ms">Novo Estabelecimento</li></a>
                     <a href="?sys=deslogar" data-id="ms"><li class="ult" data-id="ms">Encerrar Sessão</li></a>
                 </ul>
             </div><!-- menu-suspenso -->
@@ -26,8 +26,8 @@
             <div class="login-suspenso" data-id="ns">
                 <div class="login-suspenso-seta" data-id="ns"></div><!-- login-suspenso-seta -->
                 <form class="formulario-entrar" name="" method="" action="" data-id="ns">
-                    <input type="text" name="login-email" id="login-email" placeholder="E-mail" data-id="ns">
-                    <input type="password" name="login-senha" id="login-senha" placeholder="Senha" data-id="ns">
+                    <input type="text" name="login-email" id="login-email" class="campo-form-topo" placeholder="E-mail" data-id="ns">
+                    <input type="password" name="login-senha" id="login-senha" class="campo-form-topo" placeholder="Senha" data-id="ns">
                     <div class="divisao" data-id="ns"></div>
                     <div class="acoes" data-id="ns">
                         <a href="javascript:;" class="link-recuperar-senha" data-id="link-recuperar-senha">recuperar senha?</a>
@@ -36,7 +36,7 @@
                     <div class="login-callback"></div>
                 </form>
                 <form class="formulario-recuperar" name="" method="" action="" data-id="ns">
-                    <input type="text" name="login-email" placeholder="E-mail" data-id="ns">
+                    <input type="text" name="login-email" class="campo-form-topo" placeholder="E-mail" data-id="ns">
                     <div class="divisao" data-id="ns"></div>
                     <div class="acoes" data-id="ns">
                         <a href="javascript:;" class="link-voltar" data-id="link-voltar">voltar</a>

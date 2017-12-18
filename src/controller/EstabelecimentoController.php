@@ -49,6 +49,9 @@ class EstabelecimentoController {
 			case 'pagina-estabelecimento':
 				$this->estabelecimento();
 				break;
+			case 'novo-estabelecimento':
+				$this->novoEstabelecimento();
+				break;
 			default:
 				$this->home();
 		}
@@ -67,17 +70,26 @@ class EstabelecimentoController {
 	}
 
 	public function lista(){
-        if(isset($_GET['busca'])){
-            $conteudo = $_GET['busca'];
-			$result = $this->factory_estabelecimento->buscar($conteudo);
-        }
-        else if(isset($_GET['servico'])){
+		$servicosAll = $this->factory_servico->listar();
+
+        if(isset($_GET['busca']) && isset($_GET['servico']) && !empty($_GET['busca']) && !empty($_GET['servico'])){
+			$conteudo = $_GET['busca'];
+			$servico = $_GET['servico'];
+			$result = $this->factory_estabelecimento->buscar_servico_palavra($servico,$conteudo);
+        }else if(isset($_GET['servico'])&& !empty($_GET['servico'])){
             $conteudo = $_GET['servico'];
 			$result = $this->factory_estabelecimento->buscar_por_servicos($conteudo);
-        }
-        else{
+		}else if(isset($_GET['busca']) && !empty($_GET['busca'])){
+			$conteudo = $_GET['busca'];
+			$result = $this->factory_estabelecimento->buscar($conteudo);
+        }else{
             $conteudo = '';
         }
+
+		if(isset($_SESSION['usu_id'])){
+			$user = new Usuario($_SESSION['usu_id'],'','','','','');
+			$usuarioLogado = $this->factory_usuario->find($user);
+		}
 
         require 'view/lista.php';
 
@@ -88,6 +100,11 @@ class EstabelecimentoController {
 
 		//$servicos = $this->factory_servico->listar();
 		$item = $this->factory_estabelecimento->find($id);
+
+		if(isset($_SESSION['usu_id'])){
+			$user = new Usuario($_SESSION['usu_id'],'','','','','');
+			$usuarioLogado = $this->factory_usuario->find($user);
+		}
 
 		require 'view/pagina-estabelecimento.php';
 	}
@@ -127,5 +144,14 @@ class EstabelecimentoController {
 
 	public function avaliar($estabelecimento, $usuario, $descricao, $avaliacao_servico){
 
+	}
+
+	public function novoEstabelecimento(){
+		if(isset($_SESSION['usu_id'])){
+			$user = new Usuario($_SESSION['usu_id'],'','','','','');
+			$usuarioLogado = $this->factory_usuario->find($user);
+		}
+
+		require 'view/formulario-estabelecimento.php';
 	}
 }

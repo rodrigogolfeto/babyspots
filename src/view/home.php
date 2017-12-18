@@ -12,7 +12,7 @@
         <!--[if lt IE 10]><script type="text/javascript" src="Scripts/no-ie9.js"></script><![endif]-->
         <script type="text/javascript" src="view/scripts/efeitos.js?0111"></script>
 
-        <title>BabySpot's | O restaurante ideal para a sua família</title>       
+        <title>BabySpot's | O Restaurante Ideal para a sua Família</title>
     </head>
 
     <body>

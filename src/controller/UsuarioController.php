@@ -36,9 +36,6 @@ class UsuarioController {
 			$sys = "";
 
 		switch ($sys){
-			case 'cadastro-usuario':
-				$this->cadastro_usuario();
-				break;
 			case 'cadastrar':
 				$this->cadastrar_usuario();
 				break;
@@ -48,11 +45,13 @@ class UsuarioController {
 			case 'deslogar':
 				$this->deslogar();
 				break;
+			case 'dados-cadastrais':
+				$this->formulario_usuario();
+				break;
+			case 'cadastro-usuario':
+				$this->formulario_usuario();
+				break;
 		}
-	}
-
-	public function cadastro_usuario(){
-		require 'view/cadastro-usuario.php';
 	}
 
 	public function login($email,$senha){
@@ -86,6 +85,11 @@ class UsuarioController {
 
 		$usuario = new Usuario(null, $nome, $email, $senha, null);
 
+		if(isset($_SESSION['usu_id'])){
+			$user = new Usuario($_SESSION['usu_id'],'','','','','');
+			$usuarioLogado = $this->usuarioFactory->find($user);
+		}
+
 		require 'view/cadastro-usuario.php';
 	}
 
@@ -103,11 +107,14 @@ class UsuarioController {
 		$servicos = $this->servicoFactory->listar();
 		$result = $this->estabelecimentoFactory->listarTopEstabelecimentos();
 
+		?><script>window.open('?func=home', '_self');</script><?
+	}
+
+	public function formulario_usuario(){
 		if(isset($_SESSION['usu_id'])){
 			$user = new Usuario($_SESSION['usu_id'],'','','','','');
 			$usuarioLogado = $this->usuarioFactory->find($user);
 		}
-
-		require 'view/home.php';
+		require 'view/cadastro-usuario.php';
 	}
 }

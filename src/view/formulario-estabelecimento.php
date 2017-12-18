@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link type="text/css" rel="stylesheet" href="css/css.css" >
-        <link type="text/css" rel="stylesheet" href="css/formulario_estabelecimento.css">
+        <link type="text/css" rel="stylesheet" href="view/css/css.css" >
+        <link type="text/css" rel="stylesheet" href="view/css/formulario-estabelecimento.css">
+
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">if (typeof jQuery == 'undefined') { document.write(unescape("%3Cscript src='view/scripts/jquery-min.js' type='text/javascript'%3E%3C/script%3E"));}</script>
+        <!--[if lt IE 10]><script type="text/javascript" src="Scripts/no-ie9.js"></script><![endif]-->
+        <script type="text/javascript" src="view/scripts/efeitos.js?0111"></script>
+
+        <title>BabySpot's | Cadastrar Estabelecimento</title>
     </head>
     <body>
 
@@ -10,13 +17,13 @@
 
         <div class="navegacao">
             <ul>
-                <li><a href="home.php">Home</a></li>
-                <li><a href="home.php">Cadastrar Estabelecimento</a></li>
+                <li><a href="?func=home">Home</a></li>
+                <li><a href="">Cadastrar Estabelecimento</a></li>
             </ul>
         </div>
 
         <main class="container card">
-            <form >
+            <form>
                 <h3>Cadastrar Estabelecimento</h3>
                 <fieldset id="dados">
                     <label>Nome do Estabelecimento<input type="text" name="nome_estabelecimento"></label>
@@ -44,7 +51,6 @@
                 <input class="botao" type="submit" value="Salvar Alterações">
             </form>
         </main>
-
 
         <?php include "view/footer.php" ?>
     </body>

@@ -83,8 +83,8 @@ input[type=checkbox]:checked:before {content:url("../images/icon-checkbox-checke
 .login-suspenso.aberto { display:block !important; }
 .login-suspenso .formulario-entrar { display:block !important; }
 .login-suspenso .formulario-recuperar { display:none !important; }
-.login-suspenso input { width:175px;height:20px;padding:0px;color:#868686;font-size:14px;padding:5px 8px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;border:1px solid #dcdcdc;margin-bottom:12px; }
-.login-suspenso input.campo-invalido { border-color: #F20203; }
+.login-suspenso .campo-form-topo { width:175px !important;height:20px !important;color:#868686;font-size:14px;padding:5px 8px !important;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;border:1px solid #dcdcdc;margin-bottom:12px; }
+.login-suspenso .campo-form-topo.campo-invalido { border-color: #F20203; }
 .login-suspenso .divisao { width:193px;height:1px;background-color:#dcdcdc;display:block !important;margin:3px 0; }
 .login-suspenso .acoes { width:193px;height:30px;display:block !important;margin-top:10px; }
 .login-suspenso .acoes a { font-size:12px;color:#868686;text-decoration:none;float:left;margin-top:8px;transition:color.1s; }

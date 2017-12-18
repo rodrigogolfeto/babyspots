@@ -19,6 +19,8 @@ echo '</pre>';
         <script type="text/javascript">if (typeof jQuery == 'undefined') { document.write(unescape("%3Cscript src='view/scripts/jquery-min.js' type='text/javascript'%3E%3C/script%3E"));}</script>
         <!--[if lt IE 10]><script type="text/javascript" src="Scripts/no-ie9.js"></script><![endif]-->
         <script type="text/javascript" src="view/scripts/efeitos.js?0111"></script>
+
+        <title>BabySpot's | <?php echo $item[0]->getEstNome(); ?></title>
     </head>
 
     <body>

@@ -24,7 +24,7 @@ main.container {
     box-sizing: border-box;
     background-color: white;
     width: 250px;
-    height: 540px;
+    height: auto;
     align-items: flex-start;
     border-radius: 5px;
     padding-left: 20px;
@@ -81,6 +81,8 @@ main.container {
     padding-right: 30px;
     color: white;
     background-color: #59a3f6;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .filtro .container input[type='submit']:hover {
@@ -88,7 +90,7 @@ main.container {
 }
 
 .lista {
-    margin-bottom: 200px;
+    margin-bottom: 0px;
 }
 
 .lista .container {
