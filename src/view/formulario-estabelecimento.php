@@ -8,13 +8,12 @@
 
         <?php include 'view/header.php' ?>
 
-
-            <div class="navegacao">
-                <ul>
-                    <li><a href="home.php">Home</a></li>
-                    <li><a href="home.php">Cadastrar Estabelecimento</a></li>
-                </ul>
-            </div>
+        <div class="navegacao">
+            <ul>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="home.php">Cadastrar Estabelecimento</a></li>
+            </ul>
+        </div>
 
         <main class="container card">
             <form >

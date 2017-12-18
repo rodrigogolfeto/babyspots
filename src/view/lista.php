@@ -8,8 +8,12 @@
         <link type="text/css" rel="stylesheet" href="view/css/lista.css">
         <link rel="application/x-font-ttf" href="view/fonts/ubuntu/Ubuntu-B.ttf">
         <link rel="application/x-font-ttf" href="view/fonts/ubuntu/Ubuntu-R.ttf">
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script type="text/javascript" src="view/scripts/efeitos.js"></script>
+
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">if (typeof jQuery == 'undefined') { document.write(unescape("%3Cscript src='view/scripts/jquery-min.js' type='text/javascript'%3E%3C/script%3E"));}</script>
+        <!--[if lt IE 10]><script type="text/javascript" src="Scripts/no-ie9.js"></script><![endif]-->
+        <script type="text/javascript" src="view/scripts/efeitos.js?0111"></script>
+
         <title>Listagem - BabySpot's</title>
     </head>
     <body>

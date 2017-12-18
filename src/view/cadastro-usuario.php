@@ -3,7 +3,11 @@
     <head>
         <link type="text/css" rel="stylesheet" href="view/css/css.css" >
         <link type="text/css" rel="stylesheet" href="view/css/css_form_user.css">
-        <script src="view/scripts/jquery-3.2.1.min.js" type="application/javascript"></script>
+
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">if (typeof jQuery == 'undefined') { document.write(unescape("%3Cscript src='view/scripts/jquery-min.js' type='text/javascript'%3E%3C/script%3E"));}</script>
+        <!--[if lt IE 10]><script type="text/javascript" src="Scripts/no-ie9.js"></script><![endif]-->
+        <script type="text/javascript" src="view/scripts/efeitos.js?0111"></script>
     </head>
     <body>
 
